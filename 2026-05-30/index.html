@@ -2,461 +2,281 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GitHub Trending Weekly - May 30, 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{overflow:hidden;width:100vw;height:100vh;background:#111}
-.magazine{display:flex;width:1400vw;height:100vh;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
-.page{width:100vw;height:100vh;flex-shrink:0;position:relative;overflow:hidden;display:flex;align-items:stretch}
-.page--dark{background:#111;color:#f0f0f0}
-.page--light{background:#f5f3ef;color:#111}
-
-.cover{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:8vh 8vw;text-align:center;width:100%}
-.cover__kicker{font-family:'IBM Plex Mono',monospace;font-size:max(13px,1.1vw);letter-spacing:.35em;text-transform:uppercase;opacity:.6;margin-bottom:3vh}
-.cover__title{font-family:'Playfair Display',serif;font-size:max(48px,7.5vw);font-weight:900;line-height:1.05;margin-bottom:3vh}
-.cover__subtitle{font-family:'Source Serif 4',serif;font-size:max(18px,1.8vw);font-weight:300;opacity:.75;max-width:60vw;line-height:1.5}
-.cover__date{font-family:'IBM Plex Mono',monospace;font-size:max(12px,1vw);letter-spacing:.2em;opacity:.5;margin-top:5vh}
-.cover__issue{font-family:'IBM Plex Mono',monospace;font-size:max(11px,.9vw);letter-spacing:.3em;text-transform:uppercase;opacity:.4;margin-top:2vh}
-
-.repo{display:grid;grid-template-columns:55fr 45fr;width:100%;height:100%}
-.repo__left{padding:8vh 5vw 10vh 6vw;display:flex;flex-direction:column;justify-content:center;position:relative}
-.repo__right{padding:8vh 6vw 10vh 4vw;display:flex;flex-direction:column;justify-content:center;position:relative}
-
-.repo__rank{font-family:'Playfair Display',serif;font-size:max(180px,22vw);font-weight:900;position:absolute;top:50%;left:5vw;transform:translateY(-50%);line-height:1;pointer-events:none;z-index:0}
-.page--dark .repo__rank{color:rgba(255,255,255,.04)}
-.page--light .repo__rank{color:rgba(0,0,0,.04)}
-
-.repo__content{position:relative;z-index:1}
-.repo__category{font-family:'IBM Plex Mono',monospace;font-size:max(11px,1vw);letter-spacing:.25em;text-transform:uppercase;margin-bottom:2.5vh;display:inline-block;padding:.4em .8em;border:1px solid currentColor;opacity:.7}
-.repo__headline{font-family:'Playfair Display',serif;font-size:max(32px,5vw);font-weight:900;line-height:1.1;margin-bottom:3vh}
-.repo__path{font-family:'IBM Plex Mono',monospace;font-size:max(14px,1.2vw);margin-bottom:2vh;opacity:.85}
-.repo__path a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
-.page--dark .repo__path a{text-decoration-color:rgba(255,255,255,.4)}
-.page--light .repo__path a{text-decoration-color:rgba(0,0,0,.3)}
-.repo__path a:hover{opacity:1;text-decoration-thickness:2px}
-.repo__desc{font-family:'Source Serif 4',serif;font-size:max(17px,1.5vw);line-height:1.6;opacity:.85;max-width:40vw}
-
-.repo__stars{font-family:'Playfair Display',serif;font-size:max(52px,6.5vw);font-weight:900;margin-bottom:3vh;line-height:1}
-.repo__stars-label{font-family:'IBM Plex Mono',monospace;font-size:max(11px,.9vw);letter-spacing:.2em;text-transform:uppercase;opacity:.5;margin-bottom:1vh}
-.repo__lang{font-family:'IBM Plex Mono',monospace;font-size:max(13px,1.1vw);display:inline-block;padding:.4em 1em;margin-bottom:4vh;letter-spacing:.1em}
-.page--dark .repo__lang{background:rgba(255,255,255,.08);color:#f0f0f0}
-.page--light .repo__lang{background:rgba(0,0,0,.06);color:#111}
-
-.repo__callout{border-left:4px solid;padding:2.5vh 2vw;margin-top:2vh}
-.page--dark .repo__callout{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.05)}
-.page--light .repo__callout{border-color:rgba(0,0,0,.2);background:rgba(0,0,0,.03)}
-.repo__callout-title{font-family:'IBM Plex Mono',monospace;font-size:max(11px,.9vw);letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-bottom:1.5vh}
-.repo__callout-text{font-family:'Source Serif 4',serif;font-size:max(15px,1.3vw);line-height:1.6;opacity:.8}
-
-.nav-dots{position:fixed;bottom:3vh;left:50%;transform:translateX(-50%);display:flex;gap:1vw;z-index:999}
-.nav-dots .dot{width:max(8px,.6vw);height:max(8px,.6vw);border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer;transition:all .3s}
-.nav-dots .dot--active{background:#fff;transform:scale(1.4)}
-.nav-dots .dot--light{background:rgba(0,0,0,.2)}
-.nav-dots .dot--light.dot--active{background:#111}
-
-@media(max-width:768px){
-  .repo{grid-template-columns:1fr;grid-template-rows:auto auto}
-  .repo__left{padding:6vh 6vw 2vh}
-  .repo__right{padding:2vh 6vw 10vh}
-  .repo__rank{font-size:30vw;left:2vw}
-  .repo__desc{max-width:100%}
-  .repo__headline{font-size:max(28px,7vw)}
-  .repo__stars{font-size:max(40px,10vw)}
-}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0d0d0d;color:#f4f1eb}body{font-family:'Source Serif 4',Georgia,serif}a{color:inherit;text-decoration-color:currentColor;text-underline-offset:.18em}.magazine{display:flex;width:1400vw;height:100vh;transition:transform .6s cubic-bezier(.76,0,.24,1)}.page{position:relative;width:100vw;height:100vh;flex:0 0 100vw;padding:7vh 7vw 10vh;overflow:hidden}.cover,.back{display:flex;flex-direction:column;justify-content:space-between;background:#0d0d0d;color:#f4f1eb}.cover-kicker,.cover-date,.cover-issue,.back-meta,.category,.repo-meta,.weekly-gain,.callout-title{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.14em}.cover-kicker{font-size:max(12px,1vw);opacity:.55}.cover-title{font-family:'Playfair Display',serif;font-size:max(48px,8.5vw);font-weight:900;line-height:.9;max-width:11ch}.cover-subtitle{font-size:max(20px,2.2vw);line-height:1.2;max-width:28ch;opacity:.82}.cover-date{font-size:max(13px,1.1vw);opacity:.5}.cover-issue{font-size:max(12px,.9vw);opacity:.45;margin-top:2vh}.repo-page{display:grid;grid-template-columns:55fr 45fr;gap:5vw;align-items:center}.repo-page.light{background:#f4f1eb;color:#111}.repo-page.dark{background:#111;color:#f4f1eb}.repo-left,.repo-right{position:relative;z-index:1}.rank{position:absolute;z-index:-1;top:-15vh;left:-4vw;font-family:'Playfair Display',serif;font-size:33vw;font-weight:900;line-height:1;opacity:.07}.category{font-size:max(12px,1vw);font-weight:600;opacity:.58;margin-bottom:3vh}.repo-headline{font-family:'Playfair Display',serif;font-size:max(34px,5.2vw);font-weight:900;line-height:1.02;margin:0 0 3vh;letter-spacing:0}.repo-path{font-family:'IBM Plex Mono',monospace;font-size:max(14px,1.12vw);margin:0 0 3vh;overflow-wrap:anywhere}.repo-description{font-size:max(18px,1.5vw);line-height:1.34;max-width:48ch;margin:0;opacity:.86}.star-count{font-family:'Playfair Display',serif;font-size:max(58px,7vw);font-weight:900;line-height:.9;margin-bottom:2vh}.repo-meta,.weekly-gain{font-size:max(12px,1vw);opacity:.62;margin-bottom:2vh}.weekly-gain{font-weight:600}.callout{margin-top:5vh;border-left:4px solid currentColor;padding:2.4vh 0 2.4vh 2vw;background:rgba(127,127,127,.08)}.callout-title{font-size:max(12px,.92vw);font-weight:600;margin:0 0 1.6vh;opacity:.7}.callout-text{font-size:max(17px,1.35vw);line-height:1.34;margin:0;opacity:.86;max-width:32ch}.back-title{font-family:'Playfair Display',serif;font-size:max(44px,7.2vw);font-weight:900;line-height:.95;max-width:10ch}.back-meta{font-size:max(12px,1vw);opacity:.55;line-height:1.7;max-width:70ch}.dots{position:fixed;left:50%;bottom:2.5vh;transform:translateX(-50%);display:flex;gap:.55vw;z-index:10}.dot{width:.55vw;height:.55vw;min-width:7px;min-height:7px;border-radius:50%;border:1px solid currentColor;background:transparent;color:#777;opacity:.45;cursor:pointer}.dot.active{background:currentColor;opacity:.9}@media(max-width:760px){.page{padding:5vh 7vw 10vh}.repo-page{grid-template-columns:1fr;gap:4vh;align-content:center}.repo-headline{font-size:max(31px,11vw)}.repo-description{font-size:18px}.star-count{font-size:max(48px,16vw)}.callout{margin-top:2vh;padding-left:4vw}.cover-title{font-size:max(48px,17vw)}.cover-subtitle{font-size:20px}.dots{gap:6px}.dot{width:7px;height:7px}}
 </style>
 </head>
 <body>
-
-<div class="magazine" id="magazine">
-
-<!-- PAGE 1: COVER (dark) -->
-<div class="page page--dark">
-<div class="cover">
-<div class="cover__kicker">Weekly Dispatch</div>
-<div class="cover__title">GitHub<br>Trending</div>
-<div class="cover__subtitle">Twelve repositories reshaping how we build, ship, and think about software this week</div>
-<div class="cover__date">May 30, 2026</div>
-<div class="cover__issue">Issue 06</div>
-</div>
-</div>
-
-<!-- PAGE 2: Repo #1 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">1</div>
-<div class="repo__content">
-<span class="repo__category">AI Ecosystem</span>
-<h2 class="repo__headline">Anthropic Opens the Plugin Bazaar</h2>
-<p class="repo__path"><a href="https://github.com/anthropics/claude-plugins-official" target="_blank" rel="noopener">anthropics/claude-plugins-official</a></p>
-<p class="repo__desc">The official, Anthropic-managed directory of high-quality Claude Code plugins. Curated extensions for LSP support across 12 languages, PR review tooling, git workflows, output formatting, and code quality checks. Third-party contributions from GitHub, GitLab, Linear, and Asana earn an Anthropic Verified badge after human review.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">20.1K</p>
-<span class="repo__lang">TypeScript</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Make this your first stop when extending Claude Code. Start with Anthropic-Verified plugins for critical workflows like deploy checks and PR reviews. The directory replaces scattered community marketplaces with a single trusted source you can audit before installing.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 3: Repo #2 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">2</div>
-<div class="repo__content">
-<span class="repo__category">Developer Tools</span>
-<h2 class="repo__headline">Your Codebase, Pre-Parsed for Every Agent</h2>
-<p class="repo__path"><a href="https://github.com/colbymchenry/codegraph" target="_blank" rel="noopener">colbymchenry/codegraph</a></p>
-<p class="repo__desc">A local-first, multi-agent code knowledge graph. Parses codebases with tree-sitter, stores symbols and call graphs in SQLite with FTS5, and exposes everything over MCP. Agents query the graph instantly instead of scanning files. Supports 19+ languages and 13 frameworks with auto-sync via native OS file watchers.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">31.5K</p>
-<span class="repo__lang">TypeScript</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Drop codegraph into your project to slash token consumption by 59% and get 49% faster responses from Claude Code. Instead of rescanning files every session, agents query a pre-built SQLite knowledge graph. Essential for large monorepos where context windows are the bottleneck.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 4: Repo #3 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">3</div>
-<div class="repo__content">
-<span class="repo__category">Hardware / IoT</span>
-<h2 class="repo__headline">See Through Walls with Your WiFi Router</h2>
-<p class="repo__path"><a href="https://github.com/ruvnet/RuView" target="_blank" rel="noopener">ruvnet/RuView</a></p>
-<p class="repo__desc">Turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection without a single pixel of video. Captures Channel State Information from low-cost ESP32 sensors and transforms disturbances into actionable occupancy and activity data.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">67.7K</p>
-<span class="repo__lang">Rust</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Think about this for office occupancy sensing and smart space automation without cameras. CSI-based spatial intelligence from commodity ESP32 sensors means you can prototype presence detection at hardware costs under $10. Note the ongoing technical debate around multi-node mesh accuracy.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 5: Repo #4 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">4</div>
-<div class="repo__content">
-<span class="repo__category">Cybersecurity</span>
-<h2 class="repo__headline">754 Security Moves Your Agent Can Learn</h2>
-<p class="repo__path"><a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" target="_blank" rel="noopener">mukul975/Anthropic-Cybersecurity-Skills</a></p>
-<p class="repo__desc">A structured library of 754 cybersecurity skills for AI agents, mapped to five industry frameworks: MITRE ATT&amp;CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, and NIST AI RMF. Covers 26 security domains and works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI, and 20+ other platforms.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">12.3K</p>
-<span class="repo__lang">YAML</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Install these skills to give your coding agent security awareness. When it writes code, it can flag OWASP risks, map findings to MITRE ATT&amp;CK, and suggest D3FEND mitigations. Treat it as a security co-pilot layer over your existing development workflow.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 6: Repo #5 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">5</div>
-<div class="repo__content">
-<span class="repo__category">Developer Tools</span>
-<h2 class="repo__headline">Map Your Entire Codebase to One Graph</h2>
-<p class="repo__path"><a href="https://github.com/safishamsi/graphify" target="_blank" rel="noopener">safishamsi/graphify</a></p>
-<p class="repo__desc">Turn any folder of code, SQL schemas, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. Uses Tree-sitter, NetworkX, and Leiden clustering to extract structure. Type /graphify in your AI coding assistant and it maps your entire project into a graph you can query instead of grepping.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">55.1K</p>
-<span class="repo__lang">Python</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Use /graphify in Claude Code to index not just code but docs, SQL schemas, and architecture diagrams into one queryable knowledge graph. At 71.5x fewer tokens per query versus raw context, this pays for itself on the first complex refactor across a multi-service project.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 7: Repo #6 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">6</div>
-<div class="repo__content">
-<span class="repo__category">AI Infrastructure</span>
-<h2 class="repo__headline">An Agent That Remembers Yesterday</h2>
-<p class="repo__path"><a href="https://github.com/rohitg00/agentmemory" target="_blank" rel="noopener">rohitg00/agentmemory</a></p>
-<p class="repo__desc">Persistent memory for Claude Code, Cursor, Gemini CLI, Codex CLI, and any MCP client. Silently captures what your agent does, compresses it into searchable memory, and injects the right context when the next session starts. Ships 53 tools, 6 resources, 3 prompts, and 8 skills with hybrid semantic search.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">19.6K</p>
-<span class="repo__lang">TypeScript</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Instead of re-explaining your project every session, agentmemory captures what your agent does and compresses it into searchable context. At 1,900 tokens versus 22,000 for a typical context dump, it is dramatically more efficient. Essential for multi-day projects with continuous agent sessions.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 8: Repo #7 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">7</div>
-<div class="repo__content">
-<span class="repo__category">Personal AI</span>
-<h2 class="repo__headline">The Agent That Reads You First</h2>
-<p class="repo__path"><a href="https://github.com/tinyhumansai/openhuman" target="_blank" rel="noopener">tinyhumansai/openhuman</a></p>
-<p class="repo__desc">A single Rust binary you drop on your machine and run as a personal AI runtime. Model orchestration, persistent memory, and a chat shell, all local, all under one process. Built on three principles: privacy, simplicity, and extreme power. Knows your context on day one before a single prompt is typed.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">27.0K</p>
-<span class="repo__lang">Rust</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">If you are building personal productivity tools or evaluating local-first AI assistants, study OpenHuman's architecture. A single Rust binary with model orchestration, memory, and a chat shell running entirely on-device. The privacy-first approach is a strong differentiator for enterprise and regulated environments.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 9: Repo #8 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">8</div>
-<div class="repo__content">
-<span class="repo__category">AI Security</span>
-<h2 class="repo__headline">Guardrails for Autonomous Agents</h2>
-<p class="repo__path"><a href="https://github.com/microsoft/agent-governance-toolkit" target="_blank" rel="noopener">microsoft/agent-governance-toolkit</a></p>
-<p class="repo__desc">Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. The first toolkit to address all 10 OWASP Agentic AI risks with deterministic, sub-millisecond policy enforcement. Maps compliance to EU AI Act, HIPAA, and SOC2.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">9.4K</p>
-<span class="repo__lang">Python</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Before deploying any autonomous agent to production, run it through this toolkit. It covers all 10 OWASP Agentic AI risks with sub-millisecond policy enforcement. The regulatory framework mapping to EU AI Act, HIPAA, and SOC2 makes this the compliance baseline for enterprise agent deployments.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 10: Repo #9 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">9</div>
-<div class="repo__content">
-<span class="repo__category">Video Generation</span>
-<h2 class="repo__headline">From Topic to Published Video, Zero Editing</h2>
-<p class="repo__path"><a href="https://github.com/AIDC-AI/Pixelle-Video" target="_blank" rel="noopener">AIDC-AI/Pixelle-Video</a></p>
-<p class="repo__desc">Alibaba's fully automated short video engine. Enter a topic and it writes the script, generates AI images, creates voice narration, adds subtitles and background music, and renders the final video. Modular pipeline from script to composition. Digital Human and Image-to-Video modes supported.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">13.6K</p>
-<span class="repo__lang">Python</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Feed your content topics into this pipeline to generate explainer videos automatically. Script, voiceover, footage selection, subtitles, and music in one pass. Use it for documentation walkthroughs, social media content, or client demos at near-zero marginal cost with local model inference.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 11: Repo #10 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">10</div>
-<div class="repo__content">
-<span class="repo__category">Speech / TTS</span>
-<h2 class="repo__headline">Studio-Grade Voice from a Single CPU</h2>
-<p class="repo__path"><a href="https://github.com/supertone-inc/supertonic" target="_blank" rel="noopener">supertone-inc/supertonic</a></p>
-<p class="repo__desc">Lightning-fast on-device multilingual text-to-speech via ONNX Runtime. A 99M-parameter model that fits on edge hardware while producing 44.1kHz 16-bit WAV output across 31 languages. No cloud calls, no API keys, no GPU required. Supertonic 3 shipped April 2026 with expanded language coverage.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">10.9K</p>
-<span class="repo__lang">Rust</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">If you are building voice interfaces or accessibility features, supertonic gives you 31-language TTS that runs entirely on-device with no API keys. The 99M parameter model fits on edge hardware. Drop it into any workflow that needs speech synthesis without cloud dependencies or per-request costs.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 12: Repo #11 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">11</div>
-<div class="repo__content">
-<span class="repo__category">Web Scraping</span>
-<h2 class="repo__headline">Scraping That Survives Site Redesigns</h2>
-<p class="repo__path"><a href="https://github.com/D4Vinci/Scrapling" target="_blank" rel="noopener">D4Vinci/Scrapling</a></p>
-<p class="repo__desc">An adaptive web scraping framework that handles everything from a single request to a full-scale crawl. Fingerprints elements on first scrape and uses similarity matching to relocate them after site changes. Bundles an adaptive parser, multiple fetcher backends, a full spider framework, CLI tools, and an MCP server.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">10.6K</p>
-<span class="repo__lang">Python</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Unlike traditional scrapers that break when a site changes its HTML, Scrapling fingerprints elements and uses similarity matching to relocate them after redesigns. Use it for monitoring competitor pricing, tracking data sources, or building datasets that need to survive layout changes without constant maintenance.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 13: Repo #12 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">12</div>
-<div class="repo__content">
-<span class="repo__category">Developer Tools</span>
-<h2 class="repo__headline">One Desktop, Every AI Coding Agent</h2>
-<p class="repo__path"><a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noopener">farion1231/cc-switch</a></p>
-<p class="repo__desc">A cross-platform desktop all-in-one assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI, and Hermes Agent. Unified management for multiple AI coding assistants, allowing developers to switch between tools without losing context. The de facto multi-agent desktop shell at 70K+ stars.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">70.4K</p>
-<span class="repo__lang">Rust</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">If you are jumping between Claude Code, Codex, Gemini CLI, and OpenCode throughout the day, cc-switch unifies them into one interface. Stop context-switching between terminals. With unified session management and cross-agent context sharing, this eliminates the fragmentation headache of juggling multiple AI tools.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 14: BACK COVER (dark) -->
-<div class="page page--dark">
-<div class="cover">
-<div class="cover__kicker">End of Issue</div>
-<div class="cover__title">Build<br>Different</div>
-<div class="cover__subtitle">The best tools are the ones you actually ship with. Pick one repo this week and integrate it before next Friday.</div>
-<div class="cover__date">See you next week</div>
-<div class="cover__issue">GitHub Trending Weekly / Issue 06</div>
-</div>
-</div>
-
-</div>
-
-<!-- Navigation Dots -->
-<div class="nav-dots" id="navDots"></div>
-
+<main class="magazine" id="magazine">
+<section class="page cover">
+  <div>
+    <div class="cover-kicker">GitHub Trending Weekly</div>
+    <h1 class="cover-title">GitHub Repo Briefing</h1>
+  </div>
+  <div>
+    <div class="cover-subtitle">Twelve weekly trending repositories, summarized by what they do and how to test them</div>
+    <div class="cover-date">May 30, 2026</div>
+    <div class="cover-issue">Issue 06</div>
+  </div>
+</section>
+<section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">01</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">MoneyPrinterTurbo: Generate or edit video with agents</h2>
+    <p class="repo-path"><a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank" rel="noopener">harry0703/MoneyPrinterTurbo</a></p>
+    <p class="repo-description">利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">71,432</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">11,147 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Try harry0703/MoneyPrinterTurbo on a short existing video and ask for a scene summary plus transcript. Keep it only if timestamps and evidence are easy to inspect.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">02</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Understand Anything: Use Codex from Claude Code</h2>
+    <p class="repo-path"><a href="https://github.com/Lum1104/Understand-Anything" target="_blank" rel="noopener">Lum1104/Understand-Anything</a></p>
+    <p class="repo-description">Graphs that teach &gt; graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">45,506</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">26,685 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Install Lum1104/Understand-Anything in a throwaway Claude Code workspace and delegate one review task to Codex. Judge it by saved review time, not novelty.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">03</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">AI Engineering From Scratch: Learn it. Build it. Ship it for</h2>
+    <p class="repo-path"><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener">rohitg00/ai-engineering-from-scratch</a></p>
+    <p class="repo-description">Learn it. Build it. Ship it for others.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">24,979</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">13,139 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open rohitg00/ai-engineering-from-scratch, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">04</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Knowledge Work Plugins: Open source repository of plugins primarily intended</h2>
+    <p class="repo-path"><a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" rel="noopener">anthropics/knowledge-work-plugins</a></p>
+    <p class="repo-description">Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">18,172</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">5,586 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open anthropics/knowledge-work-plugins, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">05</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Codegraph: Use Codex from Claude Code</h2>
+    <p class="repo-path"><a href="https://github.com/colbymchenry/codegraph" target="_blank" rel="noopener">colbymchenry/codegraph</a></p>
+    <p class="repo-description">Pre-indexed code knowledge graph for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, and Hermes Agent — fewer tokens, fewer tool calls, 100% local</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">34,030</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">17,309 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Install colbymchenry/codegraph in a throwaway Claude Code workspace and delegate one review task to Codex. Judge it by saved review time, not novelty.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">06</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Stop Slop: A skill file for removing AI tells</h2>
+    <p class="repo-path"><a href="https://github.com/hardikpandya/stop-slop" target="_blank" rel="noopener">hardikpandya/stop-slop</a></p>
+    <p class="repo-description">A skill file for removing AI tells from prose</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">7,284</div>
+    <div class="repo-meta">Stars total / None</div>
+    <div class="weekly-gain">3,018 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open hardikpandya/stop-slop, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">07</div>
+    <div class="category">Security</div>
+    <h2 class="repo-headline">Anthropic Cybersecurity Skills: Use Codex from Claude Code</h2>
+    <p class="repo-path"><a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" target="_blank" rel="noopener">mukul975/Anthropic-Cybersecurity-Skills</a></p>
+    <p class="repo-description">754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&amp;CK, NIST CSF 2.0, MITRE ATLAS, D3FEND &amp; NIST AI RMF · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">12,380</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">5,241 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Install mukul975/Anthropic-Cybersecurity-Skills in a throwaway Claude Code workspace and delegate one review task to Codex. Judge it by saved review time, not novelty.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">08</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Taste Skill: Taste-Skill gives your AI good taste. stops</h2>
+    <p class="repo-path"><a href="https://github.com/Leonxlnx/taste-skill" target="_blank" rel="noopener">Leonxlnx/taste-skill</a></p>
+    <p class="repo-description">Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">28,869</div>
+    <div class="repo-meta">Stars total / Shell</div>
+    <div class="weekly-gain">8,999 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open Leonxlnx/taste-skill, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">09</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">Markitdown: Python tool for converting files and office</h2>
+    <p class="repo-path"><a href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener">microsoft/markitdown</a></p>
+    <p class="repo-description">Python tool for converting files and office documents to Markdown.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">131,380</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">4,810 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open microsoft/markitdown, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">10</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Claude Plugins Official: Use Codex from Claude Code</h2>
+    <p class="repo-path"><a href="https://github.com/anthropics/claude-plugins-official" target="_blank" rel="noopener">anthropics/claude-plugins-official</a></p>
+    <p class="repo-description">Official, Anthropic-managed directory of high quality Claude Code Plugins.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">28,701</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">4,858 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open anthropics/claude-plugins-official, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">11</div>
+    <div class="category">Security</div>
+    <h2 class="repo-headline">ECC: Use Codex from Claude Code</h2>
+    <p class="repo-path"><a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">affaan-m/ECC</a></p>
+    <p class="repo-description">The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">199,038</div>
+    <div class="repo-meta">Stars total / JavaScript</div>
+    <div class="weekly-gain">10,239 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Install affaan-m/ECC in a throwaway Claude Code workspace and delegate one review task to Codex. Judge it by saved review time, not novelty.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">12</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">Plugins: Cursor plugin specification and official plugins</h2>
+    <p class="repo-path"><a href="https://github.com/cursor/plugins" target="_blank" rel="noopener">cursor/plugins</a></p>
+    <p class="repo-description">Cursor plugin specification and official plugins</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">1,389</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">632 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open cursor/plugins, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section>
+<section class="page back">
+  <div class="cover-kicker">End of Issue</div>
+  <div class="back-title">Check the links. Test one repo.</div>
+  <div class="back-meta">GitHub Trending Weekly / Issue 06<br>Generated by Codex from SnailDev github-hot-hub weekly archive: https://raw.githubusercontent.com/SnailDev/github-hot-hub/main/archives/2026-05-30.md</div>
+</section>
+</main>
+<div class="dots" id="dots"></div>
 <script>
-(function(){
-const magazine=document.getElementById('magazine');
-const totalPages=14;
-let current=0;
-let startX=0;
-let isDragging=false;
-
-function goTo(n){
-  current=Math.max(0,Math.min(totalPages-1,n));
-  magazine.style.transform='translateX(-'+current*100+'vw)';
-  updateDots();
+const magazine = document.getElementById('magazine');
+const total = magazine.children.length;
+const dots = document.getElementById('dots');
+let current = 0;
+let lastWheel = 0;
+for (let i = 0; i < total; i++) {
+  const dot = document.createElement('button');
+  dot.className = 'dot';
+  dot.type = 'button';
+  dot.setAttribute('aria-label', `Go to page ${i + 1}`);
+  dot.addEventListener('click', () => go(i));
+  dots.appendChild(dot);
 }
-
-function updateDots(){
-  const dots=document.querySelectorAll('.dot');
-  const pages=document.querySelectorAll('.page');
-  dots.forEach((d,i)=>{
-    d.classList.remove('dot--active','dot--light');
-    if(i===current)d.classList.add('dot--active');
-    if(pages[current]&&pages[current].classList.contains('page--light')){
-      d.classList.add('dot--light');
-    }
-  });
+function go(index) {
+  current = Math.max(0, Math.min(total - 1, index));
+  magazine.style.transform = `translateX(-${current * 100}vw)`;
+  [...dots.children].forEach((dot, i) => dot.classList.toggle('active', i === current));
 }
-
-// Build dots
-const dotsContainer=document.getElementById('navDots');
-for(let i=0;i<totalPages;i++){
-  const dot=document.createElement('div');
-  dot.className='dot';
-  dot.addEventListener('click',()=>goTo(i));
-  dotsContainer.appendChild(dot);
-}
-updateDots();
-
-// Keyboard
-document.addEventListener('keydown',e=>{
-  if(e.key==='ArrowRight'||e.key==='ArrowDown')goTo(current+1);
-  if(e.key==='ArrowLeft'||e.key==='ArrowUp')goTo(current-1);
+document.addEventListener('keydown', event => {
+  if (event.key === 'ArrowRight') go(current + 1);
+  if (event.key === 'ArrowLeft') go(current - 1);
 });
-
-// Wheel
-let wheelTimeout;
-document.addEventListener('wheel',e=>{
-  e.preventDefault();
-  if(wheelTimeout)return;
-  wheelTimeout=setTimeout(()=>{wheelTimeout=null},600);
-  if(e.deltaX>30||e.deltaY>30)goTo(current+1);
-  if(e.deltaX<-30||e.deltaY<-30)goTo(current-1);
-},{passive:false});
-
-// Touch/Swipe
-document.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;isDragging=true});
-document.addEventListener('touchend',e=>{
-  if(!isDragging)return;
-  isDragging=false;
-  const diff=startX-e.changedTouches[0].clientX;
-  if(Math.abs(diff)>50){
-    diff>0?goTo(current+1):goTo(current-1);
-  }
-});
-
-// Click edges
-document.addEventListener('click',e=>{
-  if(e.target.closest('a'))return;
-  const x=e.clientX/window.innerWidth;
-  if(x>0.85)goTo(current+1);
-  if(x<0.15)goTo(current-1);
-});
-})();
+document.addEventListener('wheel', event => {
+  const now = Date.now();
+  if (now - lastWheel < 700) return;
+  if (Math.abs(event.deltaY) < 10 && Math.abs(event.deltaX) < 10) return;
+  lastWheel = now;
+  go(current + (event.deltaY > 0 || event.deltaX > 0 ? 1 : -1));
+}, { passive: true });
+let touchStart = null;
+document.addEventListener('touchstart', event => {
+  touchStart = event.changedTouches[0].clientX;
+}, { passive: true });
+document.addEventListener('touchend', event => {
+  if (touchStart === null) return;
+  const delta = touchStart - event.changedTouches[0].clientX;
+  if (Math.abs(delta) > 50) go(current + (delta > 0 ? 1 : -1));
+  touchStart = null;
+}, { passive: true });
+go(0);
 </script>
 </body>
 </html>

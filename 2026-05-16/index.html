@@ -2,461 +2,281 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GitHub Trending Weekly - May 16, 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{overflow:hidden;width:100vw;height:100vh;background:#111}
-.magazine{display:flex;width:1400vw;height:100vh;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
-.page{width:100vw;height:100vh;flex-shrink:0;position:relative;overflow:hidden;display:flex;align-items:stretch}
-.page--dark{background:#111;color:#f0f0f0}
-.page--light{background:#f5f3ef;color:#111}
-
-.cover{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:8vh 8vw;text-align:center;width:100%}
-.cover__kicker{font-family:'IBM Plex Mono',monospace;font-size:max(13px,1.1vw);letter-spacing:.35em;text-transform:uppercase;opacity:.6;margin-bottom:3vh}
-.cover__title{font-family:'Playfair Display',serif;font-size:max(48px,7.5vw);font-weight:900;line-height:1.05;margin-bottom:3vh}
-.cover__subtitle{font-family:'Source Serif 4',serif;font-size:max(18px,1.8vw);font-weight:300;opacity:.75;max-width:60vw;line-height:1.5}
-.cover__date{font-family:'IBM Plex Mono',monospace;font-size:max(12px,1vw);letter-spacing:.2em;opacity:.5;margin-top:5vh}
-.cover__issue{font-family:'IBM Plex Mono',monospace;font-size:max(11px,.9vw);letter-spacing:.3em;text-transform:uppercase;opacity:.4;margin-top:2vh}
-
-.repo{display:grid;grid-template-columns:55fr 45fr;width:100%;height:100%}
-.repo__left{padding:8vh 5vw 10vh 6vw;display:flex;flex-direction:column;justify-content:center;position:relative}
-.repo__right{padding:8vh 6vw 10vh 4vw;display:flex;flex-direction:column;justify-content:center;position:relative}
-
-.repo__rank{font-family:'Playfair Display',serif;font-size:max(180px,22vw);font-weight:900;position:absolute;top:50%;left:5vw;transform:translateY(-50%);line-height:1;pointer-events:none;z-index:0}
-.page--dark .repo__rank{color:rgba(255,255,255,.04)}
-.page--light .repo__rank{color:rgba(0,0,0,.04)}
-
-.repo__content{position:relative;z-index:1}
-.repo__category{font-family:'IBM Plex Mono',monospace;font-size:max(11px,1vw);letter-spacing:.25em;text-transform:uppercase;margin-bottom:2.5vh;display:inline-block;padding:.4em .8em;border:1px solid currentColor;opacity:.7}
-.repo__headline{font-family:'Playfair Display',serif;font-size:max(32px,5vw);font-weight:900;line-height:1.1;margin-bottom:3vh}
-.repo__path{font-family:'IBM Plex Mono',monospace;font-size:max(14px,1.2vw);margin-bottom:2vh;opacity:.85}
-.repo__path a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
-.page--dark .repo__path a{text-decoration-color:rgba(255,255,255,.4)}
-.page--light .repo__path a{text-decoration-color:rgba(0,0,0,.3)}
-.repo__path a:hover{opacity:1;text-decoration-thickness:2px}
-.repo__desc{font-family:'Source Serif 4',serif;font-size:max(17px,1.5vw);line-height:1.6;opacity:.85;max-width:40vw}
-
-.repo__stars{font-family:'Playfair Display',serif;font-size:max(52px,6.5vw);font-weight:900;margin-bottom:3vh;line-height:1}
-.repo__stars-label{font-family:'IBM Plex Mono',monospace;font-size:max(11px,.9vw);letter-spacing:.2em;text-transform:uppercase;opacity:.5;margin-bottom:1vh}
-.repo__lang{font-family:'IBM Plex Mono',monospace;font-size:max(13px,1.1vw);display:inline-block;padding:.4em 1em;margin-bottom:4vh;letter-spacing:.1em}
-.page--dark .repo__lang{background:rgba(255,255,255,.08);color:#f0f0f0}
-.page--light .repo__lang{background:rgba(0,0,0,.06);color:#111}
-
-.repo__callout{border-left:4px solid;padding:2.5vh 2vw;margin-top:2vh}
-.page--dark .repo__callout{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.05)}
-.page--light .repo__callout{border-color:rgba(0,0,0,.2);background:rgba(0,0,0,.03)}
-.repo__callout-title{font-family:'IBM Plex Mono',monospace;font-size:max(11px,.9vw);letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-bottom:1.5vh}
-.repo__callout-text{font-family:'Source Serif 4',serif;font-size:max(15px,1.3vw);line-height:1.6;opacity:.8}
-
-.nav-dots{position:fixed;bottom:3vh;left:50%;transform:translateX(-50%);display:flex;gap:1vw;z-index:999}
-.nav-dots .dot{width:max(8px,.6vw);height:max(8px,.6vw);border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer;transition:all .3s}
-.nav-dots .dot--active{background:#fff;transform:scale(1.4)}
-.nav-dots .dot--light{background:rgba(0,0,0,.2)}
-.nav-dots .dot--light.dot--active{background:#111}
-
-@media(max-width:768px){
-  .repo{grid-template-columns:1fr;grid-template-rows:auto auto}
-  .repo__left{padding:6vh 6vw 2vh}
-  .repo__right{padding:2vh 6vw 10vh}
-  .repo__rank{font-size:30vw;left:2vw}
-  .repo__desc{max-width:100%}
-  .repo__headline{font-size:max(28px,7vw)}
-  .repo__stars{font-size:max(40px,10vw)}
-}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0d0d0d;color:#f4f1eb}body{font-family:'Source Serif 4',Georgia,serif}a{color:inherit;text-decoration-color:currentColor;text-underline-offset:.18em}.magazine{display:flex;width:1400vw;height:100vh;transition:transform .6s cubic-bezier(.76,0,.24,1)}.page{position:relative;width:100vw;height:100vh;flex:0 0 100vw;padding:7vh 7vw 10vh;overflow:hidden}.cover,.back{display:flex;flex-direction:column;justify-content:space-between;background:#0d0d0d;color:#f4f1eb}.cover-kicker,.cover-date,.cover-issue,.back-meta,.category,.repo-meta,.weekly-gain,.callout-title{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.14em}.cover-kicker{font-size:max(12px,1vw);opacity:.55}.cover-title{font-family:'Playfair Display',serif;font-size:max(48px,8.5vw);font-weight:900;line-height:.9;max-width:11ch}.cover-subtitle{font-size:max(20px,2.2vw);line-height:1.2;max-width:28ch;opacity:.82}.cover-date{font-size:max(13px,1.1vw);opacity:.5}.cover-issue{font-size:max(12px,.9vw);opacity:.45;margin-top:2vh}.repo-page{display:grid;grid-template-columns:55fr 45fr;gap:5vw;align-items:center}.repo-page.light{background:#f4f1eb;color:#111}.repo-page.dark{background:#111;color:#f4f1eb}.repo-left,.repo-right{position:relative;z-index:1}.rank{position:absolute;z-index:-1;top:-15vh;left:-4vw;font-family:'Playfair Display',serif;font-size:33vw;font-weight:900;line-height:1;opacity:.07}.category{font-size:max(12px,1vw);font-weight:600;opacity:.58;margin-bottom:3vh}.repo-headline{font-family:'Playfair Display',serif;font-size:max(34px,5.2vw);font-weight:900;line-height:1.02;margin:0 0 3vh;letter-spacing:0}.repo-path{font-family:'IBM Plex Mono',monospace;font-size:max(14px,1.12vw);margin:0 0 3vh;overflow-wrap:anywhere}.repo-description{font-size:max(18px,1.5vw);line-height:1.34;max-width:48ch;margin:0;opacity:.86}.star-count{font-family:'Playfair Display',serif;font-size:max(58px,7vw);font-weight:900;line-height:.9;margin-bottom:2vh}.repo-meta,.weekly-gain{font-size:max(12px,1vw);opacity:.62;margin-bottom:2vh}.weekly-gain{font-weight:600}.callout{margin-top:5vh;border-left:4px solid currentColor;padding:2.4vh 0 2.4vh 2vw;background:rgba(127,127,127,.08)}.callout-title{font-size:max(12px,.92vw);font-weight:600;margin:0 0 1.6vh;opacity:.7}.callout-text{font-size:max(17px,1.35vw);line-height:1.34;margin:0;opacity:.86;max-width:32ch}.back-title{font-family:'Playfair Display',serif;font-size:max(44px,7.2vw);font-weight:900;line-height:.95;max-width:10ch}.back-meta{font-size:max(12px,1vw);opacity:.55;line-height:1.7;max-width:70ch}.dots{position:fixed;left:50%;bottom:2.5vh;transform:translateX(-50%);display:flex;gap:.55vw;z-index:10}.dot{width:.55vw;height:.55vw;min-width:7px;min-height:7px;border-radius:50%;border:1px solid currentColor;background:transparent;color:#777;opacity:.45;cursor:pointer}.dot.active{background:currentColor;opacity:.9}@media(max-width:760px){.page{padding:5vh 7vw 10vh}.repo-page{grid-template-columns:1fr;gap:4vh;align-content:center}.repo-headline{font-size:max(31px,11vw)}.repo-description{font-size:18px}.star-count{font-size:max(48px,16vw)}.callout{margin-top:2vh;padding-left:4vw}.cover-title{font-size:max(48px,17vw)}.cover-subtitle{font-size:20px}.dots{gap:6px}.dot{width:7px;height:7px}}
 </style>
 </head>
 <body>
-
-<div class="magazine" id="magazine">
-
-<!-- PAGE 1: COVER (dark) -->
-<div class="page page--dark">
-<div class="cover">
-<div class="cover__kicker">Weekly Dispatch</div>
-<div class="cover__title">GitHub<br>Trending</div>
-<div class="cover__subtitle">Twelve repositories reshaping how we build, ship, and think about software this week</div>
-<div class="cover__date">May 16, 2026</div>
-<div class="cover__issue">Issue 04</div>
-</div>
-</div>
-
-<!-- PAGE 2: Repo #1 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">1</div>
-<div class="repo__content">
-<span class="repo__category">Coding Agent</span>
-<h2 class="repo__headline">The Terminal Contender at a Tenth the Cost</h2>
-<p class="repo__path"><a href="https://github.com/Hmbown/DeepSeek-TUI" target="_blank" rel="noopener">Hmbown/DeepSeek-TUI</a></p>
-<p class="repo__desc">A Rust-native terminal coding agent built for DeepSeek V4 with 1M-token context windows, auto model routing, Plan/Agent/YOLO modes, MCP servers, and LSP inline diagnostics.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">24.5K</p>
-<span class="repo__lang">Rust</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Route routine refactors and boilerplate generation through DeepSeek V4 Flash at $0.14/M tokens instead of Opus. Reserve Claude for architectural decisions; let this handle the mechanical work and save 90% on token costs for daily coding tasks.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 3: Repo #2 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">2</div>
-<div class="repo__content">
-<span class="repo__category">Developer Tools</span>
-<h2 class="repo__headline">A .claude Folder That Launched a Movement</h2>
-<p class="repo__path"><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a></p>
-<p class="repo__desc">Matt Pocock published his personal Claude Code skills directory as a public repo. Each skill is a single SKILL.md with YAML frontmatter and focused scripts for TDD workflows, GitHub triage, and vertical-slice architecture.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">75.7K</p>
-<span class="repo__lang">Markdown</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Study the SKILL.md patterns to sharpen your own skills library. The TDD and GitHub triage workflows plug directly into your automation stack. Fork individual skills rather than importing the whole repo to keep your .claude directory lean.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 4: Repo #3 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">3</div>
-<div class="repo__content">
-<span class="repo__category">Browser Automation</span>
-<h2 class="repo__headline">Teaching AI to Navigate the Web</h2>
-<p class="repo__path"><a href="https://github.com/browser-use/browser-use" target="_blank" rel="noopener">browser-use/browser-use</a></p>
-<p class="repo__desc">The leading open-source browser automation platform for AI agents. Connect any LLM, run locally or self-hosted, and automate complex multi-step web workflows with natural language instructions.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">79.2K</p>
-<span class="repo__lang">Python</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Integrate into your scheduled automation workflows for web monitoring, data extraction, or form submission tasks that currently require manual browser interaction. Pairs naturally with your cron-based magazine generator for fetching live trending data.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 5: Repo #4 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">4</div>
-<div class="repo__content">
-<span class="repo__category">AI Finance</span>
-<h2 class="repo__headline">Wall Street in a Python Package</h2>
-<p class="repo__path"><a href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener">TauricResearch/TradingAgents</a></p>
-<p class="repo__desc">A multi-agent LLM financial trading framework that mirrors real trading firms. Deploys specialized agents as fundamental analysts, sentiment experts, technical analysts, traders, and risk managers that collaboratively evaluate market conditions.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">53.1K</p>
-<span class="repo__lang">Python</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">The multi-agent debate architecture is the transferable pattern here. Apply it to any domain needing specialist perspectives: content review pipelines, code audit workflows, or strategic planning. The LangGraph checkpoint resume is useful for long-running scheduled tasks.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 6: Repo #5 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">5</div>
-<div class="repo__content">
-<span class="repo__category">Agent Orchestration</span>
-<h2 class="repo__headline">Swarms That Learn From Every Run</h2>
-<p class="repo__path"><a href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener">ruvnet/ruflo</a></p>
-<p class="repo__desc">The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows with shared memory, self-learning swarm intelligence, RAG integration, and native Claude Code integration.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">51.4K</p>
-<span class="repo__lang">TypeScript</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">If you're chaining multiple Claude agents for different automation tasks, ruflo's shared memory and swarm coordination replaces ad-hoc orchestration. The MCP tool-calling web UI means your agents share context across runs instead of starting cold each time.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 7: Repo #6 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">6</div>
-<div class="repo__content">
-<span class="repo__category">AI Toolkit</span>
-<h2 class="repo__headline">One Monorepo to Rule Them All</h2>
-<p class="repo__path"><a href="https://github.com/badlogic/pi-mono" target="_blank" rel="noopener">badlogic/pi-mono</a></p>
-<p class="repo__desc">A complete AI agent toolkit from libGDX creator Mario Zechner. Coding agent CLI, unified LLM API across six providers, TUI and web UI libraries, Slack bot, and vLLM pod management in a single TypeScript monorepo.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">44.3K</p>
-<span class="repo__lang">TypeScript</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">The unified LLM API means you can swap providers without touching application code. The Slack bot component could automate your team notifications, and the vLLM pod management is useful if you ever need to self-host models for cost-sensitive batch processing.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 8: Repo #7 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">7</div>
-<div class="repo__content">
-<span class="repo__category">Multimodal AI</span>
-<h2 class="repo__headline">ByteDance's Bet on Visual Agents</h2>
-<p class="repo__path"><a href="https://github.com/bytedance/UI-TARS-desktop" target="_blank" rel="noopener">bytedance/UI-TARS-desktop</a></p>
-<p class="repo__desc">The open-source multimodal AI agent stack connecting cutting-edge AI models and agent infrastructure. A general-purpose agent that brings GUI interaction and vision capabilities into your terminal, browser, and desktop.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">33.3K</p>
-<span class="repo__lang">TypeScript</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Use this when you need agents that interact with GUIs for testing web apps, automating desktop workflows you cannot API-ify, or building visual QA pipelines. Built on MCP, so it slots into your existing Claude Code tool ecosystem.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 9: Repo #8 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">8</div>
-<div class="repo__content">
-<span class="repo__category">Coding Agent</span>
-<h2 class="repo__headline">The Model-Agnostic Terminal IDE</h2>
-<p class="repo__path"><a href="https://github.com/sst/opencode" target="_blank" rel="noopener">sst/opencode</a></p>
-<p class="repo__desc">An open-source coding agent built for the terminal by the SST team. Model-agnostic with 75+ providers, client/server architecture enabling remote control from mobile, and a beautiful TUI built by neovim enthusiasts.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">14.1K</p>
-<span class="repo__lang">Go</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Worth evaluating as a local coding companion alongside Claude Code. The client/server split means you could drive it remotely from your phone while builds run on your workstation. The plan/build agent toggle mirrors how you already separate research from implementation.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 10: Repo #9 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">9</div>
-<div class="repo__content">
-<span class="repo__category">Networking</span>
-<h2 class="repo__headline">QUIC-Powered Privacy at Wire Speed</h2>
-<p class="repo__path"><a href="https://github.com/apernet/hysteria" target="_blank" rel="noopener">apernet/hysteria</a></p>
-<p class="repo__desc">A powerful, lightning-fast, censorship-resistant proxy powered by a customized QUIC protocol. Masquerades as standard HTTP/3 traffic, designed for unparalleled performance over unreliable and lossy networks.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">20.8K</p>
-<span class="repo__lang">Go</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Deploy on a VPS to ensure reliable, fast tunnels between your automation services across regions with unreliable networks. The QUIC-based protocol handles packet loss gracefully, making it ideal for scheduled tasks that must not fail due to network instability.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 11: Repo #10 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">10</div>
-<div class="repo__content">
-<span class="repo__category">MCP Server</span>
-<h2 class="repo__headline">Semantic Search for Your Entire Codebase</h2>
-<p class="repo__path"><a href="https://github.com/zilliztech/claude-context" target="_blank" rel="noopener">zilliztech/claude-context</a></p>
-<p class="repo__desc">A code search MCP server for Claude Code from the Milvus team. Stores your codebase in a vector database and retrieves only relevant code as context, cutting token consumption by 40% through intelligent retrieval.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">10.6K</p>
-<span class="repo__lang">TypeScript</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Install as an MCP server in your Claude Code setup today. Eliminates the "find where we handle X" latency for large codebases. The 40% token reduction compounds fast when you run multiple scheduled agent tasks daily against the same repositories.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 12: Repo #11 (light) -->
-<div class="page page--light">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">11</div>
-<div class="repo__content">
-<span class="repo__category">ML Automation</span>
-<h2 class="repo__headline">An Engineer That Reads Papers and Ships Models</h2>
-<p class="repo__path"><a href="https://github.com/huggingface/ml-intern" target="_blank" rel="noopener">huggingface/ml-intern</a></p>
-<p class="repo__desc">An open-source autonomous ML engineer from Hugging Face. Reads research papers, trains models, and ships ML code using the entire HF ecosystem with deep access to docs, datasets, and cloud compute via smolagents.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">9.3K</p>
-<span class="repo__lang">Python</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Next time you need to fine-tune a small model or run ML experiments, let this handle the paper research, dataset selection, training setup, and deployment loop. Particularly useful for building custom classifiers or embeddings for your automation workflows.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 13: Repo #12 (dark) -->
-<div class="page page--dark">
-<div class="repo">
-<div class="repo__left">
-<div class="repo__rank">12</div>
-<div class="repo__content">
-<span class="repo__category">Video Generation</span>
-<h2 class="repo__headline">From Topic to Published Video in Minutes</h2>
-<p class="repo__path"><a href="https://github.com/AIDC-AI/Pixelle-Video" target="_blank" rel="noopener">AIDC-AI/Pixelle-Video</a></p>
-<p class="repo__desc">A fully automated short-video engine. Enter a topic, and it writes the script, generates AI images or video, creates voice narration with Edge-TTS or Index-TTS, adds background music, and renders the final video. Runs locally at zero cost with Ollama.</p>
-</div>
-</div>
-<div class="repo__right">
-<p class="repo__stars-label">GitHub Stars</p>
-<p class="repo__stars">6.3K</p>
-<span class="repo__lang">Python</span>
-<div class="repo__callout">
-<p class="repo__callout-title">How to use this</p>
-<p class="repo__callout-text">Feed your content topics into this pipeline to generate short explainer videos automatically. At $0.01-0.05 per 3-scene video with Qianwen, you could add video output to your weekly magazine workflow or create documentation walkthroughs at negligible cost.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PAGE 14: BACK COVER (dark) -->
-<div class="page page--dark">
-<div class="cover">
-<div class="cover__kicker">End of Issue</div>
-<div class="cover__title">Build<br>Different</div>
-<div class="cover__subtitle">The best tools are the ones you actually ship with. Pick one repo this week and integrate it before next Friday.</div>
-<div class="cover__date">See you next week</div>
-<div class="cover__issue">GitHub Trending Weekly / Issue 04</div>
-</div>
-</div>
-
-</div>
-
-<!-- Navigation Dots -->
-<div class="nav-dots" id="navDots"></div>
-
+<main class="magazine" id="magazine">
+<section class="page cover">
+  <div>
+    <div class="cover-kicker">GitHub Trending Weekly</div>
+    <h1 class="cover-title">GitHub Repo Briefing</h1>
+  </div>
+  <div>
+    <div class="cover-subtitle">Twelve weekly trending repositories, summarized by what they do and how to test them</div>
+    <div class="cover-date">May 16, 2026</div>
+    <div class="cover-issue">Issue 04</div>
+  </div>
+</section>
+<section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">01</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">CloakBrowser: Build browser or desktop automations</h2>
+    <p class="repo-path"><a href="https://github.com/CloakHQ/CloakBrowser" target="_blank" rel="noopener">CloakHQ/CloakBrowser</a></p>
+    <p class="repo-description">Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">12,356</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">9,120 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open CloakHQ/CloakBrowser, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">02</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">AiToEarn: Let s use AI to Earn</h2>
+    <p class="repo-path"><a href="https://github.com/yikart/AiToEarn" target="_blank" rel="noopener">yikart/AiToEarn</a></p>
+    <p class="repo-description">Let&#x27;s use AI to Earn!</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">14,223</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">4,762 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open yikart/AiToEarn, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">03</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Agentmemory: Run parallel coding agents</h2>
+    <p class="repo-path"><a href="https://github.com/rohitg00/agentmemory" target="_blank" rel="noopener">rohitg00/agentmemory</a></p>
+    <p class="repo-description">#1 Persistent memory for AI coding agents based on real-world benchmarks</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">10,055</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">6,865 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open rohitg00/agentmemory, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">04</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">Financial Services: Trending repository to inspect</h2>
+    <p class="repo-path"><a href="https://github.com/anthropics/financial-services" target="_blank" rel="noopener">anthropics/financial-services</a></p>
+    <p class="repo-description">无</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">23,683</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">9,480 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open anthropics/financial-services, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">05</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">UI TARS Desktop: Build browser or desktop automations</h2>
+    <p class="repo-path"><a href="https://github.com/bytedance/UI-TARS-desktop" target="_blank" rel="noopener">bytedance/UI-TARS-desktop</a></p>
+    <p class="repo-description">The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">34,195</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">3,529 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open bytedance/UI-TARS-desktop, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">06</div>
+    <div class="category">Infrastructure</div>
+    <h2 class="repo-headline">9Router: Route AI tools through one gateway</h2>
+    <p class="repo-path"><a href="https://github.com/decolua/9router" target="_blank" rel="noopener">decolua/9router</a></p>
+    <p class="repo-description">Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">10,999</div>
+    <div class="repo-meta">Stars total / JavaScript</div>
+    <div class="weekly-gain">5,377 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Test decolua/9router with one low-risk coding tool and one free provider. Keep it only if routing, logs, and cost controls are obvious.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">07</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Academic Research Skills: Use Codex from Claude Code</h2>
+    <p class="repo-path"><a href="https://github.com/Imbad0202/academic-research-skills" target="_blank" rel="noopener">Imbad0202/academic-research-skills</a></p>
+    <p class="repo-description">Academic Research Skills for Claude Code: research → write → review → revise → finalize</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">7,942</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">2,762 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open Imbad0202/academic-research-skills, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">08</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">Bun: Incredibly fast JavaScript runtime bundler test runner</h2>
+    <p class="repo-path"><a href="https://github.com/oven-sh/bun" target="_blank" rel="noopener">oven-sh/bun</a></p>
+    <p class="repo-description">Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">90,950</div>
+    <div class="repo-meta">Stars total / Rust</div>
+    <div class="weekly-gain">940 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open oven-sh/bun, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">09</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Skills: Skills for Real Engineers. Straight from my</h2>
+    <p class="repo-path"><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a></p>
+    <p class="repo-description">Skills for Real Engineers. Straight from my .claude directory.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">86,366</div>
+    <div class="repo-meta">Stars total / Shell</div>
+    <div class="weekly-gain">18,278 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open mattpocock/skills, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">10</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">DeepSeek TUI: Run parallel coding agents</h2>
+    <p class="repo-path"><a href="https://github.com/Hmbown/DeepSeek-TUI" target="_blank" rel="noopener">Hmbown/DeepSeek-TUI</a></p>
+    <p class="repo-description">Coding agent for DeepSeek models that runs in your terminal</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">30,358</div>
+    <div class="repo-meta">Stars total / Rust</div>
+    <div class="weekly-gain">8,701 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Test Hmbown/DeepSeek-TUI in a sandbox folder with read, search, and diff tasks only. Do not grant broad write access until the command log is predictable.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">11</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">AI Trader: Research markets with agents</h2>
+    <p class="repo-path"><a href="https://github.com/HKUDS/AI-Trader" target="_blank" rel="noopener">HKUDS/AI-Trader</a></p>
+    <p class="repo-description">&quot;AI-Trader: 100% Fully-Automated Agent-Native Trading&quot;</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">17,501</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">3,004 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open HKUDS/AI-Trader, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">12</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">RuView: Generate or edit video with agents</h2>
+    <p class="repo-path"><a href="https://github.com/ruvnet/RuView" target="_blank" rel="noopener">ruvnet/RuView</a></p>
+    <p class="repo-description">π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">58,040</div>
+    <div class="repo-meta">Stars total / Rust</div>
+    <div class="weekly-gain">4,963 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Try ruvnet/RuView on a short existing video and ask for a scene summary plus transcript. Keep it only if timestamps and evidence are easy to inspect.</p>
+    </div>
+  </div>
+</section>
+<section class="page back">
+  <div class="cover-kicker">End of Issue</div>
+  <div class="back-title">Check the links. Test one repo.</div>
+  <div class="back-meta">GitHub Trending Weekly / Issue 04<br>Generated by Codex from SnailDev github-hot-hub weekly archive: https://raw.githubusercontent.com/SnailDev/github-hot-hub/main/archives/2026-05-16.md</div>
+</section>
+</main>
+<div class="dots" id="dots"></div>
 <script>
-(function(){
-const magazine=document.getElementById('magazine');
-const totalPages=14;
-let current=0;
-let startX=0;
-let isDragging=false;
-
-function goTo(n){
-  current=Math.max(0,Math.min(totalPages-1,n));
-  magazine.style.transform='translateX(-'+current*100+'vw)';
-  updateDots();
+const magazine = document.getElementById('magazine');
+const total = magazine.children.length;
+const dots = document.getElementById('dots');
+let current = 0;
+let lastWheel = 0;
+for (let i = 0; i < total; i++) {
+  const dot = document.createElement('button');
+  dot.className = 'dot';
+  dot.type = 'button';
+  dot.setAttribute('aria-label', `Go to page ${i + 1}`);
+  dot.addEventListener('click', () => go(i));
+  dots.appendChild(dot);
 }
-
-function updateDots(){
-  const dots=document.querySelectorAll('.dot');
-  const pages=document.querySelectorAll('.page');
-  dots.forEach((d,i)=>{
-    d.classList.remove('dot--active','dot--light');
-    if(i===current)d.classList.add('dot--active');
-    if(pages[current]&&pages[current].classList.contains('page--light')){
-      d.classList.add('dot--light');
-    }
-  });
+function go(index) {
+  current = Math.max(0, Math.min(total - 1, index));
+  magazine.style.transform = `translateX(-${current * 100}vw)`;
+  [...dots.children].forEach((dot, i) => dot.classList.toggle('active', i === current));
 }
-
-// Build dots
-const dotsContainer=document.getElementById('navDots');
-for(let i=0;i<totalPages;i++){
-  const dot=document.createElement('div');
-  dot.className='dot';
-  dot.addEventListener('click',()=>goTo(i));
-  dotsContainer.appendChild(dot);
-}
-updateDots();
-
-// Keyboard
-document.addEventListener('keydown',e=>{
-  if(e.key==='ArrowRight'||e.key==='ArrowDown')goTo(current+1);
-  if(e.key==='ArrowLeft'||e.key==='ArrowUp')goTo(current-1);
+document.addEventListener('keydown', event => {
+  if (event.key === 'ArrowRight') go(current + 1);
+  if (event.key === 'ArrowLeft') go(current - 1);
 });
-
-// Wheel
-let wheelTimeout;
-document.addEventListener('wheel',e=>{
-  e.preventDefault();
-  if(wheelTimeout)return;
-  wheelTimeout=setTimeout(()=>{wheelTimeout=null},600);
-  if(e.deltaX>30||e.deltaY>30)goTo(current+1);
-  if(e.deltaX<-30||e.deltaY<-30)goTo(current-1);
-},{passive:false});
-
-// Touch/Swipe
-document.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;isDragging=true});
-document.addEventListener('touchend',e=>{
-  if(!isDragging)return;
-  isDragging=false;
-  const diff=startX-e.changedTouches[0].clientX;
-  if(Math.abs(diff)>50){
-    diff>0?goTo(current+1):goTo(current-1);
-  }
-});
-
-// Click edges
-document.addEventListener('click',e=>{
-  if(e.target.closest('a'))return;
-  const x=e.clientX/window.innerWidth;
-  if(x>0.85)goTo(current+1);
-  if(x<0.15)goTo(current-1);
-});
-})();
+document.addEventListener('wheel', event => {
+  const now = Date.now();
+  if (now - lastWheel < 700) return;
+  if (Math.abs(event.deltaY) < 10 && Math.abs(event.deltaX) < 10) return;
+  lastWheel = now;
+  go(current + (event.deltaY > 0 || event.deltaX > 0 ? 1 : -1));
+}, { passive: true });
+let touchStart = null;
+document.addEventListener('touchstart', event => {
+  touchStart = event.changedTouches[0].clientX;
+}, { passive: true });
+document.addEventListener('touchend', event => {
+  if (touchStart === null) return;
+  const delta = touchStart - event.changedTouches[0].clientX;
+  if (Math.abs(delta) > 50) go(current + (delta > 0 ? 1 : -1));
+  touchStart = null;
+}, { passive: true });
+go(0);
 </script>
 </body>
 </html>

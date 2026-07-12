@@ -3,857 +3,280 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GitHub Trending Weekly - April 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<title>GitHub Trending Weekly - April 22, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-html, body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background: #0a0a0a;
-  font-family: 'Source Serif 4', Georgia, serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-.magazine {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-
-.page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform;
-  overflow: hidden;
-}
-
-.page--dark {
-  background: #0a0a0a;
-  color: #e8e4df;
-}
-
-.page--light {
-  background: #f0ece4;
-  color: #1a1a1a;
-}
-
-/* ── COVER ── */
-.cover {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 8vh 7vw 10vh;
-  height: 100%;
-  position: relative;
-}
-
-.cover__rule {
-  position: absolute;
-  top: 6vh;
-  left: 7vw;
-  right: 7vw;
-  height: 1px;
-  background: rgba(232, 228, 223, 0.25);
-}
-
-.cover__meta {
-  position: absolute;
-  top: 8vh;
-  left: 7vw;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(11px, 0.85vw);
-  font-weight: 300;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(232, 228, 223, 0.5);
-}
-
-.cover__issue {
-  position: absolute;
-  top: 8vh;
-  right: 7vw;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(11px, 0.85vw);
-  font-weight: 300;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(232, 228, 223, 0.5);
-}
-
-.cover__title {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: max(48px, 7.5vw);
-  line-height: 0.92;
-  letter-spacing: -0.03em;
-  margin-bottom: 3vh;
-}
-
-.cover__subtitle {
-  font-family: 'Source Serif 4', serif;
-  font-weight: 300;
-  font-size: max(18px, 1.8vw);
-  line-height: 1.4;
-  color: rgba(232, 228, 223, 0.7);
-  max-width: 55vw;
-  margin-bottom: 4vh;
-}
-
-.cover__date {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(13px, 1vw);
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(232, 228, 223, 0.45);
-}
-
-/* ── REPO PAGES ── */
-.repo {
-  display: grid;
-  grid-template-columns: 55fr 45fr;
-  height: 100vh;
-  width: 100vw;
-}
-
-.repo__left {
-  padding: 7vh 4vw 10vh 7vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.repo__right {
-  padding: 7vh 7vw 10vh 4vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.repo__ghost {
-  position: absolute;
-  top: 50%;
-  left: 5vw;
-  transform: translateY(-55%);
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: max(200px, 22vw);
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-}
-
-.page--dark .repo__ghost { color: rgba(255, 255, 255, 0.04); }
-.page--light .repo__ghost { color: rgba(0, 0, 0, 0.04); }
-
-.repo__category {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(11px, 0.8vw);
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 3vh;
-  position: relative;
-  z-index: 1;
-}
-
-.page--dark .repo__category { color: rgba(232, 228, 223, 0.5); }
-.page--light .repo__category { color: rgba(26, 26, 26, 0.5); }
-
-.repo__headline {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: max(32px, 5vw);
-  line-height: 1.0;
-  letter-spacing: -0.02em;
-  margin-bottom: 3.5vh;
-  position: relative;
-  z-index: 1;
-}
-
-.repo__path {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(14px, 1.1vw);
-  font-weight: 400;
-  margin-bottom: 2.5vh;
-  position: relative;
-  z-index: 1;
-}
-
-.repo__path a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-}
-
-.page--dark .repo__path a {
-  color: rgba(232, 228, 223, 0.75);
-  text-decoration-color: rgba(232, 228, 223, 0.3);
-}
-
-.page--light .repo__path a {
-  color: rgba(26, 26, 26, 0.75);
-  text-decoration-color: rgba(26, 26, 26, 0.3);
-}
-
-.repo__path a:hover {
-  text-decoration-color: currentColor;
-}
-
-.repo__desc {
-  font-family: 'Source Serif 4', serif;
-  font-weight: 400;
-  font-size: max(17px, 1.5vw);
-  line-height: 1.55;
-  position: relative;
-  z-index: 1;
-}
-
-.page--dark .repo__desc { color: rgba(232, 228, 223, 0.85); }
-.page--light .repo__desc { color: rgba(26, 26, 26, 0.85); }
-
-.repo__stars {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: max(48px, 6.5vw);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  margin-bottom: 1vh;
-}
-
-.repo__stars-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(11px, 0.75vw);
-  font-weight: 300;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 4vh;
-}
-
-.page--dark .repo__stars-label { color: rgba(232, 228, 223, 0.4); }
-.page--light .repo__stars-label { color: rgba(26, 26, 26, 0.4); }
-
-.repo__lang {
-  display: inline-block;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(12px, 0.85vw);
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 0.6em 1.2em;
-  margin-bottom: 4vh;
-}
-
-.page--dark .repo__lang {
-  border: 1px solid rgba(232, 228, 223, 0.2);
-  color: rgba(232, 228, 223, 0.7);
-}
-
-.page--light .repo__lang {
-  border: 1px solid rgba(26, 26, 26, 0.2);
-  color: rgba(26, 26, 26, 0.7);
-}
-
-.repo__callout {
-  padding: 2.5vh 2vw;
-  border-left: 4px solid;
-  position: relative;
-}
-
-.page--dark .repo__callout {
-  background: rgba(255, 255, 255, 0.06);
-  border-left-color: rgba(232, 228, 223, 0.3);
-}
-
-.page--light .repo__callout {
-  background: rgba(0, 0, 0, 0.05);
-  border-left-color: rgba(26, 26, 26, 0.25);
-}
-
-.repo__callout-title {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(10px, 0.7vw);
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 1.5vh;
-}
-
-.page--dark .repo__callout-title { color: rgba(232, 228, 223, 0.5); }
-.page--light .repo__callout-title { color: rgba(26, 26, 26, 0.45); }
-
-.repo__callout-text {
-  font-family: 'Source Serif 4', serif;
-  font-weight: 400;
-  font-size: max(15px, 1.2vw);
-  line-height: 1.55;
-}
-
-.page--dark .repo__callout-text { color: rgba(232, 228, 223, 0.8); }
-.page--light .repo__callout-text { color: rgba(26, 26, 26, 0.8); }
-
-/* ── BACK COVER ── */
-.backcover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10vh 10vw;
-  height: 100%;
-}
-
-.backcover__title {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: max(36px, 5vw);
-  line-height: 1.05;
-  margin-bottom: 3vh;
-}
-
-.backcover__sub {
-  font-family: 'Source Serif 4', serif;
-  font-weight: 300;
-  font-size: max(17px, 1.5vw);
-  line-height: 1.5;
-  color: rgba(232, 228, 223, 0.6);
-  max-width: 50vw;
-  margin-bottom: 5vh;
-}
-
-.backcover__date {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(11px, 0.8vw);
-  font-weight: 300;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(232, 228, 223, 0.35);
-}
-
-/* ── NAV DOTS ── */
-.nav-dots {
-  position: fixed;
-  bottom: 3vh;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 100;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.nav-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  padding: 0;
-}
-
-.nav-dot:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.nav-dot--active {
-  background: rgba(255, 255, 255, 0.9);
-  transform: scale(1.3);
-}
-
-/* ── PAGE COUNTER ── */
-.page-counter {
-  position: fixed;
-  top: 3vh;
-  right: 3vw;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(10px, 0.7vw);
-  font-weight: 300;
-  letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.4);
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 6px 12px;
-  border-radius: 12px;
-}
-
-/* ── ARROW HINTS ── */
-.arrow-hint {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: max(20px, 1.5vw);
-  color: rgba(255, 255, 255, 0.15);
-  z-index: 100;
-  cursor: pointer;
-  user-select: none;
-  padding: 20px;
-  transition: color 0.2s ease;
-}
-
-.arrow-hint:hover { color: rgba(255, 255, 255, 0.5); }
-
-.arrow-hint--left { left: 1vw; }
-.arrow-hint--right { right: 1vw; }
-
-.arrow-hint--hidden { opacity: 0; pointer-events: none; }
-
-@media (max-width: 768px) {
-  .repo {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-  }
-  .repo__left {
-    padding: 5vh 6vw 2vh;
-    justify-content: flex-end;
-  }
-  .repo__right {
-    padding: 2vh 6vw 12vh;
-    justify-content: flex-start;
-  }
-  .repo__ghost {
-    font-size: 40vw;
-    left: 2vw;
-  }
-  .repo__headline {
-    font-size: max(28px, 8vw);
-  }
-  .repo__stars {
-    font-size: max(40px, 12vw);
-  }
-  .cover__title {
-    font-size: max(36px, 12vw);
-  }
-  .cover__subtitle {
-    max-width: 90vw;
-  }
-  .nav-dots { gap: 6px; }
-}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0d0d0d;color:#f4f1eb}body{font-family:'Source Serif 4',Georgia,serif}a{color:inherit;text-decoration-color:currentColor;text-underline-offset:.18em}.magazine{display:flex;width:1400vw;height:100vh;transition:transform .6s cubic-bezier(.76,0,.24,1)}.page{position:relative;width:100vw;height:100vh;flex:0 0 100vw;padding:7vh 7vw 10vh;overflow:hidden}.cover,.back{display:flex;flex-direction:column;justify-content:space-between;background:#0d0d0d;color:#f4f1eb}.cover-kicker,.cover-date,.cover-issue,.back-meta,.category,.repo-meta,.weekly-gain,.callout-title{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.14em}.cover-kicker{font-size:max(12px,1vw);opacity:.55}.cover-title{font-family:'Playfair Display',serif;font-size:max(48px,8.5vw);font-weight:900;line-height:.9;max-width:11ch}.cover-subtitle{font-size:max(20px,2.2vw);line-height:1.2;max-width:28ch;opacity:.82}.cover-date{font-size:max(13px,1.1vw);opacity:.5}.cover-issue{font-size:max(12px,.9vw);opacity:.45;margin-top:2vh}.repo-page{display:grid;grid-template-columns:55fr 45fr;gap:5vw;align-items:center}.repo-page.light{background:#f4f1eb;color:#111}.repo-page.dark{background:#111;color:#f4f1eb}.repo-left,.repo-right{position:relative;z-index:1}.rank{position:absolute;z-index:-1;top:-15vh;left:-4vw;font-family:'Playfair Display',serif;font-size:33vw;font-weight:900;line-height:1;opacity:.07}.category{font-size:max(12px,1vw);font-weight:600;opacity:.58;margin-bottom:3vh}.repo-headline{font-family:'Playfair Display',serif;font-size:max(34px,5.2vw);font-weight:900;line-height:1.02;margin:0 0 3vh;letter-spacing:0}.repo-path{font-family:'IBM Plex Mono',monospace;font-size:max(14px,1.12vw);margin:0 0 3vh;overflow-wrap:anywhere}.repo-description{font-size:max(18px,1.5vw);line-height:1.34;max-width:48ch;margin:0;opacity:.86}.star-count{font-family:'Playfair Display',serif;font-size:max(58px,7vw);font-weight:900;line-height:.9;margin-bottom:2vh}.repo-meta,.weekly-gain{font-size:max(12px,1vw);opacity:.62;margin-bottom:2vh}.weekly-gain{font-weight:600}.callout{margin-top:5vh;border-left:4px solid currentColor;padding:2.4vh 0 2.4vh 2vw;background:rgba(127,127,127,.08)}.callout-title{font-size:max(12px,.92vw);font-weight:600;margin:0 0 1.6vh;opacity:.7}.callout-text{font-size:max(17px,1.35vw);line-height:1.34;margin:0;opacity:.86;max-width:32ch}.back-title{font-family:'Playfair Display',serif;font-size:max(44px,7.2vw);font-weight:900;line-height:.95;max-width:10ch}.back-meta{font-size:max(12px,1vw);opacity:.55;line-height:1.7;max-width:70ch}.dots{position:fixed;left:50%;bottom:2.5vh;transform:translateX(-50%);display:flex;gap:.55vw;z-index:10}.dot{width:.55vw;height:.55vw;min-width:7px;min-height:7px;border-radius:50%;border:1px solid currentColor;background:transparent;color:#777;opacity:.45;cursor:pointer}.dot.active{background:currentColor;opacity:.9}@media(max-width:760px){.page{padding:5vh 7vw 10vh}.repo-page{grid-template-columns:1fr;gap:4vh;align-content:center}.repo-headline{font-size:max(31px,11vw)}.repo-description{font-size:18px}.star-count{font-size:max(48px,16vw)}.callout{margin-top:2vh;padding-left:4vw}.cover-title{font-size:max(48px,17vw)}.cover-subtitle{font-size:20px}.dots{gap:6px}.dot{width:7px;height:7px}}
 </style>
 </head>
 <body>
-
-<div class="magazine" id="magazine">
-
-  <!-- PAGE 1: COVER (dark) -->
-  <div class="page page--dark" data-page="0">
-    <div class="cover">
-      <div class="cover__rule"></div>
-      <div class="cover__meta">GitHub Trending</div>
-      <div class="cover__issue">Weekly Dispatch</div>
-      <div class="cover__title">The Repos<br>Reshaping<br>Open Source</div>
-      <div class="cover__subtitle">Twelve projects that defined the conversation this week. Agents evolving themselves, voice at zero latency, and the skills ecosystem coming of age.</div>
-      <div class="cover__date">April 14 &ndash; 21, 2026</div>
+<main class="magazine" id="magazine">
+<section class="page cover">
+  <div>
+    <div class="cover-kicker">GitHub Trending Weekly</div>
+    <h1 class="cover-title">GitHub Repo Briefing</h1>
+  </div>
+  <div>
+    <div class="cover-subtitle">Twelve weekly trending repositories, summarized by what they do and how to test them</div>
+    <div class="cover-date">April 22, 2026</div>
+    <div class="cover-issue">Issue 01</div>
+  </div>
+</section>
+<section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">01</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Andrej Karpathy Skills: Use Codex from Claude Code</h2>
+    <p class="repo-path"><a href="https://github.com/forrestchang/andrej-karpathy-skills" target="_blank" rel="noopener">forrestchang/andrej-karpathy-skills</a></p>
+    <p class="repo-description">A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy&#x27;s observations on LLM coding pitfalls.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">75,122</div>
+    <div class="repo-meta">Stars total / None</div>
+    <div class="weekly-gain">40,732 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open forrestchang/andrej-karpathy-skills, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
     </div>
   </div>
-
-  <!-- PAGE 2: #1 Hermes Agent (light) -->
-  <div class="page page--light" data-page="1">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">01</div>
-        <div class="repo__category">AI Agent Framework</div>
-        <div class="repo__headline">The Agent That Teaches Itself</div>
-        <div class="repo__path"><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">NousResearch/hermes-agent</a></div>
-        <div class="repo__desc">A self-evolving AI agent with a closed learning loop. It creates skills from experience, refines them in use, searches its own conversations for context, and builds an ever-deepening model of who you are across sessions. V0.8.0 brought browser-use integration, remote backends, and worktree parallelism.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">65.9K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">Python</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">Think of Hermes Agent as a persistent teammate that accumulates institutional knowledge. Deploy it to handle recurring automations that currently live in your head. The multi-platform gateway (Slack, Telegram, Discord) makes it a natural orchestrator for cross-tool workflows you already run manually.</div>
-        </div>
-      </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">02</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Evolver: The GEP-powered self-evolving engine for AI agents.</h2>
+    <p class="repo-path"><a href="https://github.com/EvoMap/evolver" target="_blank" rel="noopener">EvoMap/evolver</a></p>
+    <p class="repo-description">The GEP-powered self-evolving engine for AI agents. Auditable evolution with Genes, Capsules, and Events. | evomap.ai</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">6,487</div>
+    <div class="repo-meta">Stars total / JavaScript</div>
+    <div class="weekly-gain">4,376 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open EvoMap/evolver, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
     </div>
   </div>
-
-  <!-- PAGE 3: #2 MemPalace (dark) -->
-  <div class="page page--dark" data-page="2">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">02</div>
-        <div class="repo__category">AI Memory</div>
-        <div class="repo__headline">Verbatim Recall for Machines</div>
-        <div class="repo__path"><a href="https://github.com/MemPalace/mempalace" target="_blank" rel="noopener">MemPalace/mempalace</a></div>
-        <div class="repo__desc">An AI memory system built around verbatim storage rather than lossy summarization. MemPalace preserves exact context across sessions, giving language models a durable, searchable long-term memory that doesn't decay or hallucinate details. Crossed 20K stars within 48 hours of launch.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">43.3K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">Python</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">Pair MemPalace with your existing agent setup to give it perfect recall of past decisions. Particularly valuable for automations that span multiple days or contexts, where standard context windows lose important details between sessions.</div>
-        </div>
-      </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">03</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">GenericAgent: Self-evolving agent grows skill tree from 3.3K-line</h2>
+    <p class="repo-path"><a href="https://github.com/lsdefine/GenericAgent" target="_blank" rel="noopener">lsdefine/GenericAgent</a></p>
+    <p class="repo-description">Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">5,857</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">4,223 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open lsdefine/GenericAgent, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
     </div>
   </div>
-
-  <!-- PAGE 4: #3 Microsoft Markitdown (light) -->
-  <div class="page page--light" data-page="3">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">03</div>
-        <div class="repo__category">Developer Tools</div>
-        <div class="repo__headline">Every Document Becomes Markdown</div>
-        <div class="repo__path"><a href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener">microsoft/markitdown</a></div>
-        <div class="repo__desc">Microsoft's converter that turns PDFs, Word docs, Excel sheets, PowerPoints, images, and more into clean Markdown. The universal bridge between messy enterprise documents and the structured text that AI pipelines actually consume.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">104.5K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">Python</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">Drop this into your document processing pipeline as the first step. If you're building RAG systems or feeding docs to language models, Markitdown solves the "garbage in" problem. Combine with your SEO or content workflows to ingest competitor research at scale.</div>
-        </div>
-      </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">04</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Hermes Agent: The agent that grows with you</h2>
+    <p class="repo-path"><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">NousResearch/hermes-agent</a></p>
+    <p class="repo-description">The agent that grows with you</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">110,077</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">25,081 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open NousResearch/hermes-agent, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
     </div>
   </div>
-
-  <!-- PAGE 5: #4 QuantumNous/new-api (dark) -->
-  <div class="page page--dark" data-page="4">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">04</div>
-        <div class="repo__category">AI Infrastructure</div>
-        <div class="repo__headline">One Gateway, Every Model</div>
-        <div class="repo__path"><a href="https://github.com/QuantumNous/new-api" target="_blank" rel="noopener">QuantumNous/new-api</a></div>
-        <div class="repo__desc">A unified AI model hub that cross-converts LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. Acts as a centralized gateway for personal and enterprise model management, with load balancing, key rotation, and usage tracking built in.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">28.3K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">Go</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">If you're calling multiple LLM providers, this eliminates the adapter code. Self-host it as a proxy between your automations and model providers. Particularly useful if you're swapping between Claude, GPT, and Gemini depending on the task and want one consistent interface.</div>
-        </div>
-      </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">05</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Claude Mem: Use Codex from Claude Code</h2>
+    <p class="repo-path"><a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">thedotmack/claude-mem</a></p>
+    <p class="repo-description">A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude&#x27;s agent-sdk), and injects relevant context back into future sessions.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">65,590</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">10,356 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open thedotmack/claude-mem, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
     </div>
   </div>
-
-  <!-- PAGE 6: #5 Karpathy Skills (light) -->
-  <div class="page page--light" data-page="5">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">05</div>
-        <div class="repo__category">AI Development</div>
-        <div class="repo__headline">Karpathy's Rules for Coding Agents</div>
-        <div class="repo__path"><a href="https://github.com/forrestchang/andrej-karpathy-skills" target="_blank" rel="noopener">forrestchang/andrej-karpathy-skills</a></div>
-        <div class="repo__desc">A single CLAUDE.md file that reshapes Claude Code's behavior around Andrej Karpathy's running observations on how large language models fail, guess, and recover. Drop it into a project before refactoring and watch the agent code with more discipline.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">16.5K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">Markdown</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">Copy the CLAUDE.md directly into your project roots. It's most valuable during refactors and complex multi-file changes where LLMs tend to over-abstract or silently break contracts. Think of it as a behavioral guardrail, not a replacement for your own project instructions.</div>
-        </div>
-      </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">06</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Openai Agents Python: Build browser or desktop automations</h2>
+    <p class="repo-path"><a href="https://github.com/openai/openai-agents-python" target="_blank" rel="noopener">openai/openai-agents-python</a></p>
+    <p class="repo-description">A lightweight, powerful framework for multi-agent workflows</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">24,560</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">3,546 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open openai/openai-agents-python, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
     </div>
   </div>
-
-  <!-- PAGE 7: #6 Google AI Edge Gallery (dark) -->
-  <div class="page page--dark" data-page="6">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">06</div>
-        <div class="repo__category">Mobile AI</div>
-        <div class="repo__headline">On-Device Intelligence, No Cloud Required</div>
-        <div class="repo__path"><a href="https://github.com/google-ai-edge/gallery" target="_blank" rel="noopener">google-ai-edge/gallery</a></div>
-        <div class="repo__desc">Google's showcase for running ML and GenAI models entirely on Android devices. Features reference implementations for on-device inference across vision, language, and multimodal tasks, using the LiteRT and MediaPipe ecosystems.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">20.6K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">Kotlin</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">If you're building mobile apps or considering edge deployment, this gallery is your reference architecture. Use the sample implementations to prototype features that need zero-latency inference without server round-trips, like real-time image classification or local text generation.</div>
-        </div>
-      </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">07</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">Dive Into Llms: Dive into LLMs</h2>
+    <p class="repo-path"><a href="https://github.com/Lordog/dive-into-llms" target="_blank" rel="noopener">Lordog/dive-into-llms</a></p>
+    <p class="repo-description">《动手学大模型Dive into LLMs》系列编程实践教程</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">33,619</div>
+    <div class="repo-meta">Stars total / Jupyter Notebook</div>
+    <div class="weekly-gain">5,167 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open Lordog/dive-into-llms, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
     </div>
   </div>
-
-  <!-- PAGE 8: #7 DeepTutor (light) -->
-  <div class="page page--light" data-page="7">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">07</div>
-        <div class="repo__category">EdTech</div>
-        <div class="repo__headline">Your Papers, Understood Deeply</div>
-        <div class="repo__path"><a href="https://github.com/HKUDS/DeepTutor" target="_blank" rel="noopener">HKUDS/DeepTutor</a></div>
-        <div class="repo__desc">An agent-native personalized learning assistant from HKU. Upload research papers and DeepTutor builds an adaptive tutoring session, breaking down dense material with Socratic questioning, concept mapping, and progressive difficulty adjustment.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">17.2K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">Python</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">Feed it the technical papers behind tools you're evaluating. Instead of skimming abstracts, get an interactive breakdown that maps unfamiliar concepts to things you already know. Useful for staying current on the rapid-fire AI research landscape without the time cost of deep reading.</div>
-        </div>
-      </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">08</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">Voicebox: Generate or edit video with agents</h2>
+    <p class="repo-path"><a href="https://github.com/jamiepine/voicebox" target="_blank" rel="noopener">jamiepine/voicebox</a></p>
+    <p class="repo-description">The open-source voice synthesis studio</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">22,373</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">5,198 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Give jamiepine/voicebox one concrete production task: make a short draft video, deck, or asset from existing copy. Keep it only if the first draft is editable.</p>
     </div>
   </div>
-
-  <!-- PAGE 9: #8 Multica (dark) -->
-  <div class="page page--dark" data-page="8">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">08</div>
-        <div class="repo__category">Multi-Agent Systems</div>
-        <div class="repo__headline">Agents That Coordinate Like a Team</div>
-        <div class="repo__path"><a href="https://github.com/multica-ai/multica" target="_blank" rel="noopener">multica-ai/multica</a></div>
-        <div class="repo__desc">A multi-agent coordination system purpose-built for coding teams. Multica orchestrates multiple AI agents to work on different parts of a codebase simultaneously, handling task decomposition, conflict resolution, and merge coordination automatically.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">9.2K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">TypeScript</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">Think about the bottleneck in your current agent workflow: one agent, one file at a time. Multica lets you parallelize complex refactors across a codebase. Start with well-scoped tasks like migrating test files or updating API signatures across multiple services.</div>
-        </div>
-      </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">09</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Multica: Run parallel coding agents</h2>
+    <p class="repo-path"><a href="https://github.com/multica-ai/multica" target="_blank" rel="noopener">multica-ai/multica</a></p>
+    <p class="repo-description">The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">19,171</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">6,223 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open multica-ai/multica, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
     </div>
   </div>
-
-  <!-- PAGE 10: #9 NVIDIA PersonaPlex (light) -->
-  <div class="page page--light" data-page="9">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">09</div>
-        <div class="repo__category">Voice AI</div>
-        <div class="repo__headline">70 Milliseconds to a Conversation</div>
-        <div class="repo__path"><a href="https://github.com/NVIDIA/personaplex" target="_blank" rel="noopener">NVIDIA/personaplex</a></div>
-        <div class="repo__desc">Full-duplex voice AI from NVIDIA achieving 0.07-second latency. Supports simultaneous listen-and-speak, making natural voice conversations with AI feel genuinely real-time for the first time. Built for production voice agent deployments.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">9.0K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">Python</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">If you're building any voice-driven experience, the 70ms latency benchmark is the new bar. Evaluate PersonaPlex as the speech layer for customer-facing agents. The full-duplex capability matters most for sales and support bots where interruption handling separates good from unusable.</div>
-        </div>
-      </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">10</div>
+    <div class="category">Infrastructure</div>
+    <h2 class="repo-headline">Open Agents: An open source template for building cloud</h2>
+    <p class="repo-path"><a href="https://github.com/vercel-labs/open-agents" target="_blank" rel="noopener">vercel-labs/open-agents</a></p>
+    <p class="repo-description">An open source template for building cloud agents.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">3,992</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">1,812 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Prototype vercel-labs/open-agents behind a local example, then measure setup time, failure modes, and rollback steps before putting it near an automation.</p>
     </div>
   </div>
-
-  <!-- PAGE 11: #10 VoxCPM2 (dark) -->
-  <div class="page page--dark" data-page="10">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">10</div>
-        <div class="repo__category">Speech Synthesis</div>
-        <div class="repo__headline">30 Languages, No Tokenizer</div>
-        <div class="repo__path"><a href="https://github.com/OpenBMB/VoxCPM" target="_blank" rel="noopener">OpenBMB/VoxCPM</a></div>
-        <div class="repo__desc">A tokenizer-free, diffusion autoregressive TTS model with 2B parameters. VoxCPM2 supports 30 languages at 48kHz studio quality, trained on over 2 million hours of multilingual speech. Design novel voices from text descriptions or clone any voice from a short clip.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">7.0K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">Python</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">The voice-from-description feature is the standout. Instead of curating voice actor libraries, describe the voice you want in natural language and generate it. Ideal for prototyping multilingual content or building voice experiences where licensing real voice talent isn't feasible yet.</div>
-        </div>
-      </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">11</div>
+    <div class="category">Infrastructure</div>
+    <h2 class="repo-headline">Opensre: Build your own AI SRE agents. The</h2>
+    <p class="repo-path"><a href="https://github.com/Tracer-Cloud/opensre" target="_blank" rel="noopener">Tracer-Cloud/opensre</a></p>
+    <p class="repo-description">Build your own AI SRE agents. The open source toolkit for the AI era ✨</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">2,309</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">1,395 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Prototype Tracer-Cloud/opensre behind a local example, then measure setup time, failure modes, and rollback steps before putting it near an automation.</p>
     </div>
   </div>
-
-  <!-- PAGE 12: #11 Claude Code Game Studios (light) -->
-  <div class="page page--light" data-page="11">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">11</div>
-        <div class="repo__category">Game Development</div>
-        <div class="repo__headline">A Full Studio in Your Terminal</div>
-        <div class="repo__path"><a href="https://github.com/Donchitos/Claude-Code-Game-Studios" target="_blank" rel="noopener">Donchitos/Claude-Code-Game-Studios</a></div>
-        <div class="repo__desc">Turns Claude Code into a complete game development studio. 49 specialized AI agents mirror a real studio hierarchy: designers, developers, artists, audio engineers, QA testers, and producers, all coordinated through 72 workflow skills and automated pipelines.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">5.2K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">YAML</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">Even if you're not making games, study the agent hierarchy pattern. The way it decomposes a complex creative workflow into coordinated specialist roles is a template for any multi-agent system. Borrow the coordination architecture for your own domain-specific agent teams.</div>
-        </div>
-      </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">12</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">Omi: AI that sees your screen listens to</h2>
+    <p class="repo-path"><a href="https://github.com/BasedHardware/omi" target="_blank" rel="noopener">BasedHardware/omi</a></p>
+    <p class="repo-description">AI that sees your screen, listens to your conversations and tells you what to do</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">11,929</div>
+    <div class="repo-meta">Stars total / Dart</div>
+    <div class="weekly-gain">3,863 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">How to use this</p>
+      <p class="callout-text">Open BasedHardware/omi, read the README install path, and decide one yes/no trial: clone this week, bookmark for later, or ignore.</p>
     </div>
   </div>
-
-  <!-- PAGE 13: #12 Voicebox (dark) -->
-  <div class="page page--dark" data-page="12">
-    <div class="repo">
-      <div class="repo__left">
-        <div class="repo__ghost">12</div>
-        <div class="repo__category">Audio Tooling</div>
-        <div class="repo__headline">The Open-Source Voice Workstation</div>
-        <div class="repo__path"><a href="https://github.com/jamiepine/voicebox" target="_blank" rel="noopener">jamiepine/voicebox</a></div>
-        <div class="repo__desc">An open-source voice synthesis studio providing a complete environment for creating and managing synthetic audio. A dedicated workstation for voice generation workflows, handling inputs, processing parameters, model selection, and output management in a unified interface.</div>
-      </div>
-      <div class="repo__right">
-        <div class="repo__stars">4.8K</div>
-        <div class="repo__stars-label">GitHub Stars</div>
-        <div class="repo__lang">TypeScript</div>
-        <div class="repo__callout">
-          <div class="repo__callout-title">How to use this</div>
-          <div class="repo__callout-text">Think of this as the "VS Code for voice synthesis." If you're producing audio content, podcasts, or voice interfaces, Voicebox gives you a proper workstation instead of cobbling together CLI tools. Self-hostable, so sensitive voice data stays on your infrastructure.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PAGE 14: BACK COVER (dark) -->
-  <div class="page page--dark" data-page="13">
-    <div class="backcover">
-      <div class="backcover__title">End of<br>Dispatch</div>
-      <div class="backcover__sub">Twelve repos. One week. The open-source landscape moves fast. The best way to keep up is to build with it.</div>
-      <div class="backcover__date">GitHub Trending Weekly &middot; April 2026</div>
-    </div>
-  </div>
-
-</div>
-
-<!-- NAV DOTS -->
-<div class="nav-dots" id="navDots"></div>
-
-<!-- PAGE COUNTER -->
-<div class="page-counter" id="pageCounter">01 / 14</div>
-
-<!-- ARROW HINTS -->
-<div class="arrow-hint arrow-hint--left arrow-hint--hidden" id="arrowLeft">&larr;</div>
-<div class="arrow-hint arrow-hint--right" id="arrowRight">&rarr;</div>
-
+</section>
+<section class="page back">
+  <div class="cover-kicker">End of Issue</div>
+  <div class="back-title">Check the links. Test one repo.</div>
+  <div class="back-meta">GitHub Trending Weekly / Issue 01<br>Generated by Codex from SnailDev github-hot-hub weekly archive: https://raw.githubusercontent.com/SnailDev/github-hot-hub/main/archives/2026-04-22.md</div>
+</section>
+</main>
+<div class="dots" id="dots"></div>
 <script>
-const pages = document.querySelectorAll('.page');
-const totalPages = pages.length;
-let currentPage = 0;
-let isTransitioning = false;
-
-const dotsContainer = document.getElementById('navDots');
-for (let i = 0; i < totalPages; i++) {
+const magazine = document.getElementById('magazine');
+const total = magazine.children.length;
+const dots = document.getElementById('dots');
+let current = 0;
+let lastWheel = 0;
+for (let i = 0; i < total; i++) {
   const dot = document.createElement('button');
-  dot.className = 'nav-dot' + (i === 0 ? ' nav-dot--active' : '');
-  dot.setAttribute('aria-label', 'Page ' + (i + 1));
-  dot.addEventListener('click', function() { goTo(i); });
-  dotsContainer.appendChild(dot);
+  dot.className = 'dot';
+  dot.type = 'button';
+  dot.setAttribute('aria-label', `Go to page ${i + 1}`);
+  dot.addEventListener('click', () => go(i));
+  dots.appendChild(dot);
 }
-
-document.getElementById('arrowLeft').addEventListener('click', function() { goTo(currentPage - 1); });
-document.getElementById('arrowRight').addEventListener('click', function() { goTo(currentPage + 1); });
-
-function updatePositions(animate) {
-  pages.forEach(function(page, i) {
-    if (animate) {
-      page.style.transition = 'transform 0.65s cubic-bezier(0.22, 1, 0.36, 1)';
-    } else {
-      page.style.transition = 'none';
-    }
-    page.style.transform = 'translateX(' + ((i - currentPage) * 100) + 'vw)';
-  });
-
-  var dots = dotsContainer.querySelectorAll('.nav-dot');
-  dots.forEach(function(dot, i) {
-    dot.classList.toggle('nav-dot--active', i === currentPage);
-  });
-
-  document.getElementById('pageCounter').textContent =
-    String(currentPage + 1).padStart(2, '0') + ' / ' + String(totalPages).padStart(2, '0');
-
-  document.getElementById('arrowLeft').classList.toggle('arrow-hint--hidden', currentPage === 0);
-  document.getElementById('arrowRight').classList.toggle('arrow-hint--hidden', currentPage === totalPages - 1);
+function go(index) {
+  current = Math.max(0, Math.min(total - 1, index));
+  magazine.style.transform = `translateX(-${current * 100}vw)`;
+  [...dots.children].forEach((dot, i) => dot.classList.toggle('active', i === current));
 }
-
-function goTo(target) {
-  if (isTransitioning) return;
-  if (target < 0 || target >= totalPages) return;
-  isTransitioning = true;
-  currentPage = target;
-  updatePositions(true);
-  setTimeout(function() { isTransitioning = false; }, 680);
-}
-
-updatePositions(false);
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-    e.preventDefault();
-    goTo(currentPage + 1);
-  } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-    e.preventDefault();
-    goTo(currentPage - 1);
-  } else if (e.key === 'Home') {
-    e.preventDefault();
-    goTo(0);
-  } else if (e.key === 'End') {
-    e.preventDefault();
-    goTo(totalPages - 1);
-  }
+document.addEventListener('keydown', event => {
+  if (event.key === 'ArrowRight') go(current + 1);
+  if (event.key === 'ArrowLeft') go(current - 1);
 });
-
-var wheelCooldown = false;
-document.addEventListener('wheel', function(e) {
-  e.preventDefault();
-  if (wheelCooldown) return;
-  wheelCooldown = true;
-  if (e.deltaY > 0 || e.deltaX > 0) {
-    goTo(currentPage + 1);
-  } else if (e.deltaY < 0 || e.deltaX < 0) {
-    goTo(currentPage - 1);
-  }
-  setTimeout(function() { wheelCooldown = false; }, 800);
-}, { passive: false });
-
-var touchStartX = 0;
-var touchStartY = 0;
-var touchStartTime = 0;
-
-document.addEventListener('touchstart', function(e) {
-  touchStartX = e.changedTouches[0].screenX;
-  touchStartY = e.changedTouches[0].screenY;
-  touchStartTime = Date.now();
+document.addEventListener('wheel', event => {
+  const now = Date.now();
+  if (now - lastWheel < 700) return;
+  if (Math.abs(event.deltaY) < 10 && Math.abs(event.deltaX) < 10) return;
+  lastWheel = now;
+  go(current + (event.deltaY > 0 || event.deltaX > 0 ? 1 : -1));
 }, { passive: true });
-
-document.addEventListener('touchend', function(e) {
-  var dx = e.changedTouches[0].screenX - touchStartX;
-  var dy = e.changedTouches[0].screenY - touchStartY;
-  var dt = Date.now() - touchStartTime;
-
-  if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50 && dt < 500) {
-    if (dx < 0) {
-      goTo(currentPage + 1);
-    } else {
-      goTo(currentPage - 1);
-    }
-  }
+let touchStart = null;
+document.addEventListener('touchstart', event => {
+  touchStart = event.changedTouches[0].clientX;
 }, { passive: true });
+document.addEventListener('touchend', event => {
+  if (touchStart === null) return;
+  const delta = touchStart - event.changedTouches[0].clientX;
+  if (Math.abs(delta) > 50) go(current + (delta > 0 ? 1 : -1));
+  touchStart = null;
+}, { passive: true });
+go(0);
 </script>
-
 </body>
 </html>
