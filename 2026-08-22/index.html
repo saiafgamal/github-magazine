@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Trending Weekly - August 22, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0d0d0d;color:#f4f1eb}body{font-family:'Source Serif 4',Georgia,serif}a{color:inherit;text-decoration-color:currentColor;text-underline-offset:.18em}.magazine{display:flex;width:1400vw;height:100vh;transition:transform .6s cubic-bezier(.76,0,.24,1)}.page{position:relative;width:100vw;height:100vh;flex:0 0 100vw;padding:7vh 7vw 10vh;overflow:hidden}.cover,.back{display:flex;flex-direction:column;justify-content:space-between;background:#0d0d0d;color:#f4f1eb}.cover-kicker,.cover-date,.cover-issue,.back-meta,.category,.repo-meta,.weekly-gain,.callout-title{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.14em}.cover-kicker{font-size:max(12px,1vw);opacity:.55}.cover-title{font-family:'Playfair Display',serif;font-size:max(48px,8.5vw);font-weight:900;line-height:.9;max-width:11ch}.cover-subtitle{font-size:max(20px,2.2vw);line-height:1.2;max-width:28ch;opacity:.82}.cover-date{font-size:max(13px,1.1vw);opacity:.5}.cover-issue{font-size:max(12px,.9vw);opacity:.45;margin-top:2vh}.repo-page{display:grid;grid-template-columns:55fr 45fr;gap:5vw;align-items:center}.repo-page.light{background:#f4f1eb;color:#111}.repo-page.dark{background:#111;color:#f4f1eb}.repo-left,.repo-right{position:relative;z-index:1}.rank{position:absolute;z-index:-1;top:-15vh;left:-4vw;font-family:'Playfair Display',serif;font-size:33vw;font-weight:900;line-height:1;opacity:.07}.category{font-size:max(12px,1vw);font-weight:600;opacity:.58;margin-bottom:3vh}.repo-headline{font-family:'Playfair Display',serif;font-size:max(34px,5.2vw);font-weight:900;line-height:1.02;margin:0 0 3vh;letter-spacing:0}.repo-path{font-family:'IBM Plex Mono',monospace;font-size:max(14px,1.12vw);margin:0 0 3vh;overflow-wrap:anywhere}.repo-description{font-size:max(18px,1.5vw);line-height:1.34;max-width:48ch;margin:0;opacity:.86}.star-count{font-family:'Playfair Display',serif;font-size:max(58px,7vw);font-weight:900;line-height:.9;margin-bottom:2vh}.repo-meta,.weekly-gain{font-size:max(12px,1vw);opacity:.62;margin-bottom:2vh}.weekly-gain{font-weight:600}.callout{margin-top:5vh;border-left:4px solid currentColor;padding:2.4vh 0 2.4vh 2vw;background:rgba(127,127,127,.08)}.callout-title{font-size:max(12px,.92vw);font-weight:600;margin:0 0 1.6vh;opacity:.7}.callout-text{font-size:max(17px,1.35vw);line-height:1.34;margin:0;opacity:.86;max-width:32ch}.back-title{font-family:'Playfair Display',serif;font-size:max(44px,7.2vw);font-weight:900;line-height:.95;max-width:10ch}.back-meta{font-size:max(12px,1vw);opacity:.55;line-height:1.7;max-width:70ch}.dots{position:fixed;left:50%;bottom:2.5vh;transform:translateX(-50%);display:flex;gap:.55vw;z-index:10}.dot{width:.55vw;height:.55vw;min-width:7px;min-height:7px;border-radius:50%;border:1px solid currentColor;background:transparent;color:#777;opacity:.45;cursor:pointer}.dot.active{background:currentColor;opacity:.9}@media(max-width:760px){.page{padding:5vh 7vw 10vh}.repo-page{grid-template-columns:1fr;gap:4vh;align-content:center}.repo-headline{font-size:max(31px,11vw)}.repo-description{font-size:18px}.star-count{font-size:max(48px,16vw)}.callout{margin-top:2vh;padding-left:4vw}.cover-title{font-size:max(48px,17vw)}.cover-subtitle{font-size:20px}.dots{gap:6px}.dot{width:7px;height:7px}}
+</style>
+</head>
+<body>
+<main class="magazine" id="magazine">
+<section class="page cover">
+  <div>
+    <div class="cover-kicker">GitHub Trending Weekly</div>
+    <h1 class="cover-title">GitHub Repo Briefing</h1>
+  </div>
+  <div>
+    <div class="cover-subtitle">Twelve weekly trending repositories, summarized by what they do and how to test them</div>
+    <div class="cover-date">August 22, 2026</div>
+    <div class="cover-issue">Issue 18</div>
+  </div>
+</section>
+<section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">01</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">plugins</h2>
+    <p class="repo-path"><a href="https://github.com/cursor/plugins" target="_blank" rel="noopener">cursor/plugins</a></p>
+    <p class="repo-description">Cursor&#x27;s plugin specification and a set of official plugins that package skills, commands, agents, and integrations for the Cursor editor.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">4,562</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">1,582 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Read one plugin manifest and install it in a test project. Run its smallest command, inspect file and network access, and keep only the pieces that match your workflow.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">02</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">cordis</h2>
+    <p class="repo-path"><a href="https://github.com/cordiverse/cordis" target="_blank" rel="noopener">cordiverse/cordis</a></p>
+    <p class="repo-description">A TypeScript meta-framework described by its maintainers as a framework for spatiotemporal composability.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">7,066</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">3,614 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Read the core concepts and run the smallest documented example. Use it only if the composition model is clearer than a normal framework for the workflow you are testing.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">03</div>
+    <div class="category">Infrastructure</div>
+    <h2 class="repo-headline">OpenViking</h2>
+    <p class="repo-path"><a href="https://github.com/volcengine/OpenViking" target="_blank" rel="noopener">volcengine/OpenViking</a></p>
+    <p class="repo-description">A Python context database for AI agents that combines agent memory, knowledge RAG, and skills in one storage layer.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">31,918</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">3,033 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run the smallest local example with one public document and one saved memory. Check what is indexed, how retrieval is scored, and how records are deleted before adding private material.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">04</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">omarchy</h2>
+    <p class="repo-path"><a href="https://github.com/basecamp/omarchy" target="_blank" rel="noopener">basecamp/omarchy</a></p>
+    <p class="repo-description">A Shell-based Linux setup from Basecamp that packages an opinionated desktop environment and development workstation configuration.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">28,009</div>
+    <div class="repo-meta">Stars total / Shell</div>
+    <div class="weekly-gain">2,565 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install it only in a VM or spare machine first. Record which packages, dotfiles, and services it changes before using the setup on a daily workstation.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">05</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">modular</h2>
+    <p class="repo-path"><a href="https://github.com/modular/modular" target="_blank" rel="noopener">modular/modular</a></p>
+    <p class="repo-description">The public repository for the Modular Platform, including MAX and the Mojo programming language.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">28,785</div>
+    <div class="repo-meta">Stars total / Mojo</div>
+    <div class="weekly-gain">1,643 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run one Mojo or MAX example from the repository and compare the setup with your current Python path. Keep notes on install size, hardware assumptions, and rollback steps.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">06</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">MoneyPrinterTurbo</h2>
+    <p class="repo-path"><a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank" rel="noopener">harry0703/MoneyPrinterTurbo</a></p>
+    <p class="repo-description">A Chinese and English tool that turns a topic or keyword into a short video with a script, images, subtitles, music, and generated voice.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">114,471</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">10,470 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Generate one private test video from a factual topic. Check each claim, image license, voice, and subtitle timing before publishing or selling the result.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">07</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">OpenLogi</h2>
+    <p class="repo-path"><a href="https://github.com/AprilNEA/OpenLogi" target="_blank" rel="noopener">AprilNEA/OpenLogi</a></p>
+    <p class="repo-description">A Rust local-first alternative to Logitech Options+ for remapping buttons, DPI, and SmartShift over HID++ without an account or telemetry.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">13,531</div>
+    <div class="repo-meta">Stars total / Rust</div>
+    <div class="weekly-gain">4,054 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Test it with one supported mouse on a non-critical profile. Export or note the original device settings first, then verify each remap before using it during client work.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">08</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">public-apis</h2>
+    <p class="repo-path"><a href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener">public-apis/public-apis</a></p>
+    <p class="repo-description">A curated list of free public APIs, organized by category, with links and usage notes maintained in a GitHub repository.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">468,399</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">10,990 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Pick one API for a test integration and verify its current docs, auth rules, rate limits, and license from the source site before using it in a proposal or demo.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">09</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">diagram-design</h2>
+    <p class="repo-path"><a href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener">cathrynlavery/diagram-design</a></p>
+    <p class="repo-description">A skill for Claude Code, Codex, and Pi that creates 27 diagram types as static HTML and SVG. Use it for architecture, flows, data models, and timelines; it can also redraw Mermaid or draw.io sources.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">25,318</div>
+    <div class="repo-meta">Stars total / HTML</div>
+    <div class="weekly-gain">8,457 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install the skill, then give it one client process, such as a booking flow. Ask for an architecture or swimlane diagram, open the HTML, and remove any node that does not help the reader.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">10</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">ai-memory</h2>
+    <p class="repo-path"><a href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener">akitaonrails/ai-memory</a></p>
+    <p class="repo-description">A Rust project for long-term memory in agent coding CLIs and for handing context between different agent vendors.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">4,029</div>
+    <div class="repo-meta">Stars total / Rust</div>
+    <div class="weekly-gain">2,404 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Use it in a disposable repository with one remembered project rule. Start a second agent session and confirm exactly what context is retrieved before storing client-specific notes.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">11</div>
+    <div class="category">Infrastructure</div>
+    <h2 class="repo-headline">omlx</h2>
+    <p class="repo-path"><a href="https://github.com/jundot/omlx" target="_blank" rel="noopener">jundot/omlx</a></p>
+    <p class="repo-description">A Python LLM inference server for Apple Silicon with continuous batching, SSD caching, and macOS menu bar management.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">20,303</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">1,536 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run one small model locally and send a short inference request. Measure latency, memory use, cache location, and shutdown behavior before routing agent traffic through it.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">12</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">semantica</h2>
+    <p class="repo-path"><a href="https://github.com/semantica-agi/semantica" target="_blank" rel="noopener">semantica-agi/semantica</a></p>
+    <p class="repo-description">A Python library for storing entities, relationships, decisions, rules, and source links in a knowledge graph. It can trace decisions, flag conflicts, and export an audit trail.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">10,211</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">2,755 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install it with pip install semantica. Record one vendor choice with its reason and source, then call trace_decision_chain() and check_decision_rules() before using it in a report.</p>
+    </div>
+  </div>
+</section>
+<section class="page back">
+  <div class="cover-kicker">End of Issue</div>
+  <div class="back-title">Check the links. Test one repo.</div>
+  <div class="back-meta">GitHub Trending Weekly / Issue 18<br>Generated by Codex from SnailDev github-hot-hub weekly archive: https://raw.githubusercontent.com/SnailDev/github-hot-hub/main/archives/2026-08-22.md</div>
+</section>
+</main>
+<div class="dots" id="dots"></div>
+<script>
+const magazine = document.getElementById('magazine');
+const total = magazine.children.length;
+const dots = document.getElementById('dots');
+let current = 0;
+let lastWheel = 0;
+for (let i = 0; i < total; i++) {
+  const dot = document.createElement('button');
+  dot.className = 'dot';
+  dot.type = 'button';
+  dot.setAttribute('aria-label', `Go to page ${i + 1}`);
+  dot.addEventListener('click', () => go(i));
+  dots.appendChild(dot);
+}
+function go(index) {
+  current = Math.max(0, Math.min(total - 1, index));
+  magazine.style.transform = `translateX(-${current * 100}vw)`;
+  [...dots.children].forEach((dot, i) => dot.classList.toggle('active', i === current));
+}
+document.addEventListener('keydown', event => {
+  if (event.key === 'ArrowRight') go(current + 1);
+  if (event.key === 'ArrowLeft') go(current - 1);
+});
+document.addEventListener('wheel', event => {
+  const now = Date.now();
+  if (now - lastWheel < 700) return;
+  if (Math.abs(event.deltaY) < 10 && Math.abs(event.deltaX) < 10) return;
+  lastWheel = now;
+  go(current + (event.deltaY > 0 || event.deltaX > 0 ? 1 : -1));
+}, { passive: true });
+let touchStart = null;
+document.addEventListener('touchstart', event => {
+  touchStart = event.changedTouches[0].clientX;
+}, { passive: true });
+document.addEventListener('touchend', event => {
+  if (touchStart === null) return;
+  const delta = touchStart - event.changedTouches[0].clientX;
+  if (Math.abs(delta) > 50) go(current + (delta > 0 ? 1 : -1));
+  touchStart = null;
+}, { passive: true });
+go(0);
+</script>
+</body>
+</html>
