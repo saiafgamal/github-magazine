@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Trending Weekly - September 19, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0d0d0d;color:#f4f1eb}body{font-family:'Source Serif 4',Georgia,serif}a{color:inherit;text-decoration-color:currentColor;text-underline-offset:.18em}.magazine{display:flex;width:1400vw;height:100vh;transition:transform .6s cubic-bezier(.76,0,.24,1)}.page{position:relative;width:100vw;height:100vh;flex:0 0 100vw;padding:7vh 7vw 10vh;overflow:hidden}.cover,.back{display:flex;flex-direction:column;justify-content:space-between;background:#0d0d0d;color:#f4f1eb}.cover-kicker,.cover-date,.cover-issue,.back-meta,.category,.repo-meta,.weekly-gain,.callout-title{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.14em}.cover-kicker{font-size:max(12px,1vw);opacity:.55}.cover-title{font-family:'Playfair Display',serif;font-size:max(48px,8.5vw);font-weight:900;line-height:.9;max-width:11ch}.cover-subtitle{font-size:max(20px,2.2vw);line-height:1.2;max-width:28ch;opacity:.82}.cover-date{font-size:max(13px,1.1vw);opacity:.5}.cover-issue{font-size:max(12px,.9vw);opacity:.45;margin-top:2vh}.repo-page{display:grid;grid-template-columns:55fr 45fr;gap:5vw;align-items:center}.repo-page.light{background:#f4f1eb;color:#111}.repo-page.dark{background:#111;color:#f4f1eb}.repo-left,.repo-right{position:relative;z-index:1}.rank{position:absolute;z-index:-1;top:-15vh;left:-4vw;font-family:'Playfair Display',serif;font-size:33vw;font-weight:900;line-height:1;opacity:.07}.category{font-size:max(12px,1vw);font-weight:600;opacity:.58;margin-bottom:3vh}.repo-headline{font-family:'Playfair Display',serif;font-size:max(34px,5.2vw);font-weight:900;line-height:1.02;margin:0 0 3vh;letter-spacing:0}.repo-path{font-family:'IBM Plex Mono',monospace;font-size:max(14px,1.12vw);margin:0 0 3vh;overflow-wrap:anywhere}.repo-description{font-size:max(18px,1.5vw);line-height:1.34;max-width:48ch;margin:0;opacity:.86}.star-count{font-family:'Playfair Display',serif;font-size:max(58px,7vw);font-weight:900;line-height:.9;margin-bottom:2vh}.repo-meta,.weekly-gain{font-size:max(12px,1vw);opacity:.62;margin-bottom:2vh}.weekly-gain{font-weight:600}.callout{margin-top:5vh;border-left:4px solid currentColor;padding:2.4vh 0 2.4vh 2vw;background:rgba(127,127,127,.08)}.callout-title{font-size:max(12px,.92vw);font-weight:600;margin:0 0 1.6vh;opacity:.7}.callout-text{font-size:max(17px,1.35vw);line-height:1.34;margin:0;opacity:.86;max-width:32ch}.back-title{font-family:'Playfair Display',serif;font-size:max(44px,7.2vw);font-weight:900;line-height:.95;max-width:10ch}.back-meta{font-size:max(12px,1vw);opacity:.55;line-height:1.7;max-width:70ch}.dots{position:fixed;left:50%;bottom:2.5vh;transform:translateX(-50%);display:flex;gap:.55vw;z-index:10}.dot{width:.55vw;height:.55vw;min-width:7px;min-height:7px;border-radius:50%;border:1px solid currentColor;background:transparent;color:#777;opacity:.45;cursor:pointer}.dot.active{background:currentColor;opacity:.9}@media(max-width:760px){.page{padding:5vh 7vw 10vh}.repo-page{grid-template-columns:1fr;gap:4vh;align-content:center}.repo-headline{font-size:max(31px,11vw)}.repo-description{font-size:18px}.star-count{font-size:max(48px,16vw)}.callout{margin-top:2vh;padding-left:4vw}.cover-title{font-size:max(48px,17vw)}.cover-subtitle{font-size:20px}.dots{gap:6px}.dot{width:7px;height:7px}}
+</style>
+</head>
+<body>
+<main class="magazine" id="magazine">
+<section class="page cover">
+  <div>
+    <div class="cover-kicker">GitHub Trending Weekly</div>
+    <h1 class="cover-title">GitHub Repo Briefing</h1>
+  </div>
+  <div>
+    <div class="cover-subtitle">Twelve weekly trending repositories, summarized by what they do and how to test them</div>
+    <div class="cover-date">September 19, 2026</div>
+    <div class="cover-issue">Issue 22</div>
+  </div>
+</section>
+<section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">01</div>
+    <div class="category">Infrastructure</div>
+    <h2 class="repo-headline">open-code-review</h2>
+    <p class="repo-path"><a href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener">alibaba/open-code-review</a></p>
+    <p class="repo-description">A code-review system that combines deterministic rules with an LLM agent and reports findings at exact source lines, including rules for common security and correctness issues.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">37,162</div>
+    <div class="repo-meta">Stars total / Go</div>
+    <div class="weekly-gain">14,144 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run it on a test pull request with one known defect. Compare the line comment with a human review and inspect the configured rules before connecting the service to a live repository.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">02</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">claude-code</h2>
+    <p class="repo-path"><a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener">anthropics/claude-code</a></p>
+    <p class="repo-description">An agentic coding tool for terminal, IDE, and GitHub workflows that can inspect code, explain it, and perform routine tasks.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">146,516</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">1,620 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Give it 1 read-only question in a test repository. Check its file access and answer before authorizing edits.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">03</div>
+    <div class="category">Security</div>
+    <h2 class="repo-headline">ECC</h2>
+    <p class="repo-path"><a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">affaan-m/ECC</a></p>
+    <p class="repo-description">A collection of engineering skills, memory, security checks, research-first workflows, and performance guidance for Claude Code, Codex, OpenCode, and Cursor.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">262,494</div>
+    <div class="repo-meta">Stars total / JavaScript</div>
+    <div class="weekly-gain">5,877 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install one workflow in a disposable repository and run it on a small issue. Check the generated plan, tests, and permission requests before adding the full collection.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">04</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">WeKnora</h2>
+    <p class="repo-path"><a href="https://github.com/Tencent/WeKnora" target="_blank" rel="noopener">Tencent/WeKnora</a></p>
+    <p class="repo-description">An open-source knowledge platform for turning documents into a searchable RAG system, reasoning agent, and wiki.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">27,208</div>
+    <div class="repo-meta">Stars total / Go</div>
+    <div class="weekly-gain">4,703 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Import a few public documents and ask 1 source-specific question. Confirm the answer cites the correct passage.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">05</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">gods-eye-view</h2>
+    <p class="repo-path"><a href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank" rel="noopener">bilawalsidhu/gods-eye-view</a></p>
+    <p class="repo-description">A browser-based 3D globe that displays public aircraft, ship, satellite, earthquake, traffic, and camera feeds.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">38,198</div>
+    <div class="repo-meta">Stars total / JavaScript</div>
+    <div class="weekly-gain">11,683 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Open a public region in the local demo. Check the data source and timestamp before using any scene in a visual report.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">06</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">agent-skills</h2>
+    <p class="repo-path"><a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener">addyosmani/agent-skills</a></p>
+    <p class="repo-description">A pack of 24 workflow skills for definition, planning, implementation, testing, review, performance, simplification, and release work in coding agents.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">96,666</div>
+    <div class="repo-meta">Stars total / JavaScript</div>
+    <div class="weekly-gain">3,051 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install the pack with npx skills add addyosmani/agent-skills. In one real repo, run /spec, /plan, and /test on a small change, then keep it if the outputs provide useful evidence.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">07</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">knowledge-work-plugins</h2>
+    <p class="repo-path"><a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" rel="noopener">anthropics/knowledge-work-plugins</a></p>
+    <p class="repo-description">A collection of plugins for knowledge-work tasks in Claude Cowork, with commands and workflows for roles such as research, writing, and analysis.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">24,974</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">776 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install one role-specific plugin and run it on a public source. Check the generated files and tool permissions, then remove commands that do not fit your actual workflow.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">08</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">i-have-adhd</h2>
+    <p class="repo-path"><a href="https://github.com/ayghri/i-have-adhd" target="_blank" rel="noopener">ayghri/i-have-adhd</a></p>
+    <p class="repo-description">A coding-agent output skill that asks for concise answers, clear next actions, and less buried information when a task has many details.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">48,409</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">7,869 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install it and run the same small task with and without the skill. Compare the location of the answer, risks, and next action, then keep only useful changes in your project instructions.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">09</div>
+    <div class="category">Security</div>
+    <h2 class="repo-headline">context-mode</h2>
+    <p class="repo-path"><a href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener">mksglu/context-mode</a></p>
+    <p class="repo-description">An MCP server that sandboxes tool output and stores searchable session events to reduce coding-agent context use.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">23,599</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">1,398 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run the same read-only repository question with and without it. Compare context usage and check the stored session data.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">10</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">worktrunk</h2>
+    <p class="repo-path"><a href="https://github.com/max-sixty/worktrunk" target="_blank" rel="noopener">max-sixty/worktrunk</a></p>
+    <p class="repo-description">A CLI for managing Git worktrees, with commands and hooks designed for parallel agent workflows.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">8,068</div>
+    <div class="repo-meta">Stars total / Rust</div>
+    <div class="weekly-gain">1,104 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Create 2 worktrees in a disposable repository. Confirm each branch and directory stays isolated before using it on a client project.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">11</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">humanizer</h2>
+    <p class="repo-path"><a href="https://github.com/blader/humanizer" target="_blank" rel="noopener">blader/humanizer</a></p>
+    <p class="repo-description">A Markdown agent skill that rewrites AI-sounding prose while aiming to preserve its meaning.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">50,082</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">3,118 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Apply it to a draft paragraph, then compare claims line by line with the source before using the copy in a client report.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">12</div>
+    <div class="category">Productivity</div>
+    <h2 class="repo-headline">core</h2>
+    <p class="repo-path"><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a></p>
+    <p class="repo-description">The open-source Home Assistant platform for local home automation, with integrations for devices and services.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">90,772</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">357 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Use its demo or a test instance to configure 1 automation. Check the trigger, action, and local data handling before adding devices.</p>
+    </div>
+  </div>
+</section>
+<section class="page back">
+  <div class="cover-kicker">End of Issue</div>
+  <div class="back-title">Check the links. Test one repo.</div>
+  <div class="back-meta">GitHub Trending Weekly / Issue 22<br>Generated by Codex from SnailDev github-hot-hub weekly archive: https://raw.githubusercontent.com/SnailDev/github-hot-hub/main/archives/2026-09-19.md</div>
+</section>
+</main>
+<div class="dots" id="dots"></div>
+<script>
+const magazine = document.getElementById('magazine');
+const total = magazine.children.length;
+const dots = document.getElementById('dots');
+let current = 0;
+let lastWheel = 0;
+for (let i = 0; i < total; i++) {
+  const dot = document.createElement('button');
+  dot.className = 'dot';
+  dot.type = 'button';
+  dot.setAttribute('aria-label', `Go to page ${i + 1}`);
+  dot.addEventListener('click', () => go(i));
+  dots.appendChild(dot);
+}
+function go(index) {
+  current = Math.max(0, Math.min(total - 1, index));
+  magazine.style.transform = `translateX(-${current * 100}vw)`;
+  [...dots.children].forEach((dot, i) => dot.classList.toggle('active', i === current));
+}
+document.addEventListener('keydown', event => {
+  if (event.key === 'ArrowRight') go(current + 1);
+  if (event.key === 'ArrowLeft') go(current - 1);
+});
+document.addEventListener('wheel', event => {
+  const now = Date.now();
+  if (now - lastWheel < 700) return;
+  if (Math.abs(event.deltaY) < 10 && Math.abs(event.deltaX) < 10) return;
+  lastWheel = now;
+  go(current + (event.deltaY > 0 || event.deltaX > 0 ? 1 : -1));
+}, { passive: true });
+let touchStart = null;
+document.addEventListener('touchstart', event => {
+  touchStart = event.changedTouches[0].clientX;
+}, { passive: true });
+document.addEventListener('touchend', event => {
+  if (touchStart === null) return;
+  const delta = touchStart - event.changedTouches[0].clientX;
+  if (Math.abs(delta) > 50) go(current + (delta > 0 ? 1 : -1));
+  touchStart = null;
+}, { passive: true });
+go(0);
+</script>
+</body>
+</html>
