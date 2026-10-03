@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Trending Weekly - October 3, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0d0d0d;color:#f4f1eb}body{font-family:'Source Serif 4',Georgia,serif}a{color:inherit;text-decoration-color:currentColor;text-underline-offset:.18em}.magazine{display:flex;width:1400vw;height:100vh;transition:transform .6s cubic-bezier(.76,0,.24,1)}.page{position:relative;width:100vw;height:100vh;flex:0 0 100vw;padding:7vh 7vw 10vh;overflow:hidden}.cover,.back{display:flex;flex-direction:column;justify-content:space-between;background:#0d0d0d;color:#f4f1eb}.cover-kicker,.cover-date,.cover-issue,.back-meta,.category,.repo-meta,.weekly-gain,.callout-title{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.14em}.cover-kicker{font-size:max(12px,1vw);opacity:.55}.cover-title{font-family:'Playfair Display',serif;font-size:max(48px,8.5vw);font-weight:900;line-height:.9;max-width:11ch}.cover-subtitle{font-size:max(20px,2.2vw);line-height:1.2;max-width:28ch;opacity:.82}.cover-date{font-size:max(13px,1.1vw);opacity:.5}.cover-issue{font-size:max(12px,.9vw);opacity:.45;margin-top:2vh}.repo-page{display:grid;grid-template-columns:55fr 45fr;gap:5vw;align-items:center}.repo-page.light{background:#f4f1eb;color:#111}.repo-page.dark{background:#111;color:#f4f1eb}.repo-left,.repo-right{position:relative;z-index:1}.rank{position:absolute;z-index:-1;top:-15vh;left:-4vw;font-family:'Playfair Display',serif;font-size:33vw;font-weight:900;line-height:1;opacity:.07}.category{font-size:max(12px,1vw);font-weight:600;opacity:.58;margin-bottom:3vh}.repo-headline{font-family:'Playfair Display',serif;font-size:max(34px,5.2vw);font-weight:900;line-height:1.02;margin:0 0 3vh;letter-spacing:0}.repo-path{font-family:'IBM Plex Mono',monospace;font-size:max(14px,1.12vw);margin:0 0 3vh;overflow-wrap:anywhere}.repo-description{font-size:max(18px,1.5vw);line-height:1.34;max-width:48ch;margin:0;opacity:.86}.star-count{font-family:'Playfair Display',serif;font-size:max(58px,7vw);font-weight:900;line-height:.9;margin-bottom:2vh}.repo-meta,.weekly-gain{font-size:max(12px,1vw);opacity:.62;margin-bottom:2vh}.weekly-gain{font-weight:600}.callout{margin-top:5vh;border-left:4px solid currentColor;padding:2.4vh 0 2.4vh 2vw;background:rgba(127,127,127,.08)}.callout-title{font-size:max(12px,.92vw);font-weight:600;margin:0 0 1.6vh;opacity:.7}.callout-text{font-size:max(17px,1.35vw);line-height:1.34;margin:0;opacity:.86;max-width:32ch}.back-title{font-family:'Playfair Display',serif;font-size:max(44px,7.2vw);font-weight:900;line-height:.95;max-width:10ch}.back-meta{font-size:max(12px,1vw);opacity:.55;line-height:1.7;max-width:70ch}.dots{position:fixed;left:50%;bottom:2.5vh;transform:translateX(-50%);display:flex;gap:.55vw;z-index:10}.dot{width:.55vw;height:.55vw;min-width:7px;min-height:7px;border-radius:50%;border:1px solid currentColor;background:transparent;color:#777;opacity:.45;cursor:pointer}.dot.active{background:currentColor;opacity:.9}@media(max-width:760px){.page{padding:5vh 7vw 10vh}.repo-page{grid-template-columns:1fr;gap:4vh;align-content:center}.repo-headline{font-size:max(31px,11vw)}.repo-description{font-size:18px}.star-count{font-size:max(48px,16vw)}.callout{margin-top:2vh;padding-left:4vw}.cover-title{font-size:max(48px,17vw)}.cover-subtitle{font-size:20px}.dots{gap:6px}.dot{width:7px;height:7px}}
+</style>
+<style id="magazine-cover-fit">
+/* Size covers against both viewport dimensions, reserving navigation space. */
+.cover {
+  height: 100dvh;
+  min-height: 100dvh;
+  padding: clamp(18px, 5dvh, 56px) 7vw clamp(48px, 9dvh, 96px);
+  gap: clamp(16px, 3dvh, 32px);
+  overflow: hidden;
+}
+.cover > div { flex-shrink: 0; min-width: 0; }
+.cover .cover-title, .cover .cover__title {
+  font-size: clamp(32px, min(7vw, 12dvh), 112px);
+  line-height: 1;
+  max-width: 14ch;
+  margin: clamp(16px, 4dvh, 40px) 0 0;
+  overflow-wrap: normal;
+}
+.cover .cover-subtitle, .cover .cover__subtitle {
+  font-size: clamp(16px, min(1.6vw, 2.8dvh), 26px);
+  line-height: 1.3;
+  max-width: 44ch;
+  margin: 0 0 clamp(12px, 2dvh, 22px);
+}
+.cover .cover-kicker, .cover .cover-date, .cover .cover-issue,
+.cover .cover__meta, .cover .cover__date, .cover .cover__issue {
+  font-size: clamp(11px, min(.9vw, 2dvh), 16px);
+  line-height: 1.5;
+}
+.cover .cover-issue { margin-top: clamp(6px, 1dvh, 12px); }
+.cover .cover__title { margin-bottom: clamp(16px, 3dvh, 32px); }
+.cover .cover__meta, .cover .cover__issue { top: 5dvh; }
+@media (max-width: 760px) {
+  .cover .cover-title, .cover .cover__title {
+    font-size: clamp(28px, min(13vw, 10dvh), 72px);
+    max-width: 100%;
+  }
+  .cover .cover-subtitle, .cover .cover__subtitle { max-width: 100%; }
+}
+@media (max-height: 450px) and (min-width: 761px) {
+  .cover { gap: 12px; padding-top: 16px; padding-bottom: 42px; }
+  .cover .cover-title, .cover .cover__title {
+    font-size: min(6vw, 10dvh);
+    max-width: 22ch;
+    margin-top: 12px;
+  }
+  .cover .cover-subtitle, .cover .cover__subtitle {
+    font-size: 14px;
+    max-width: 64ch;
+    margin-bottom: 8px;
+  }
+}
+</style>
+</head>
+<body>
+<main class="magazine" id="magazine">
+<section class="page cover">
+  <div>
+    <div class="cover-kicker">GitHub Trending Weekly</div>
+    <h1 class="cover-title">GitHub Repo Briefing</h1>
+  </div>
+  <div>
+    <div class="cover-subtitle">Twelve weekly trending repositories, summarized by what they do and how to test them</div>
+    <div class="cover-date">October 3, 2026</div>
+    <div class="cover-issue">Issue 24</div>
+  </div>
+</section>
+<section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">01</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">paperclip</h2>
+    <p class="repo-path"><a href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener">paperclipai/paperclip</a></p>
+    <p class="repo-description">An open-source Node.js server and React interface for coordinating teams of AI agents around goals, tasks, reporting lines, budgets, approvals, and work history.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">96,598</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">12,825 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run the local quickstart with a throwaway organization, one goal, and one test agent. Confirm that its task, budget, approval, and activity records remain visible before connecting a real agent.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">02</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">hindsight</h2>
+    <p class="repo-path"><a href="https://github.com/vectorize-io/hindsight" target="_blank" rel="noopener">vectorize-io/hindsight</a></p>
+    <p class="repo-description">An agent memory system with retain, recall, and reflect operations, available through a self-hosted API, an embedded Python mode, client libraries, and an MCP server.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">44,954</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">16,183 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Start a local instance, retain three facts in a test memory bank, and recall one of them. Inspect the returned evidence and delete the test data before evaluating a production integration.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">03</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">VoiceStudio</h2>
+    <p class="repo-path"><a href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener">debpalash/VoiceStudio</a></p>
+    <p class="repo-description">A local voice-production app for speech generation, voice design, dubbing, dictation, transcription, and agent connections.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">52,348</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">16,475 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Generate a short clip with a permitted voice. Check pronunciation, file storage, and consent before using it in client media.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">04</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">impeccable</h2>
+    <p class="repo-path"><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">pbakaus/impeccable</a></p>
+    <p class="repo-description">Design guidance for AI coding agents, packaged as one skill with 24 commands, live browser iteration, and deterministic checks for frontend design problems.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">74,893</div>
+    <div class="repo-meta">Stars total / JavaScript</div>
+    <div class="weekly-gain">3,124 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install it in a disposable frontend project, run /impeccable init, and audit 1 page. Compare every reported issue with the rendered page before keeping any suggested change.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">05</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">ai-engineering-from-scratch</h2>
+    <p class="repo-path"><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener">rohitg00/ai-engineering-from-scratch</a></p>
+    <p class="repo-description">A hands-on course that teaches AI engineering by building and shipping small projects with an agent as a tutor.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">62,951</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">5,600 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install its skills and run /start-learning for one topic. Make the smallest exercise yourself, run its test, and record what you changed before asking the agent for the next lesson.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">06</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">hyperframes</h2>
+    <p class="repo-path"><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">heygen-com/hyperframes</a></p>
+    <p class="repo-description">An open-source framework for rendering HTML, CSS, media, and seekable animations as deterministic MP4 videos.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">56,177</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">2,661 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Render a 5-second HTML motion sample locally. Check the output frames and timing before using it for a client video.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">07</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">next.js</h2>
+    <p class="repo-path"><a href="https://github.com/vercel/next.js" target="_blank" rel="noopener">vercel/next.js</a></p>
+    <p class="repo-description">A React framework for building full-stack web applications with current React features and Rust-based JavaScript tooling.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">143,040</div>
+    <div class="repo-meta">Stars total / JavaScript</div>
+    <div class="weekly-gain">658 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Complete 1 page from the official Learn Next.js course, run it locally, and check the production build before considering it for a client site.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">08</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">effect</h2>
+    <p class="repo-path"><a href="https://github.com/Effect-TS/effect" target="_blank" rel="noopener">Effect-TS/effect</a></p>
+    <p class="repo-description">A TypeScript library for typed errors, dependency injection, structured concurrency, scheduling, tracing, and schema validation in production applications.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">16,724</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">466 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install effect in a strict TypeScript scratch project and model 1 operation with a typed error. Test both its success and failure paths before using it in an application.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">09</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">claude-skills</h2>
+    <p class="repo-path"><a href="https://github.com/alirezarezvani/claude-skills" target="_blank" rel="noopener">alirezarezvani/claude-skills</a></p>
+    <p class="repo-description">A collection of reusable skills, agents, commands, scripts, and reference files for Codex, Claude Code, Gemini CLI, and other coding tools.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">27,424</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">832 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install 1 skill into a disposable project, inspect its SKILL.md and scripts, and run it on public test data before adding it to a persistent agent profile.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">10</div>
+    <div class="category">Open Source</div>
+    <h2 class="repo-headline">flutter</h2>
+    <p class="repo-path"><a href="https://github.com/flutter/flutter" target="_blank" rel="noopener">flutter/flutter</a></p>
+    <p class="repo-description">Google&#x27;s open-source SDK for building mobile, web, and desktop applications from one Dart codebase.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">179,289</div>
+    <div class="repo-meta">Stars total / Dart</div>
+    <div class="weekly-gain">228 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Create 1 starter app and run it on macOS and the web. Change 1 widget with hot reload, then compare layout and input behavior on both targets.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">11</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">Agent-Reach</h2>
+    <p class="repo-path"><a href="https://github.com/Panniantong/Agent-Reach" target="_blank" rel="noopener">Panniantong/Agent-Reach</a></p>
+    <p class="repo-description">A command-line skill that gives agents access to web pages and services such as X, Reddit, YouTube, GitHub, Bilibili, and Xiaohongshu through fallback backends.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">89,508</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">3,959 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install it and fetch one public post from one supported service. Check the returned URL, timestamp, and text against the source before using it in a report.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">12</div>
+    <div class="category">Infrastructure</div>
+    <h2 class="repo-headline">Octop</h2>
+    <p class="repo-path"><a href="https://github.com/TencentCloud/Octop" target="_blank" rel="noopener">TencentCloud/Octop</a></p>
+    <p class="repo-description">A self-hosted, multi-user AI assistant that combines multiple agents with a web dashboard, CLI, messaging channels, connectors, knowledge bases, and scheduled tasks.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">6,530</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">1,425 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run octop init and octop run in a disposable local profile, create 1 test user and expert, and inspect the data directory and tool approval flow before connecting an account.</p>
+    </div>
+  </div>
+</section>
+<section class="page back">
+  <div class="cover-kicker">End of Issue</div>
+  <div class="back-title">Check the links. Test one repo.</div>
+  <div class="back-meta">GitHub Trending Weekly / Issue 24<br>Generated by Codex from SnailDev github-hot-hub weekly archive: https://raw.githubusercontent.com/SnailDev/github-hot-hub/main/archives/2026-10-03.md</div>
+</section>
+</main>
+<div class="dots" id="dots"></div>
+<script>
+const magazine = document.getElementById('magazine');
+const total = magazine.children.length;
+const dots = document.getElementById('dots');
+let current = 0;
+let lastWheel = 0;
+for (let i = 0; i < total; i++) {
+  const dot = document.createElement('button');
+  dot.className = 'dot';
+  dot.type = 'button';
+  dot.setAttribute('aria-label', `Go to page ${i + 1}`);
+  dot.addEventListener('click', () => go(i));
+  dots.appendChild(dot);
+}
+function go(index) {
+  current = Math.max(0, Math.min(total - 1, index));
+  magazine.style.transform = `translateX(-${current * 100}vw)`;
+  [...dots.children].forEach((dot, i) => dot.classList.toggle('active', i === current));
+}
+document.addEventListener('keydown', event => {
+  if (event.key === 'ArrowRight') go(current + 1);
+  if (event.key === 'ArrowLeft') go(current - 1);
+});
+document.addEventListener('wheel', event => {
+  const now = Date.now();
+  if (now - lastWheel < 700) return;
+  if (Math.abs(event.deltaY) < 10 && Math.abs(event.deltaX) < 10) return;
+  lastWheel = now;
+  go(current + (event.deltaY > 0 || event.deltaX > 0 ? 1 : -1));
+}, { passive: true });
+let touchStart = null;
+document.addEventListener('touchstart', event => {
+  touchStart = event.changedTouches[0].clientX;
+}, { passive: true });
+document.addEventListener('touchend', event => {
+  if (touchStart === null) return;
+  const delta = touchStart - event.changedTouches[0].clientX;
+  if (Math.abs(delta) > 50) go(current + (delta > 0 ? 1 : -1));
+  touchStart = null;
+}, { passive: true });
+go(0);
+</script>
+</body>
+</html>
