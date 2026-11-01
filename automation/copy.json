@@ -1,0 +1,1746 @@
+{
+  "1jehuang/jcode": {
+    "name": "jcode",
+    "category": "Open Source",
+    "description": "A RAM-efficient coding-agent harness for running an agent from the terminal with a small local footprint.",
+    "first_test": "Install it with the project script and point it at a disposable clone. Ask for one test-only change, measure memory use, and inspect the diff before any commit step.",
+    "language": "Rust",
+    "source_issue": "2026-08-01"
+  },
+  "3b1b/manim": {
+    "name": "manim",
+    "category": "Creative Systems",
+    "description": "A Python engine for precise programmatic animations. This repository is ManimGL, installed as manimgl; it renders scenes from Python and can use LaTeX for math text.",
+    "first_test": "Install manimgl with Python 3.10+ and FFmpeg, then run manimgl example_scenes.py OpeningManimExample. Render one short explainer and keep its dependencies separate from Manim Community.",
+    "language": "Python",
+    "source_issue": "2026-08-15"
+  },
+  "abseil/abseil-cpp": {
+    "name": "abseil-cpp",
+    "category": "Open Source",
+    "description": "A collection of C++17 utility libraries for strings, containers, synchronization, time, hashing, and other common low-level tasks.",
+    "first_test": "Build the library and compile one small example against it. Run the project's tests and check the selected C++ standard before adding Abseil to a production build.",
+    "language": "C++",
+    "source_issue": "2026-07-18"
+  },
+  "addyosmani/agent-skills": {
+    "name": "agent-skills",
+    "category": "Agent Ops",
+    "description": "A pack of 24 workflow skills for definition, planning, implementation, testing, review, performance, simplification, and release work in coding agents.",
+    "first_test": "Install the pack with npx skills add addyosmani/agent-skills. In one real repo, run /spec, /plan, and /test on a small change, then keep it if the outputs provide useful evidence.",
+    "language": "JavaScript",
+    "source_issue": "2026-09-26"
+  },
+  "affaan-m/ECC": {
+    "name": "ECC",
+    "category": "Security",
+    "description": "A collection of engineering skills, memory, security checks, research-first workflows, and performance guidance for Claude Code, Codex, OpenCode, and Cursor.",
+    "first_test": "Install one workflow in a disposable repository and run it on a small issue. Check the generated plan, tests, and permission requests before adding the full collection.",
+    "language": "JavaScript",
+    "source_issue": "2026-09-26"
+  },
+  "agegr/pi-web": {
+    "name": "pi-web",
+    "category": "Agent Ops",
+    "description": "A web interface for the pi coding agent that lets users start and observe coding-agent sessions from a browser.",
+    "first_test": "Run it against a disposable repository and complete one read-only task. Check login, terminal output, working directory, and session cleanup before exposing the web interface.",
+    "language": "TypeScript",
+    "source_issue": "2026-07-25"
+  },
+  "AgriciDaniel/claude-seo": {
+    "name": "claude-seo",
+    "category": "Business Tools",
+    "description": "An SEO audit plugin for Claude Code built from 26 sub-skills and 19 agents, covering technical SEO, Core Web Vitals, structured data, AI search citation, and local, e-commerce, and international SEO, with a prioritized action plan.",
+    "first_test": "Run one audit on a site you own and pick 3 of its highest-priority findings. Check each against Search Console or PageSpeed data before acting on any recommendation.",
+    "source_issue": "2026-10-31",
+    "language": ""
+  },
+  "akitaonrails/ai-memory": {
+    "name": "ai-memory",
+    "category": "Agent Ops",
+    "description": "A Rust project for long-term memory in agent coding CLIs and for handing context between different agent vendors.",
+    "first_test": "Use it in a disposable repository with one remembered project rule. Start a second agent session and confirm exactly what context is retrieved before storing client-specific notes.",
+    "language": "Rust",
+    "source_issue": "2026-10-24"
+  },
+  "alibaba/open-code-review": {
+    "name": "open-code-review",
+    "category": "Infrastructure",
+    "description": "A code-review system that combines deterministic rules with an LLM agent and reports findings at exact source lines, including rules for common security and correctness issues.",
+    "first_test": "Run it on a test pull request with one known defect. Compare the line comment with a human review and inspect the configured rules before connecting the service to a live repository.",
+    "language": "Go",
+    "source_issue": "2026-09-26"
+  },
+  "alibaba/page-agent": {
+    "name": "page-agent",
+    "category": "Agent Ops",
+    "description": "A JavaScript in-page GUI agent that controls web interfaces with natural-language instructions without a browser extension or headless browser.",
+    "first_test": "Add it to a local test page and ask it to read one field. Inspect the generated actions and block submit or delete actions until selectors and confirmation checks are explicit.",
+    "language": "TypeScript",
+    "source_issue": "2026-07-11"
+  },
+  "alirezarezvani/claude-skills": {
+    "name": "claude-skills",
+    "category": "Agent Ops",
+    "description": "A collection of reusable skills, agents, commands, scripts, and reference files for Codex, Claude Code, Gemini CLI, and other coding tools.",
+    "first_test": "Install 1 skill into a disposable project, inspect its SKILL.md and scripts, and run it on public test data before adding it to a persistent agent profile.",
+    "language": "Python",
+    "source_issue": "2026-10-03"
+  },
+  "Alishahryar1/free-claude-code": {
+    "name": "free-claude-code",
+    "category": "Creative Systems",
+    "description": "A launcher for terminal, desktop, IDE, and Discord workflows with Claude Code, Codex, Pi, OpenCode, and local model providers. It includes server and client commands for connecting those tools.",
+    "first_test": "Install it in a test account and run fcc-server with one provider. Use fcc-claude on a read-only repository, then check the provider, token path, and command log before using a paid account.",
+    "language": "Python",
+    "source_issue": "2026-04-29"
+  },
+  "android/skills": {
+    "name": "skills",
+    "category": "Agent Ops",
+    "description": "Official modular agent skills that ground coding agents in Android development patterns, tools, and workflows documented by the Android team.",
+    "first_test": "Install only the r8-analyzer skill into 1 disposable Android project, run it against a test release configuration, and compare every finding with the generated R8 files and Android documentation.",
+    "language": "Kotlin",
+    "source_issue": "2026-10-24"
+  },
+  "Anil-matcha/Open-Generative-AI": {
+    "name": "Open-Generative-AI",
+    "category": "Creative Systems",
+    "description": "A self-hosted image and video generation studio that connects to many model providers through a web interface. It is released under the MIT license and supports configurable model access.",
+    "first_test": "Run it with a local test configuration and generate one image from a prompt you wrote. Record the provider, model, input, and output license before using the result commercially.",
+    "language": "JavaScript",
+    "source_issue": "2026-04-29"
+  },
+  "anomalyco/opencode": {
+    "name": "opencode",
+    "category": "Agent Ops",
+    "description": "An open-source coding agent available as a terminal interface and desktop app, with a full-access build agent and a read-only plan agent for code exploration.",
+    "first_test": "Run the read-only plan agent in 1 disposable repository and ask it to trace a single function call path. Confirm it makes no file changes before testing the build agent.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-24"
+  },
+  "anthropics/claude-code": {
+    "name": "claude-code",
+    "category": "Agent Ops",
+    "description": "An agentic coding tool for terminal, IDE, and GitHub workflows that can inspect code, explain it, and perform routine tasks.",
+    "first_test": "Give it 1 read-only question in a test repository. Check its file access and answer before authorizing edits.",
+    "language": "TypeScript",
+    "source_issue": "2026-09-26"
+  },
+  "anthropics/claude-plugins-community": {
+    "name": "claude-plugins-community",
+    "category": "Agent Ops",
+    "description": "A read-only mirror of community plugins approved for the Claude Cowork and Claude Code plugin marketplace. Its marketplace.json file is synced from Anthropic's review pipeline.",
+    "first_test": "Add the marketplace to Claude Code and install one plugin by name. Read that plugin's files and permissions, run one harmless command, and remove it if its access is broader than the task needs.",
+    "language": "Python",
+    "source_issue": "2026-08-29"
+  },
+  "anthropics/claude-plugins-official": {
+    "name": "claude-plugins-official",
+    "category": "Agent Ops",
+    "description": "Anthropic's maintained directory of Claude Code plugins, including plugin manifests, skills, hooks, commands, and agent integrations.",
+    "first_test": "Choose one plugin from its manifest, install it in a test project, and read every hook it enables. Run one command before allowing it to edit files or call external services.",
+    "language": "Python",
+    "source_issue": "2026-10-24"
+  },
+  "anthropics/financial-services": {
+    "name": "financial-services",
+    "category": "Agent Ops",
+    "description": "Claude plugins and reference material for financial analysis, investment research, due diligence, and other financial-services workflows.",
+    "first_test": "Install one relevant plugin and test it with a public company filing. Check every number against the source document and keep the result as analysis support, not financial advice.",
+    "language": "Python",
+    "source_issue": "2026-09-26"
+  },
+  "anthropics/knowledge-work-plugins": {
+    "name": "knowledge-work-plugins",
+    "category": "Agent Ops",
+    "description": "A collection of plugins for knowledge-work tasks in Claude Cowork, with commands and workflows for roles such as research, writing, and analysis.",
+    "first_test": "Install one role-specific plugin and run it on a public source. Check the generated files and tool permissions, then remove commands that do not fit your actual workflow.",
+    "language": "Python",
+    "source_issue": "2026-10-24"
+  },
+  "anthropics/skills": {
+    "name": "skills",
+    "category": "Agent Ops",
+    "description": "Anthropic's public repository of example Agent Skills for Claude, including the document skills for Word, PowerPoint, Excel, and PDF files, the Agent Skills specification, and a skill template.",
+    "first_test": "Add it as a Claude Code plugin marketplace and install only document-skills. Ask for 1 short PDF form-field extraction from a test file and check the output against the original document.",
+    "source_issue": "2026-10-31",
+    "language": ""
+  },
+  "antirez/ds4": {
+    "name": "ds4",
+    "category": "Open Source",
+    "description": "A native local-inference engine for DeepSeek 4 and related models on Metal, CUDA, and ROCm, with an HTTP server and coding-agent mode.",
+    "first_test": "Build it on a supported test machine and run the smallest model command. Measure model load, memory, tokens per second, and server access before exposing it to other users.",
+    "language": "C",
+    "source_issue": "2026-08-08"
+  },
+  "apache/maka": {
+    "name": "maka",
+    "category": "Agent Ops",
+    "description": "A local-first AI agent workspace that records model messages, tool calls, tool results, permission decisions, and termination events in an append-only session log.",
+    "first_test": "On a supported Apple Silicon Mac, build it from source with npm ci and npm run dev. Run one read-only repository task, then inspect the tool timeline, permission decisions, and saved session record.",
+    "language": "TypeScript",
+    "source_issue": "2026-08-29"
+  },
+  "apple/container": {
+    "name": "container",
+    "category": "Infrastructure",
+    "description": "A macOS command-line tool for running Linux containers inside lightweight virtual machines on Apple Silicon, with OCI images and isolated networking.",
+    "first_test": "Run container system start and container run --rm alpine echo hello. Check volume, network, and cleanup behavior before placing a build or agent task inside it.",
+    "language": "Swift",
+    "source_issue": "2026-06-13"
+  },
+  "AprilNEA/OpenLogi": {
+    "name": "OpenLogi",
+    "category": "Open Source",
+    "description": "A Rust local-first alternative to Logitech Options+ for remapping buttons, DPI, and SmartShift over HID++ without an account or telemetry.",
+    "first_test": "Test it with one supported mouse on a non-critical profile. Export or note the original device settings first, then verify each remap before using it during client work.",
+    "language": "Rust",
+    "source_issue": "2026-08-29"
+  },
+  "asgeirtj/system_prompts_leaks": {
+    "name": "system_prompts_leaks",
+    "category": "Creative Systems",
+    "description": "A reference corpus of collected system-prompt files from several AI products and agents. It is useful for comparing instruction layers, but the files are not official guarantees.",
+    "first_test": "Read one prompt as a text sample and label its source and date. Compare its rules with the product's public documentation, and do not copy private or product-specific text into a deployed system.",
+    "language": "JavaScript",
+    "source_issue": "2026-07-11"
+  },
+  "ATH-MaaS/Pixelle-Video": {
+    "name": "Pixelle-Video",
+    "category": "Creative Systems",
+    "description": "A web-based short-video pipeline that turns a topic into a script, images or video, voice narration, music, subtitles, and a final composition.",
+    "first_test": "Use a non-client topic and one short output. Check the generated script, media licenses, voice, and subtitle timing before you reuse any asset in a public campaign.",
+    "language": "Python",
+    "source_issue": "2026-05-08"
+  },
+  "ayghri/i-have-adhd": {
+    "name": "i-have-adhd",
+    "category": "Agent Ops",
+    "description": "A coding-agent output skill that asks for concise answers, clear next actions, and less buried information when a task has many details.",
+    "first_test": "Install it and run the same small task with and without the skill. Compare the location of the answer, risks, and next action, then keep only useful changes in your project instructions.",
+    "language": "Python",
+    "source_issue": "2026-09-19"
+  },
+  "basecamp/omarchy": {
+    "name": "omarchy",
+    "category": "Open Source",
+    "description": "A Shell-based Linux setup from Basecamp that packages an opinionated desktop environment and development workstation configuration.",
+    "first_test": "Install it only in a VM or spare machine first. Record which packages, dotfiles, and services it changes before using the setup on a daily workstation.",
+    "language": "Shell",
+    "source_issue": "2026-08-22"
+  },
+  "BasedHardware/omi": {
+    "name": "omi",
+    "category": "Open Source",
+    "description": "A wearable and desktop second-brain system that captures conversations or screens, transcribes them, and produces summaries, action items, and chat context.",
+    "first_test": "Use it for one non-sensitive meeting or screen session. Read the transcript, summary, and stored data location, then remove the recording before testing it with private material.",
+    "language": "Dart",
+    "source_issue": "2026-04-22"
+  },
+  "bilawalsidhu/gods-eye-view": {
+    "name": "gods-eye-view",
+    "category": "Open Source",
+    "description": "A browser-based 3D globe that displays public aircraft, ship, satellite, earthquake, traffic, and camera feeds.",
+    "first_test": "Open a public region in the local demo. Check the data source and timestamp before using any scene in a visual report.",
+    "language": "JavaScript",
+    "source_issue": "2026-09-19"
+  },
+  "blader/humanizer": {
+    "name": "humanizer",
+    "category": "Agent Ops",
+    "description": "A Markdown agent skill that rewrites AI-sounding prose while aiming to preserve its meaning.",
+    "first_test": "Apply it to a draft paragraph, then compare claims line by line with the source before using the copy in a client report.",
+    "language": "Python",
+    "source_issue": "2026-09-19"
+  },
+  "block/buzz": {
+    "name": "buzz",
+    "category": "Open Source",
+    "description": "A communication platform from Block for organising conversations and shared work around a common space.",
+    "first_test": "Create a test workspace with two accounts and send one message. Check roles, notifications, export, and deletion before moving a real team channel.",
+    "language": "Rust",
+    "source_issue": "2026-08-01"
+  },
+  "bojieli/ai-agent-book": {
+    "name": "ai-agent-book",
+    "category": "Agent Ops",
+    "description": "An open Chinese book about AI-agent design and engineering, with the full text, a compiled PDF, and code examples arranged by chapter.",
+    "first_test": "Read one chapter and run its matching example. Change one input, compare the output with the explanation, and record the dependency versions before using the pattern elsewhere.",
+    "language": "Python",
+    "source_issue": "2026-07-25"
+  },
+  "boykopovar/AnyPS5": {
+    "name": "AnyPS5",
+    "category": "Open Source",
+    "description": "A compatibility tool that relinks clean PS5 ELF executables into native Linux, Windows, or macOS formats and supplies system-library implementations without a separate emulator process.",
+    "first_test": "Build the relinker in a test environment, then run its import audit on 1 lawfully obtained compatible sample. Review every absent or stubbed import before attempting to launch the output.",
+    "language": "C++",
+    "source_issue": "2026-10-17"
+  },
+  "bradautomates/claude-video": {
+    "name": "claude-video",
+    "category": "Creative Systems",
+    "description": "A Claude Code skill that downloads a video, extracts frames, transcribes speech, and gives the combined evidence to Claude through the /watch command.",
+    "first_test": "Run /watch on a short local or permitted video and ask one timestamped question. Check the extracted frames and transcript against the source before using the answer.",
+    "language": "Python",
+    "source_issue": "2026-07-11"
+  },
+  "browser-use/video-use": {
+    "name": "video-use",
+    "category": "Creative Systems",
+    "description": "A coding-agent tool for editing video from a footage folder and a natural-language request, with a final video written to the project directory.",
+    "first_test": "Give it three short test clips and ask for one cut. Inspect the edit decision, timestamps, and final.mp4, then confirm that the source files were not overwritten.",
+    "language": "Python",
+    "source_issue": "2026-07-04"
+  },
+  "browserbase/skills": {
+    "name": "skills",
+    "category": "Agent Ops",
+    "description": "Browserbase's official agent skills for web navigation, page interaction, extraction, and browser automation workflows.",
+    "first_test": "Install one skill and run it against a public test page. Check the selected elements and extracted values against the page before adding login or form-submit actions.",
+    "language": "JavaScript",
+    "source_issue": "2026-05-08"
+  },
+  "BuilderIO/agent-native": {
+    "name": "agent-native",
+    "category": "Agent Ops",
+    "description": "A framework for defining application actions that can be used from a user interface, agent, HTTP, MCP, A2A, or CLI client.",
+    "first_test": "Define one read-only action and call it from two supported clients. Assert the same input validation and result shape before adding an action that changes data.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-27"
+  },
+  "bytedance/UI-TARS-desktop": {
+    "name": "UI-TARS-desktop",
+    "category": "Agent Ops",
+    "description": "A multimodal desktop agent stack with a CLI, web UI, browser and computer-use tools, MCP support, and model adapters for visual interaction.",
+    "first_test": "Install the desktop client and use it on a test account. Ask it to open one local application and report the screen action sequence before allowing clicks that change data.",
+    "language": "TypeScript",
+    "source_issue": "2026-05-16"
+  },
+  "cactus-compute/needle": {
+    "name": "needle",
+    "category": "Open Source",
+    "description": "A 45-million-parameter local model for tool calling and structured extraction. It is distributed in a small file, returns schema-constrained JSON, and supports confidence thresholds.",
+    "first_test": "Install cactus-needle, define one typed Python tool, and call agent.run() with an invoice example. Accept a device action only above a confidence threshold that you set and test.",
+    "language": "Python",
+    "source_issue": "2026-08-15"
+  },
+  "calesthio/OpenMontage": {
+    "name": "OpenMontage",
+    "category": "Creative Systems",
+    "description": "An agentic video-production system that coordinates media preparation, planning, editing, and rendering through a pipeline called Backlot.",
+    "first_test": "Run make setup and open one sample project with python -m backlot open. Use test footage, inspect each pipeline step, and verify the final render before adding client media.",
+    "language": "Python",
+    "source_issue": "2026-07-04"
+  },
+  "can1357/oh-my-pi": {
+    "name": "oh-my-pi",
+    "category": "Agent Ops",
+    "description": "A terminal coding-agent toolkit with file and shell tools, LSP support, Python execution, browser access, subagents, and a customizable agent loop.",
+    "first_test": "Install it and point it at a disposable repository. Ask for a test-only change, inspect the tool calls and LSP diagnostics, and reject any unrequested file edits.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-06"
+  },
+  "cathrynlavery/diagram-design": {
+    "name": "diagram-design",
+    "category": "Creative Systems",
+    "description": "A skill for Claude Code, Codex, and Pi that creates 27 diagram types as static HTML and SVG. Use it for architecture, flows, data models, and timelines; it can also redraw Mermaid or draw.io sources.",
+    "first_test": "Install the skill, then give it one client process, such as a booking flow. Ask for an architecture or swimlane diagram, open the HTML, and remove any node that does not help the reader.",
+    "language": "HTML",
+    "source_issue": "2026-10-17"
+  },
+  "citrolabs/ego-lite": {
+    "name": "ego-lite",
+    "category": "Agent Ops",
+    "description": "A local browser for AI agents that can share an existing logged-in browser state with tools such as Codex or Claude Code.",
+    "first_test": "Use a separate browser profile and a public test site first. Check which cookies and tabs are exposed, then keep all payment and admin accounts out of the shared profile.",
+    "language": "JavaScript",
+    "source_issue": "2026-08-01"
+  },
+  "CJackHwang/ds2api": {
+    "name": "ds2api",
+    "category": "Open Source",
+    "description": "A Go middleware service that converts a DeepSeek web conversation interface into OpenAI, Claude, and Gemini-compatible API formats, with a React administration interface.",
+    "first_test": "Run it locally with the documented Docker or Go path and send one test request. Inspect the request translation and terms of service before connecting a real account or client traffic.",
+    "language": "Go",
+    "source_issue": "2026-04-29"
+  },
+  "CloakHQ/CloakBrowser": {
+    "name": "CloakBrowser",
+    "category": "Open Source",
+    "description": "A source-patched Chromium build intended as a drop-in Playwright or Puppeteer browser for controlled browser testing and automation.",
+    "first_test": "Run the supplied browser example against a local test page. Review the security, compliance, and site terms first; do not use it to bypass access controls or anti-abuse systems.",
+    "language": "Python",
+    "source_issue": "2026-05-23"
+  },
+  "cloudflare/security-audit-skill": {
+    "name": "security-audit-skill",
+    "category": "Security",
+    "description": "A coding-agent skill that organizes repository security audits into reconnaissance, coverage-led hunting, candidate validation, structured findings, independent verification, and source-backed reports.",
+    "first_test": "Install it in an isolated agent profile and audit one disposable sample repository. Check that coverage-ledger.json and findings.json pass the included validators before reading the generated reports.",
+    "language": "JavaScript",
+    "source_issue": "2026-10-24"
+  },
+  "cocoindex-io/cocoindex": {
+    "name": "cocoindex",
+    "category": "Agent Ops",
+    "description": "A Python data-transformation engine that updates downstream indexes incrementally instead of rebuilding all data after every change.",
+    "first_test": "Install it with pip install -U cocoindex and transform a small fixture. Change one source row, run the pipeline again, and confirm that only the expected target records changed.",
+    "language": "Rust",
+    "source_issue": "2026-05-08"
+  },
+  "colbymchenry/codegraph": {
+    "name": "codegraph",
+    "category": "Agent Ops",
+    "description": "A local code knowledge graph that indexes a repository, syncs after code changes, and serves context to coding agents through CLI and MCP clients.",
+    "first_test": "Run codegraph init in a disposable clone and index one module. Ask for a caller list, compare it with the language tools, and check what files the agent can read before enabling edits.",
+    "language": "TypeScript",
+    "source_issue": "2026-05-30"
+  },
+  "Comfy-Org/ComfyUI": {
+    "name": "ComfyUI",
+    "category": "Open Source",
+    "description": "A node-graph engine and interface for building reusable local workflows for image, video, audio, 3D, and text models, with queueing, workflow templates, and API integration.",
+    "first_test": "Use the official desktop app to load 1 maintained text-to-image template, generate 1 low-resolution image, and save the workflow JSON. Reopen it offline and confirm the graph and parameters are preserved.",
+    "language": "Python",
+    "source_issue": "2026-10-24"
+  },
+  "cordiverse/cordis": {
+    "name": "cordis",
+    "category": "Open Source",
+    "description": "A TypeScript meta-framework described by its maintainers as a framework for spatiotemporal composability.",
+    "first_test": "Read the core concepts and run the smallest documented example. Use it only if the composition model is clearer than a normal framework for the workflow you are testing.",
+    "language": "TypeScript",
+    "source_issue": "2026-08-22"
+  },
+  "cursor/plugins": {
+    "name": "plugins",
+    "category": "Open Source",
+    "description": "Cursor's plugin specification and a set of official plugins that package skills, commands, agents, and integrations for the Cursor editor.",
+    "first_test": "Read one plugin manifest and install it in a test project. Run its smallest command, inspect file and network access, and keep only the pieces that match your workflow.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-24"
+  },
+  "datawhalechina/easy-vibe": {
+    "name": "easy-vibe",
+    "category": "Open Source",
+    "description": "A step-by-step course for beginners who want to build modern software with AI-assisted development and ship working projects.",
+    "first_test": "Start one lesson in a clean project and complete its exercise without skipping the verification step. Keep the generated code only after you can explain its entry point and test.",
+    "language": "JavaScript",
+    "source_issue": "2026-05-23"
+  },
+  "davila7/claude-code-templates": {
+    "name": "claude-code-templates",
+    "category": "Agent Ops",
+    "description": "A CLI and catalog of Claude Code agents, commands, settings, hooks, skills, MCP integrations, project templates, monitoring tools, and installation diagnostics.",
+    "first_test": "Run the interactive catalog in a temporary profile and install one component. Inspect every written configuration file, run its health check, and remove the profile after confirming the component's scope.",
+    "language": "Python",
+    "source_issue": "2026-09-26"
+  },
+  "debpalash/VoiceStudio": {
+    "name": "VoiceStudio",
+    "category": "Creative Systems",
+    "description": "A local voice-production app for speech generation, voice design, dubbing, dictation, transcription, and agent connections.",
+    "first_test": "Generate a short clip with a permitted voice. Check pronunciation, file storage, and consent before using it in client media.",
+    "language": "Python",
+    "source_issue": "2026-10-03"
+  },
+  "decolua/9router": {
+    "name": "9router",
+    "category": "Infrastructure",
+    "description": "A local AI router that presents one endpoint for several coding clients and providers, translates request formats, and can fail over between configured models.",
+    "first_test": "Configure one provider and one low-risk coding request. Inspect the route, model, token count, and error fallback in the logs before adding more providers or secrets.",
+    "language": "JavaScript",
+    "source_issue": "2026-05-16"
+  },
+  "DeusData/codebase-memory-mcp": {
+    "name": "codebase-memory-mcp",
+    "category": "Infrastructure",
+    "description": "A local MCP server that builds code intelligence from Tree-sitter parsing and a graph, with a static binary and support for many programming languages.",
+    "first_test": "Install the binary and index a small repository. Ask for a symbol definition and callers, compare both with the source, and check the MCP client permissions before enabling edits.",
+    "language": "C",
+    "source_issue": "2026-07-04"
+  },
+  "diegosouzapw/OmniRoute": {
+    "name": "OmniRoute",
+    "category": "Infrastructure",
+    "description": "A local AI gateway that exposes one endpoint for many model providers and translates requests for clients such as Claude Code, Codex, Cursor, and Copilot.",
+    "first_test": "Run it on the local port with one provider and one low-risk prompt. Inspect the selected model, request log, costs, and fallback behavior before adding credentials for other providers.",
+    "language": "TypeScript",
+    "source_issue": "2026-07-25"
+  },
+  "DietrichGebert/ponytail": {
+    "name": "ponytail",
+    "category": "Agent Ops",
+    "description": "An agent skill that prompts coding agents to solve tasks with smaller, simpler code changes.",
+    "first_test": "Apply it to 1 small bug in a disposable branch. Compare the diff and test results with the normal agent workflow.",
+    "language": "JavaScript",
+    "source_issue": "2026-09-12"
+  },
+  "different-ai/openwork": {
+    "name": "openwork",
+    "category": "Agent Ops",
+    "description": "An open-source desktop workspace for sharing AI workflows, skills, MCP connections, and connected services across compatible agents and team members.",
+    "first_test": "Install it with a test workspace and connect one non-sensitive capability. Use search_capabilities and execute_capability on a harmless action, then review access and sign-in scope.",
+    "language": "TypeScript",
+    "source_issue": "2026-08-08"
+  },
+  "docusealco/docuseal": {
+    "name": "docuseal",
+    "category": "Open Source",
+    "description": "A self-hosted document workflow for creating PDF forms, filling them, and collecting digital signatures. The project includes a Docker deployment path.",
+    "first_test": "Start the Docker container with a test volume and create one non-sensitive form. Complete it with a test signer, then verify the PDF, audit trail, and storage location.",
+    "language": "Ruby",
+    "source_issue": "2026-05-08"
+  },
+  "DuarteSantos8/openGym": {
+    "name": "openGym",
+    "category": "Infrastructure",
+    "description": "A self-hosted workout and body-weight tracker for planning routines, logging guided sessions, viewing training status, importing fitness-app data, and signing in with passkeys.",
+    "first_test": "Use the public demo to create 1 routine and log 1 sample workout. Check the muscle and progress views, then test the export before deciding whether to self-host it.",
+    "language": "JavaScript",
+    "source_issue": "2026-10-10"
+  },
+  "earendil-works/pi": {
+    "name": "pi",
+    "category": "Agent Ops",
+    "description": "An AI-agent toolkit with a unified LLM API, agent loop, terminal UI, and coding-agent CLI for building or running local agent workflows.",
+    "first_test": "Run the CLI with one configured model and a read-only repository task. Save the tool trace, check the API endpoint, and test cancellation before using it in automation.",
+    "language": "TypeScript",
+    "source_issue": "2026-07-25"
+  },
+  "earthtojake/text-to-cad": {
+    "name": "text-to-cad",
+    "category": "Agent Ops",
+    "description": "An agent plugin with local workflows for generating STEP, GLB, STL, and 3MF models, checking manufacturability, and producing engineering drawings.",
+    "first_test": "Install the release-channel plugin in 1 test agent, disable telemetry if needed, and generate a simple dimensioned box. Inspect the model in the local viewer and export 1 STEP file.",
+    "language": "Python",
+    "source_issue": "2026-10-10"
+  },
+  "Effect-TS/effect": {
+    "name": "effect",
+    "category": "Open Source",
+    "description": "A TypeScript library for typed errors, dependency injection, structured concurrency, scheduling, tracing, and schema validation in production applications.",
+    "first_test": "Install effect in a strict TypeScript scratch project and model 1 operation with a typed error. Test both its success and failure paths before using it in an application.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-03"
+  },
+  "Egonex-AI/Understand-Anything": {
+    "name": "Understand-Anything",
+    "category": "Agent Ops",
+    "description": "A coding-agent plugin that analyzes a repository into an interactive knowledge graph, dashboard, and searchable explanations.",
+    "first_test": "Install it in a disposable clone and run /understand. Compare one graph relationship with the source code, then use /understand-diff before accepting a change.",
+    "language": "TypeScript",
+    "source_issue": "2026-05-30"
+  },
+  "EpicGames/raddebugger": {
+    "name": "raddebugger",
+    "category": "Open Source",
+    "description": "A native graphical debugger for local Windows x64 programs with PDB support, multi-process debugging, a custom RAD Debug Info format, and related linker tools.",
+    "first_test": "Download 1 prebuilt alpha release on a Windows x64 test machine and debug a small program. Verify a breakpoint, variable inspection, and process switching before using it on a larger codebase.",
+    "language": "C",
+    "source_issue": "2026-10-10"
+  },
+  "esengine/DeepSeek-Reasonix": {
+    "name": "DeepSeek-Reasonix",
+    "category": "Infrastructure",
+    "description": "A terminal coding agent built around DeepSeek models, with a persistent session, prefix-cache handling, extensions, and ACP support.",
+    "first_test": "Install the CLI and run one read-only task in a disposable repository. Check model configuration, cached files, shell commands, and cancellation before leaving it running.",
+    "language": "Go",
+    "source_issue": "2026-08-08"
+  },
+  "EveryInc/compound-engineering-plugin": {
+    "name": "compound-engineering-plugin",
+    "category": "Agent Ops",
+    "description": "An engineering plugin for Claude, Codex, Cursor, and related agents that packages repeatable research, planning, implementation, review, and delivery workflows.",
+    "first_test": "Install one command in a test repository and run it on a small change. Review the plan and generated tests, then keep the workflow only if each step produces evidence you can inspect.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-06"
+  },
+  "EvoMap/evolver": {
+    "name": "evolver",
+    "category": "Agent Ops",
+    "description": "A JavaScript engine for self-evolving agents. It stores proposed changes as Genes, Capsules, and Events so you can review what changed before you run the next cycle.",
+    "first_test": "Install it with npm install -g @evomap/evolver. Run one local evolution with --review, inspect the generated capsule, and keep the change only if you can explain its test result.",
+    "language": "JavaScript",
+    "source_issue": "2026-04-22"
+  },
+  "facebook/astryx": {
+    "name": "astryx",
+    "category": "Creative Systems",
+    "description": "A React 19 and StyleX design system with reusable packages, customizable tokens, and conventions intended to be understandable by coding agents.",
+    "first_test": "Install the packages and rebuild one button from the examples. Check token values, generated CSS, and keyboard states before using it as a product design system.",
+    "language": "TypeScript",
+    "source_issue": "2026-07-11"
+  },
+  "Fincept-Corporation/FinceptTerminal": {
+    "name": "FinceptTerminal",
+    "category": "Creative Systems",
+    "description": "An AGPL desktop finance application with market analytics, investment research, and economic data tools. The public repository is the free edition for learning and academic use.",
+    "first_test": "Build the free edition and load a small set of historical data. Check the data source and date for every chart; do not use the output as a trading instruction without independent review.",
+    "language": "C++",
+    "source_issue": "2026-04-29"
+  },
+  "flutter/flutter": {
+    "name": "flutter",
+    "category": "Open Source",
+    "description": "Google's open-source SDK for building mobile, web, and desktop applications from one Dart codebase.",
+    "first_test": "Create 1 starter app and run it on macOS and the web. Change 1 widget with hot reload, then compare layout and input behavior on both targets.",
+    "language": "Dart",
+    "source_issue": "2026-10-10"
+  },
+  "fmtlib/fmt": {
+    "name": "fmt",
+    "category": "Open Source",
+    "description": "A C++ formatting library that provides string formatting and output APIs.",
+    "first_test": "Build the smallest formatting example in a test C++ project and compare its output with the project's existing formatter.",
+    "language": "C++",
+    "source_issue": "2026-09-05"
+  },
+  "freestylefly/awesome-gpt-image-2": {
+    "name": "awesome-gpt-image-2",
+    "category": "Agent Ops",
+    "description": "A prompt-as-code library for GPT-Image-2 with a categorized case gallery, reusable prompt templates, and an agent skill for image-generation workflows.",
+    "first_test": "Choose one case from the gallery and copy its full prompt into a test generation. Change one structured field, compare both images, and record which layout or style detail changed.",
+    "language": "JavaScript",
+    "source_issue": "2026-08-29"
+  },
+  "Gitlawb/openclaude": {
+    "name": "openclaude",
+    "category": "Agent Ops",
+    "description": "An open-source coding-agent CLI that connects terminal workflows to cloud and local model providers, tools, agents, and MCP.",
+    "first_test": "Run its quick start in a disposable repository with one local provider. Record what files and commands the agent can access.",
+    "language": "TypeScript",
+    "source_issue": "2026-09-05"
+  },
+  "google-labs-code/design.md": {
+    "name": "design.md",
+    "category": "Creative Systems",
+    "description": "A design-document format that combines YAML design tokens with Markdown rationale so coding agents can use a visual system and its decisions together.",
+    "first_test": "Create a small DESIGN.md for one screen with three tokens and one component rule. Ask an agent to implement it, then compare the CSS values with the declared tokens.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-27"
+  },
+  "google-research/timesfm": {
+    "name": "timesfm",
+    "category": "Data & Research",
+    "description": "A pretrained time-series forecasting model and Python package for predicting future values from historical time-series data.",
+    "first_test": "Install the package and forecast a small, dated dataset with a held-out period. Compare the result with a seasonal baseline and record the horizon and input frequency.",
+    "language": "Python",
+    "source_issue": "2026-09-05"
+  },
+  "google/skills": {
+    "name": "skills",
+    "category": "Agent Ops",
+    "description": "Agent skills for Google Cloud and other Google products, including authentication, architecture, data, deployment, and multi-product solution workflows.",
+    "first_test": "Install one cloud skill with npx skills add google/skills and run it against a test project. Review the commands and IAM scope before allowing it to change cloud resources.",
+    "language": "Python",
+    "source_issue": "2026-08-08"
+  },
+  "handsomestWei/patent-disclosure-skill": {
+    "name": "patent-disclosure-skill",
+    "category": "Agent Ops",
+    "description": "A Chinese-language agent skill for identifying patent ideas, drafting disclosure documents, and explaining published patents.",
+    "first_test": "Try it on a public invention example and inspect the draft disclosure. Keep any real filing or legal conclusion with qualified counsel.",
+    "language": "Python",
+    "source_issue": "2026-09-05"
+  },
+  "hardikpandya/stop-slop": {
+    "name": "stop-slop",
+    "category": "Agent Ops",
+    "description": "A writing skill that identifies common AI wording, repeated structures, and weak transitions so an agent can revise prose into clearer human language.",
+    "first_test": "Run it on one paragraph you wrote and compare the original with the revision. Keep only changes that improve meaning, then add a fact check for every new claim.",
+    "language": "None",
+    "source_issue": "2026-05-30"
+  },
+  "harry0703/MoneyPrinterTurbo": {
+    "name": "MoneyPrinterTurbo",
+    "category": "Creative Systems",
+    "description": "A Chinese and English tool that turns a topic or keyword into a short video with a script, images, subtitles, music, and generated voice.",
+    "first_test": "Generate one private test video from a factual topic. Check each claim, image license, voice, and subtitle timing before publishing or selling the result.",
+    "language": "Python",
+    "source_issue": "2026-08-22"
+  },
+  "headroomlabs-ai/headroom": {
+    "name": "headroom",
+    "category": "Infrastructure",
+    "description": "A library, proxy, and MCP server that compresses tool output, logs, files, and retrieval chunks before they reach an LLM.",
+    "first_test": "Run it on a captured tool response and compare the original and compressed text. Measure whether key fields survive, then add a regression test before using it in an agent loop.",
+    "language": "Python",
+    "source_issue": "2026-06-20"
+  },
+  "heygen-com/hyperframes": {
+    "name": "hyperframes",
+    "category": "Creative Systems",
+    "description": "An open-source framework for rendering HTML, CSS, media, and seekable animations as deterministic MP4 videos.",
+    "first_test": "Render a 5-second HTML motion sample locally. Check the output frames and timing before using it for a client video.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-24"
+  },
+  "HKUDS/AI-Trader": {
+    "name": "AI-Trader",
+    "category": "Agent Ops",
+    "description": "An agent-native trading platform that exposes market data and trading workflows through skills and an API.",
+    "first_test": "Use the paper or dry-run mode with historical data. Check the data timestamp, order assumptions, and risk limits; never connect a live brokerage account for a first test.",
+    "language": "Python",
+    "source_issue": "2026-05-16"
+  },
+  "HKUDS/DeepTutor": {
+    "name": "DeepTutor",
+    "category": "Open Source",
+    "description": "A personalised tutoring system that builds lessons, explanations, questions, and feedback around a learner's continuing study context.",
+    "first_test": "Install it with pip install -U deeptutor and run one short lesson. Answer the questions yourself, check the source material, and confirm what learner data it stores.",
+    "language": "Python",
+    "source_issue": "2026-07-18"
+  },
+  "HKUDS/Vibe-Trading": {
+    "name": "Vibe-Trading",
+    "category": "Agent Ops",
+    "description": "A personal trading-agent application that combines market data, research steps, and an agent workflow for exploring trading ideas.",
+    "first_test": "Use its local or paper configuration with historical data. Check the data source, time window, and risk assumptions, and do not connect a live account during evaluation.",
+    "language": "Python",
+    "source_issue": "2026-07-18"
+  },
+  "HKUDS/ViMax": {
+    "name": "ViMax",
+    "category": "Creative Systems",
+    "description": "An agentic video-generation workflow that separates director, screenwriter, producer, and video-generator roles before producing a video.",
+    "first_test": "Run one short prompt with test media and save each stage's output. Check the script, asset sources, and final edit before using the video in a public channel.",
+    "language": "Python",
+    "source_issue": "2026-05-23"
+  },
+  "Hmbown/CodeWhale": {
+    "name": "CodeWhale",
+    "category": "Agent Ops",
+    "description": "A terminal coding-agent harness that lets users bring their own model and run an open-source agent workflow from a local project.",
+    "first_test": "Install it with npm install -g codewhale and run codewhale exec in a disposable clone. Give it a test failure and inspect the command history and patch before merging.",
+    "language": "Rust",
+    "source_issue": "2026-05-16"
+  },
+  "home-assistant/core": {
+    "name": "core",
+    "category": "Productivity",
+    "description": "The open-source Home Assistant platform for local home automation, with integrations for devices and services.",
+    "first_test": "Use its demo or a test instance to configure 1 automation. Check the trigger, action, and local data handling before adding devices.",
+    "language": "Python",
+    "source_issue": "2026-09-19"
+  },
+  "huggingface/ml-intern": {
+    "name": "ml-intern",
+    "category": "Open Source",
+    "description": "An ML engineering agent that researches papers, writes code, and works with Hugging Face models, datasets, documentation, and compute. It can run interactively or from one headless prompt.",
+    "first_test": "Clone it, run uv sync, and start with a local or sandboxed prompt such as inspect one dataset. Set only the tokens it needs and review every generated training or Hub action.",
+    "language": "Python",
+    "source_issue": "2026-04-29"
+  },
+  "humanlayer/12-factor-agents": {
+    "name": "12-factor-agents",
+    "category": "Agent Ops",
+    "description": "A set of engineering principles and examples for building reliable LLM applications, including explicit context, control flow, tools, and human approval.",
+    "first_test": "Choose one principle and apply it to a small agent. Add a test that proves the agent pauses or fails at the required boundary instead of relying on a prompt alone.",
+    "language": "TypeScript",
+    "source_issue": "2026-05-23"
+  },
+  "humanlayer/skills": {
+    "name": "skills",
+    "category": "Agent Ops",
+    "description": "Claude Code skills from HumanLayer for visual pull-request outlines, explanations, instruction files, and other coding workflows.",
+    "first_test": "Try the visual-pr skill on a small test change. Compare its outline with the actual diff before using it in review.",
+    "language": "TypeScript",
+    "source_issue": "2026-09-12"
+  },
+  "Imbad0202/academic-research-skills": {
+    "name": "academic-research-skills",
+    "category": "Agent Ops",
+    "description": "A Claude Code skill workflow for academic research: plan the question, gather sources, write, review, revise, and finalize with a human in the loop.",
+    "first_test": "Install it and run /ars-plan for one narrow question. Check the source list and claims after each stage; do not accept a final draft that lacks evidence for a key statement.",
+    "language": "Python",
+    "source_issue": "2026-05-23"
+  },
+  "interviewstreet/hiring-agent": {
+    "name": "hiring-agent",
+    "category": "Agent Ops",
+    "description": "A Python application that evaluates and scores resumes with an AI model. The repository describes it as a resume evaluator, not an applicant-tracking system.",
+    "first_test": "Run it with synthetic resumes and a local model. Compare the score with a human rubric, inspect the extracted evidence, and remove personal data before any real hiring test.",
+    "language": "Python",
+    "source_issue": "2026-06-27"
+  },
+  "iOfficeAI/OfficeCLI": {
+    "name": "OfficeCLI",
+    "category": "Creative Systems",
+    "description": "A single-binary CLI for reading, editing, creating, and rendering Word, Excel, and PowerPoint files without a local Microsoft Office installation.",
+    "first_test": "Install it and create a test document with officecli. Render it to HTML or PNG, compare the layout with the source, and inspect the output before touching a client file.",
+    "language": "C#",
+    "source_issue": "2026-07-18"
+  },
+  "iptv-org/iptv": {
+    "name": "iptv",
+    "category": "Open Source",
+    "description": "A community-maintained collection of public IPTV channel playlists, grouped by country, language, and category.",
+    "first_test": "Open the supplied M3U URL in a test player and check one channel's source and licence. Remove unavailable or unauthorised streams before sharing a playlist.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-20"
+  },
+  "iv-org/invidious": {
+    "name": "invidious",
+    "category": "Open Source",
+    "description": "An open-source alternative front end for YouTube that provides a different interface and instance-based deployment model.",
+    "first_test": "Run a permitted local instance and open one public video. Check playback, search, subscriptions, and instance configuration before relying on a public instance for private use.",
+    "language": "Crystal",
+    "source_issue": "2026-08-08"
+  },
+  "jakubkrehel/skills": {
+    "name": "skills",
+    "category": "Creative Systems",
+    "description": "A collection of interface skills for coding agents covering accessibility, layout, typography, color, interface writing, and UI polish, plus user-invoked tools for reviewing branches and stress-testing components.",
+    "first_test": "Install only better-accessibility and run it on 1 form you own. Verify each reported problem with the keyboard and a screen reader before keeping any fix.",
+    "source_issue": "2026-10-31",
+    "language": ""
+  },
+  "jamiepine/voicebox": {
+    "name": "voicebox",
+    "category": "Creative Systems",
+    "description": "A local-first voice studio for text to speech, voice cloning, dictation, and MCP voice tools. It keeps the models and audio workflow on the user's machine when configured locally.",
+    "first_test": "Start with a short script and one voice model. Generate a ten-second clip, check the output file and pronunciation, and confirm where the audio and model files are stored.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-27"
+  },
+  "JCodesMore/ai-website-cloner-template": {
+    "name": "ai-website-cloner-template",
+    "category": "Agent Ops",
+    "description": "A Next.js template that gives an agent a website URL and uses browser access to recreate the page structure and styling in a local application.",
+    "first_test": "Run /clone-website on a site you own or have permission to copy. Compare the generated page with the source, replace protected assets, and check mobile layout before reuse.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-27"
+  },
+  "jingyaogong/minimind": {
+    "name": "minimind",
+    "category": "Open Source",
+    "description": "A PyTorch project for training a small language model from scratch, with code for pretraining, fine-tuning, and other training stages.",
+    "first_test": "Use a sample training configuration on non-client data. Measure memory, runtime, and output quality before allocating more hardware.",
+    "language": "Python",
+    "source_issue": "2026-09-05"
+  },
+  "jundot/omlx": {
+    "name": "omlx",
+    "category": "Infrastructure",
+    "description": "A Python LLM inference server for Apple Silicon with continuous batching, SSD caching, and macOS menu bar management.",
+    "first_test": "Run one small model locally and send a short inference request. Measure latency, memory use, cache location, and shutdown behavior before routing agent traffic through it.",
+    "language": "Python",
+    "source_issue": "2026-08-22"
+  },
+  "K-Dense-AI/scientific-agent-skills": {
+    "name": "scientific-agent-skills",
+    "category": "Infrastructure",
+    "description": "A collection of reusable agent skills for scientific research workflows across biology, chemistry, medicine, and related fields.",
+    "first_test": "Pick 1 literature-retrieval skill for a public research question. Check its source citations before using any result in client work.",
+    "language": "Python",
+    "source_issue": "2026-09-05"
+  },
+  "kangarooking/cangjie-skill": {
+    "name": "cangjie-skill",
+    "category": "Agent Ops",
+    "description": "A Chinese workflow for turning books, long videos, and podcasts into executable agent skills that can be used during later work.",
+    "first_test": "Choose one public source and create one small skill from it. Compare each instruction with the source, remove unsupported claims, and run the skill on a test task before installing it.",
+    "language": "Python",
+    "source_issue": "2026-07-18"
+  },
+  "koala73/worldmonitor": {
+    "name": "worldmonitor",
+    "category": "Open Source",
+    "description": "A web dashboard that combines news aggregation, geopolitical monitoring, maps, and infrastructure signals into a real-time situational view.",
+    "first_test": "Run npm install and npm run dev with test settings. Open one event and trace it to the source link and timestamp before using the dashboard for an operational decision.",
+    "language": "TypeScript",
+    "source_issue": "2026-07-25"
+  },
+  "kunchenguid/no-mistakes": {
+    "name": "no-mistakes",
+    "category": "Open Source",
+    "description": "A Git command workflow that runs review, tests, documentation, lint, and push checks in a disposable worktree before it creates a pull request.",
+    "first_test": "Run git push no-mistakes on a small test branch. Read every check and failure, then verify that the worktree and pull request contain only the intended files.",
+    "language": "Go",
+    "source_issue": "2026-06-27"
+  },
+  "Lakr233/vphone-cli": {
+    "name": "vphone-cli",
+    "category": "Data & Research",
+    "description": "A CLI for booting a virtual iPhone through Apple's Virtualization.framework using PCC research VM infrastructure.",
+    "first_test": "Review the Apple Silicon, macOS, and SIP prerequisites on a test Mac before considering a mobile QA experiment.",
+    "language": "Swift",
+    "source_issue": "2026-09-05"
+  },
+  "Leonxlnx/taste-skill": {
+    "name": "taste-skill",
+    "category": "Agent Ops",
+    "description": "A design-review skill for agent workflows that covers layout, typography, motion, image use, and checks for generic or repetitive interface output.",
+    "first_test": "Install it and review one existing screen. Ask for three concrete changes, implement one, and compare the result at desktop and mobile widths before keeping the skill.",
+    "language": "JavaScript",
+    "source_issue": "2026-06-13"
+  },
+  "lfnovo/open-notebook": {
+    "name": "open-notebook",
+    "category": "Data & Research",
+    "description": "A self-hosted, private notebook that collects sources and lets you research them with several model providers. It is designed as a local alternative to hosted notebook tools.",
+    "first_test": "Start it with the documented Docker Compose setup and create the encryption key. Add one public source, inspect the stored files, and test a backup before importing private notes.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-13"
+  },
+  "logto-io/logto": {
+    "name": "logto",
+    "category": "Business Tools",
+    "description": "An open-source identity service with OIDC and OAuth 2.1, multi-tenancy, single sign-on, role-based access, and user management.",
+    "first_test": "Start the Docker Compose example and create a test tenant and application. Verify login, token claims, redirect URLs, and role checks before connecting a production client.",
+    "language": "TypeScript",
+    "source_issue": "2026-07-04"
+  },
+  "Lordog/dive-into-llms": {
+    "name": "dive-into-llms",
+    "category": "Open Source",
+    "description": "A Chinese programming tutorial series for learning large language models through explanations and working exercises. The material is organized as a practical path rather than a library.",
+    "first_test": "Choose one chapter, create its stated environment, and run its smallest example. Change one input and write down which output changed and why before moving to the next chapter.",
+    "language": "Jupyter Notebook",
+    "source_issue": "2026-04-22"
+  },
+  "lsdefine/GenericAgent": {
+    "name": "GenericAgent",
+    "category": "Agent Ops",
+    "description": "A small self-evolving agent with browser, terminal, file, keyboard, screen, and Android tools. It includes both a terminal interface and a web interface for testing those actions.",
+    "first_test": "Create a uv environment and run the TUI against a throwaway folder. Ask it to list and edit one test file, then inspect every command before you allow a wider tool scope.",
+    "language": "Python",
+    "source_issue": "2026-04-29"
+  },
+  "lyogavin/airllm": {
+    "name": "airllm",
+    "category": "Open Source",
+    "description": "A Python inference library that streams large language model layers so models such as 70B can run with less GPU memory than full-model loading.",
+    "first_test": "Install it and run the smallest documented model example on a test prompt. Measure RAM, VRAM, speed, and model downloads before using it on a constrained machine.",
+    "language": "Jupyter Notebook",
+    "source_issue": "2026-08-08"
+  },
+  "macro-inc/macro": {
+    "name": "macro",
+    "category": "Agent Ops",
+    "description": "An open-source workspace that links email, messages, documents, tasks, calls, agents, and CRM records. Its @links create bidirectional connections between related work.",
+    "first_test": "Start with one support email. Turn it into a task, link the task to the discussion, and open the original email from the task to verify that the context stays connected.",
+    "language": "Rust",
+    "source_issue": "2026-08-15"
+  },
+  "MadsLorentzen/ai-job-search": {
+    "name": "ai-job-search",
+    "category": "Agent Ops",
+    "description": "A local job-application workflow for Claude Code that profiles a candidate, searches job portals, evaluates fit, drafts CVs and cover letters, and prepares interview material.",
+    "first_test": "Clone it into a private repository because setup writes personal details into tracked files. Use a fictional profile and one saved posting, then inspect the fit score, drafts, reviewer notes, and generated files.",
+    "language": "Python",
+    "source_issue": "2026-08-29"
+  },
+  "magnitudedev/magnitude": {
+    "name": "magnitude",
+    "category": "Open Source",
+    "description": "A local inference engine that profiles consumer hardware, recommends models, and runs them on Apple Silicon, GPUs, or CPUs.",
+    "first_test": "Profile a test Mac and run 1 recommended model on a non-client prompt. Record memory use and response speed.",
+    "language": "TypeScript",
+    "source_issue": "2026-09-05"
+  },
+  "mattpocock/skills": {
+    "name": "skills",
+    "category": "Agent Ops",
+    "description": "A collection of small engineering skills for planning, implementation, testing, review, simplification, and release work. The files are editable and can be installed as a managed Claude Code plugin.",
+    "first_test": "Install one skill set, not both installation methods. Run its planning and testing commands on a small change, then keep only the files that improve your actual review evidence.",
+    "language": "Shell",
+    "source_issue": "2026-10-17"
+  },
+  "max-sixty/worktrunk": {
+    "name": "worktrunk",
+    "category": "Creative Systems",
+    "description": "A CLI for managing Git worktrees, with commands and hooks designed for parallel agent workflows.",
+    "first_test": "Create 2 worktrees in a disposable repository. Confirm each branch and directory stays isolated before using it on a client project.",
+    "language": "Rust",
+    "source_issue": "2026-09-19"
+  },
+  "megadose/holehe": {
+    "name": "holehe",
+    "category": "Open Source",
+    "description": "A Python CLI that checks whether an email address is linked to accounts on more than 120 services by reading registration or password-recovery responses.",
+    "first_test": "Install it with pip3 install holehe and test an address that you own or have permission to check. Treat a positive result as a lead, not proof of account ownership, and note rate limits.",
+    "language": "Python",
+    "source_issue": "2026-08-15"
+  },
+  "meshery/meshery": {
+    "name": "meshery",
+    "category": "Infrastructure",
+    "description": "A cloud-native management platform for designing, operating, and visualising Kubernetes and other multi-cluster infrastructure with GitOps workflows.",
+    "first_test": "Run it against a local Kubernetes cluster and import one non-production workload. Check the generated manifest and access scope before connecting a shared cluster.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-20"
+  },
+  "microsoft/AI-For-Beginners": {
+    "name": "AI-For-Beginners",
+    "category": "Open Source",
+    "description": "A twelve-week, 24-lesson curriculum that teaches core AI concepts with notebooks, explanations, and practical exercises for beginners.",
+    "first_test": "Choose one lesson, create its environment, and run its notebook from start to finish. Change one input and explain the output before continuing to the next lesson.",
+    "language": "Jupyter Notebook",
+    "source_issue": "2026-08-08"
+  },
+  "microsoft/markitdown": {
+    "name": "markitdown",
+    "category": "Open Source",
+    "description": "A Python tool that converts office files, PDFs, images, audio, HTML, and other formats into Markdown while preserving useful document structure.",
+    "first_test": "Install it and convert one sample DOCX and PDF. Compare headings, tables, links, and missing content with the originals before using the Markdown for search or analysis.",
+    "language": "Python",
+    "source_issue": "2026-06-13"
+  },
+  "mksglu/context-mode": {
+    "name": "context-mode",
+    "category": "Security",
+    "description": "An MCP server that sandboxes tool output and stores searchable session events to reduce coding-agent context use.",
+    "first_test": "Run the same read-only repository question with and without it. Compare context usage and check the stored session data.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-17"
+  },
+  "modular/modular": {
+    "name": "modular",
+    "category": "Open Source",
+    "description": "The public repository for the Modular Platform, including MAX and the Mojo programming language.",
+    "first_test": "Run one Mojo or MAX example from the repository and compare the setup with your current Python path. Keep notes on install size, hardware assumptions, and rollback steps.",
+    "language": "Mojo",
+    "source_issue": "2026-08-29"
+  },
+  "moeru-ai/airi": {
+    "name": "airi",
+    "category": "Creative Systems",
+    "description": "A self-hosted virtual companion with real-time voice chat and optional game control for Minecraft and Factorio.",
+    "first_test": "Run it with a local model and a test game world. Check microphone, screen, and game permissions, then reset the world before enabling automated actions.",
+    "language": "TypeScript",
+    "source_issue": "2026-08-01"
+  },
+  "MoonshotAI/kimi-cli": {
+    "name": "kimi-cli",
+    "category": "Agent Ops",
+    "description": "A command-line coding agent from Moonshot AI for working with repositories and developer tasks in a terminal session.",
+    "first_test": "Install it in a test repository and ask for a file explanation. Verify the command list, model configuration, and final output before granting write or network access.",
+    "language": "Python",
+    "source_issue": "2026-07-25"
+  },
+  "MoonshotAI/kimi-code": {
+    "name": "kimi-code",
+    "category": "Agent Ops",
+    "description": "A Kimi Code command-line agent for software development tasks in a terminal workspace.",
+    "first_test": "Install it in a disposable clone and ask it to explain one failing test. Inspect the model request, shell commands, and proposed patch before allowing a write.",
+    "language": "TypeScript",
+    "source_issue": "2026-07-25"
+  },
+  "morluto/rea": {
+    "name": "rea",
+    "category": "Agent Ops",
+    "description": "An MCP and command-line toolkit that lets coding agents inspect native binaries, JavaScript and Electron apps, .NET assemblies, and websites while reporting evidence and limitations for its conclusions.",
+    "first_test": "Install it in 1 disposable agent profile, then run static analysis on 1 small JavaScript bundle you own. Verify the cited strings and call paths manually before enabling native-analysis tools.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-24"
+  },
+  "msitarzewski/agency-agents": {
+    "name": "agency-agents",
+    "category": "Agent Ops",
+    "description": "A collection of specialised agent roles with defined responsibilities, processes, and deliverables for engineering, research, marketing, and operations work.",
+    "first_test": "Choose one role and give it a bounded task with a required output format. Check its assumptions and sources, then combine it with a human review instead of treating the role description as expertise.",
+    "language": "Shell",
+    "source_issue": "2026-07-04"
+  },
+  "mukul975/Anthropic-Cybersecurity-Skills": {
+    "name": "Anthropic-Cybersecurity-Skills",
+    "category": "Security",
+    "description": "A collection of structured cybersecurity skills mapped to MITRE ATT&CK, NIST CSF, MITRE ATLAS, D3FEND, NIST AI RMF, and MITRE F3.",
+    "first_test": "Install one skill and use it on a local lab finding. Check the mapped framework control and reproduce the finding yourself; use it only for authorised security work.",
+    "language": "Python",
+    "source_issue": "2026-05-30"
+  },
+  "multica-ai/andrej-karpathy-skills": {
+    "name": "andrej-karpathy-skills",
+    "category": "Agent Ops",
+    "description": "A single CLAUDE.md file that turns four coding rules into agent instructions: think before coding, keep the design simple, make small changes, and work toward a clear goal.",
+    "first_test": "Copy the file into a disposable project and give the agent one small bug. Check whether it asks for the goal first and changes only the files that the fix needs.",
+    "language": "None",
+    "source_issue": "2026-04-29"
+  },
+  "multica-ai/multica": {
+    "name": "multica",
+    "category": "Agent Ops",
+    "description": "A self-hosted workspace for assigning coding-agent tasks, tracking progress, and sharing reusable skills. It treats agents as workers with separate tasks and project context.",
+    "first_test": "Run the setup in a test repository and assign one issue to one agent. Review the generated branch and task log before adding a second agent or granting write access to production.",
+    "language": "Go",
+    "source_issue": "2026-04-22"
+  },
+  "mvanhorn/last30days-skill": {
+    "name": "last30days-skill",
+    "category": "Agent Ops",
+    "description": "An agent skill that searches recent Reddit, X, YouTube, Hacker News, GitHub, and other sources, then produces a time-bounded summary with links.",
+    "first_test": "Run /last30days for one narrow topic and record the search date. Open several source links, remove duplicate claims, and label anything the sources do not confirm.",
+    "language": "Python",
+    "source_issue": "2026-06-13"
+  },
+  "mvschwarz/openrig": {
+    "name": "openrig",
+    "category": "Agent Ops",
+    "description": "An open-source system for running persistent teams of Claude Code, Codex, and Pi agents with defined roles, shared context, and owned work.",
+    "first_test": "Run the documented installer with --dry-run on a test machine. Review the proposed provider hooks, workspace trust settings, and prerequisites before applying setup.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-10"
+  },
+  "n0-computer/iroh": {
+    "name": "iroh",
+    "category": "Open Source",
+    "description": "A Rust networking library for encrypted QUIC connections and NAT traversal that lets peers dial by public key instead of a fixed address.",
+    "first_test": "Run the echo example on two local processes. Record the public keys and connection path, then test a blocked-network case before exposing a service to the Internet.",
+    "language": "Rust",
+    "source_issue": "2026-06-20"
+  },
+  "NationalSecurityAgency/ghidra": {
+    "name": "ghidra",
+    "category": "Security",
+    "description": "A software reverse-engineering framework with disassembly, assembly, decompilation, graphing, scripting, and support for many processor architectures and executable formats.",
+    "first_test": "Install 1 official release and import a small binary you compiled yourself. Identify 1 function in the disassembly, compare its decompiled output with the source, and review current security advisories before analyzing untrusted files.",
+    "language": "Java",
+    "source_issue": "2026-10-17"
+  },
+  "NousResearch/hermes-agent": {
+    "name": "hermes-agent",
+    "category": "Agent Ops",
+    "description": "A terminal agent with a learning loop, reusable skills, persistent memory, and interfaces such as Telegram. It is designed to keep useful context between tasks.",
+    "first_test": "Run the install script in a separate user or container and start hermes. Give it one read-only task, then check which memory and skill files it writes before connecting external accounts.",
+    "language": "Python",
+    "source_issue": "2026-04-22"
+  },
+  "Nutlope/hallmark": {
+    "name": "hallmark",
+    "category": "Creative Systems",
+    "description": "A design skill for Claude Code, Codex, Cursor, and OpenCode that builds pages from a catalog of fifty themes and checks the result in a real browser against tiered quality gates, with separate redesign and audit commands.",
+    "first_test": "Run /hallmark audit on 1 existing page without changing it. Compare each reported issue with the page at desktop and mobile widths before letting it redesign anything.",
+    "source_issue": "2026-10-31",
+    "language": "CSS"
+  },
+  "NVIDIA-NeMo/Switchyard": {
+    "name": "Switchyard",
+    "category": "Infrastructure",
+    "description": "A pre-alpha Rust proxy and library for LLM traffic. It translates OpenAI and Anthropic formats, routes requests to configured backends, and records request and latency metrics.",
+    "first_test": "Install the CLI, create one route, and run switchyard-server with --dry-run. Bind it to 127.0.0.1, call /health, and inspect the backend and metrics for one test request.",
+    "language": "Rust",
+    "source_issue": "2026-08-15"
+  },
+  "NVIDIA/SkillSpector": {
+    "name": "SkillSpector",
+    "category": "Security",
+    "description": "A security scanner for agent skills that checks for prompt injection, data exfiltration, unsafe commands, and supply-chain risks before installation.",
+    "first_test": "Install it with uv tool install and scan one skill directory. Read each finding, reproduce the flagged path, and block the skill until its network and file actions are understood.",
+    "language": "Python",
+    "source_issue": "2026-06-20"
+  },
+  "obra/superpowers": {
+    "name": "superpowers",
+    "category": "Agent Ops",
+    "description": "A development methodology for coding agents, delivered as composable skills that trigger automatically for brainstorming, planning, git worktrees, test-driven development, subagent execution, and code review.",
+    "first_test": "Install it in 1 disposable repository and give the agent a small feature. Check that it asks clarifying questions, writes a plan, and adds a failing test before it writes the implementation.",
+    "source_issue": "2026-10-31",
+    "language": ""
+  },
+  "ogulcancelik/herdr": {
+    "name": "herdr",
+    "category": "Agent Ops",
+    "description": "A terminal agent multiplexer that runs several coding agents in parallel and provides a shared control surface for their sessions.",
+    "first_test": "Run it in a disposable repository with two read-only tasks. Check each session's working directory and process before allowing one agent to edit or commit files.",
+    "language": "Rust",
+    "source_issue": "2026-07-11"
+  },
+  "omacom/omarchy": {
+    "name": "omarchy",
+    "category": "Open Source",
+    "description": "An opinionated Linux distribution by DHH with a documented desktop setup, applications, development tools, hotkeys, themes, configuration, snapshots, and security guidance.",
+    "first_test": "Read the Getting Started, hardware, and security sections before installing it on a spare supported machine. Test updates, snapshots, networking, and one development tool before moving real work onto it.",
+    "language": "Shell",
+    "source_issue": "2026-08-29"
+  },
+  "Open-LLM-VTuber/Open-LLM-VTuber": {
+    "name": "Open-LLM-VTuber",
+    "category": "Creative Systems",
+    "description": "An offline voice-interactive companion that combines an LLM, speech input and output, Live2D avatars, and optional visual perception.",
+    "first_test": "Run it with a local model and a test avatar. Speak one prompt, inspect the audio and model logs, and confirm that no camera or microphone data leaves the machine.",
+    "language": "Python",
+    "source_issue": "2026-06-06"
+  },
+  "openai/codex": {
+    "name": "codex",
+    "category": "Agent Ops",
+    "description": "A terminal coding agent that reads a repository, edits files, runs commands, and reports the resulting diff from a local session.",
+    "first_test": "Install it and run one read-only task in a disposable clone. Review its plan, commands, tests, and diff before allowing it to write to a working project.",
+    "language": "Rust",
+    "source_issue": "2026-08-29"
+  },
+  "openai/codex-plugin-cc": {
+    "name": "codex-plugin-cc",
+    "category": "Agent Ops",
+    "description": "A Claude Code plugin that adds Codex commands for review, adversarial review, rescue, and task transfer inside a Claude Code session.",
+    "first_test": "Install it in a disposable repository and run /codex:review on one small diff. Compare the findings with your tests and inspect the plugin permissions before enabling more commands.",
+    "language": "JavaScript",
+    "source_issue": "2026-07-11"
+  },
+  "openai/openai-agents-python": {
+    "name": "openai-agents-python",
+    "category": "Agent Ops",
+    "description": "A Python SDK for agents, tools, guardrails, handoffs, and multi-agent workflows. Its Runner API passes control between agents while keeping the workflow in application code.",
+    "first_test": "Install it with pip install openai-agents. Define one agent with one local function tool, run it with Runner.run_sync, and assert the final output and tool arguments in a test.",
+    "language": "Python",
+    "source_issue": "2026-04-22"
+  },
+  "openai/plugins": {
+    "name": "plugins",
+    "category": "Open Source",
+    "description": "OpenAI's repository of Codex plugin specifications, manifests, examples, and reference implementations for extending an agent with reusable capabilities.",
+    "first_test": "Read one .codex-plugin/plugin.json and run its smallest example. Check the declared tools and permissions against the implementation before installing it in a working project.",
+    "language": "JavaScript",
+    "source_issue": "2026-09-12"
+  },
+  "openai/skills": {
+    "name": "skills",
+    "category": "Agent Ops",
+    "description": "A catalog of agent skills for Codex. Its README marks the repository deprecated and points to openai/plugins for current examples.",
+    "first_test": "Compare 1 archived skill with the current plugins repository before adapting its instructions to a local workflow.",
+    "language": "Python",
+    "source_issue": "2026-09-12"
+  },
+  "OpenCut-app/OpenCut": {
+    "name": "OpenCut",
+    "category": "Open Source",
+    "description": "An open-source video editor that is being rewritten with a web interface and a plugin-first architecture. The repository is an active work in progress.",
+    "first_test": "Run the documented web development command with sample media. Test one cut and export path, then check the current issue list before relying on it for a production edit.",
+    "language": "TypeScript",
+    "source_issue": "2026-07-18"
+  },
+  "opengeos/GeoLibre": {
+    "name": "GeoLibre",
+    "category": "Infrastructure",
+    "description": "A lightweight, cloud-native GIS platform for viewing and analysing geospatial data in browsers, desktop apps, mobile apps, and Jupyter notebooks.",
+    "first_test": "Load a small public GeoJSON file and render one layer. Check coordinate reference, feature count, and export output before connecting private location data.",
+    "language": "TypeScript",
+    "source_issue": "2026-08-01"
+  },
+  "openinterpreter/openinterpreter": {
+    "name": "openinterpreter",
+    "category": "Agent Ops",
+    "description": "A coding-agent harness for running open models such as Kimi from a terminal, with a workflow that can emulate common agent commands.",
+    "first_test": "Install it in a test environment and run /harness on a small repository. Check the model endpoint, shell permissions, and final diff before enabling unattended actions.",
+    "language": "Rust",
+    "source_issue": "2026-07-18"
+  },
+  "oven-sh/bun": {
+    "name": "bun",
+    "category": "Open Source",
+    "description": "A JavaScript and TypeScript runtime that also provides a package manager, bundler, test runner, and script launcher in one executable.",
+    "first_test": "Install Bun in a sample project, run bun install, then run one script and one test. Compare the result with the project's current Node command before changing the build tool.",
+    "language": "Rust",
+    "source_issue": "2026-05-16"
+  },
+  "Panniantong/Agent-Reach": {
+    "name": "Agent-Reach",
+    "category": "Agent Ops",
+    "description": "A command-line skill that gives agents access to web pages and services such as X, Reddit, YouTube, GitHub, Bilibili, and Xiaohongshu through fallback backends.",
+    "first_test": "Install it and fetch one public post from one supported service. Check the returned URL, timestamp, and text against the source before using it in a report.",
+    "language": "Python",
+    "source_issue": "2026-10-03"
+  },
+  "paperclipai/paperclip": {
+    "name": "paperclip",
+    "category": "Agent Ops",
+    "description": "An open-source Node.js server and React interface for coordinating teams of AI agents around goals, tasks, reporting lines, budgets, approvals, and work history.",
+    "first_test": "Run the local quickstart with a throwaway organization, one goal, and one test agent. Confirm that its task, budget, approval, and activity records remain visible before connecting a real agent.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-03"
+  },
+  "pascalorg/editor": {
+    "name": "editor",
+    "category": "Open Source",
+    "description": "A browser-based editor for creating and sharing 3D architectural projects.",
+    "first_test": "Open a sample project and change one wall or material. Export or share the result, then check saved coordinates and asset ownership before using it for a client presentation.",
+    "language": "TypeScript",
+    "source_issue": "2026-08-01"
+  },
+  "pbakaus/impeccable": {
+    "name": "impeccable",
+    "category": "Creative Systems",
+    "description": "Design guidance for AI coding agents, packaged as one skill with 24 commands, live browser iteration, and deterministic checks for frontend design problems.",
+    "first_test": "Install it in a disposable frontend project, run /impeccable init, and audit 1 page. Compare every reported issue with the rendered page before keeping any suggested change.",
+    "language": "JavaScript",
+    "source_issue": "2026-10-03"
+  },
+  "penpot/penpot": {
+    "name": "penpot",
+    "category": "Creative Systems",
+    "description": "An open-source design platform for interfaces, components, variants, and design tokens, with a self-hosted deployment option.",
+    "first_test": "Start the documented self-hosted demo and rebuild one small component. Check token inheritance, component variants, and export output before migrating a real design file.",
+    "language": "Clojure",
+    "source_issue": "2026-06-27"
+  },
+  "permissionlesstech/bitchat": {
+    "name": "bitchat",
+    "category": "Business Tools",
+    "description": "A Bluetooth mesh chat application with an IRC-style interface that can pass messages between nearby devices without a central server.",
+    "first_test": "Install two test devices and send a short message with Bluetooth permissions visible. Check delivery range, identity, persistence, and metadata before using it for sensitive communication.",
+    "language": "Swift",
+    "source_issue": "2026-08-01"
+  },
+  "phuryn/pm-skills": {
+    "name": "pm-skills",
+    "category": "Agent Ops",
+    "description": "A set of product-management skills and commands for discovery, strategy, planning, execution, launch, and growth workflows.",
+    "first_test": "Install one skill and apply it to a real but low-risk feature. Compare its problem statement, acceptance criteria, and launch checks with your existing brief before adopting more commands.",
+    "language": "None",
+    "source_issue": "2026-06-20"
+  },
+  "pingdotgg/t3code": {
+    "name": "t3code",
+    "category": "Agent Ops",
+    "description": "A control surface with mobile, web, and desktop clients for starting and managing local coding-agent sessions.",
+    "first_test": "Run it against a disposable repository and complete one read-only task from the web client. Check authentication, local process scope, and session logs before enabling edits.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-10"
+  },
+  "PrimeIntellect-ai/prime-agent": {
+    "name": "prime-agent",
+    "category": "Agent Ops",
+    "description": "A coding and research agent for long tasks. It keeps a Python session, subagents, goals, schedules, and reusable skills so work can resume after a terminal disconnects.",
+    "first_test": "Start it inside a disposable clone and give it one bounded task, such as a pull-request review. Check prime-agent status, agents, and attach before accepting changes in the real project.",
+    "language": "TypeScript",
+    "source_issue": "2026-08-15"
+  },
+  "public-apis/public-apis": {
+    "name": "public-apis",
+    "category": "Open Source",
+    "description": "A curated list of free public APIs, organized by category, with links and usage notes maintained in a GitHub repository.",
+    "first_test": "Pick one API for a test integration and verify its current docs, auth rules, rate limits, and license from the source site before using it in a proposal or demo.",
+    "language": "Python",
+    "source_issue": "2026-08-22"
+  },
+  "ranxianglei/billion-context": {
+    "name": "billion-context",
+    "category": "Open Source",
+    "description": "A context-compression proxy and plugin that folds consumed coding-agent conversation into layered summaries and exposes tools for compression, restoration, search, and context status.",
+    "first_test": "Run 1 disposable coding session through the documented client launcher and inspect acp_status after a compression. Compare the restored details with the original transcript before using it on client work.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-17"
+  },
+  "refactoringhq/tolaria": {
+    "name": "tolaria",
+    "category": "Productivity",
+    "description": "A desktop application for browsing and editing Markdown knowledge bases with local files and a focused note-taking interface.",
+    "first_test": "Open a copy of one Markdown folder and edit one note. Check links, front matter, and the saved file on disk before pointing the app at the real knowledge base.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-13"
+  },
+  "revfactory/harness": {
+    "name": "harness",
+    "category": "Creative Systems",
+    "description": "A harness for running coding agents with reusable instructions, tools, and workflow controls from a local development environment.",
+    "first_test": "Run one agent task in a disposable clone and record its prompt, tools, files, and final diff. Add a human approval step before allowing the harness to commit or push.",
+    "language": "HTML",
+    "source_issue": "2026-06-06"
+  },
+  "Robbyant/lingbot-map": {
+    "name": "lingbot-map",
+    "category": "Open Source",
+    "description": "A 3D streaming-reconstruction model that builds a spatial map from visual input for research and interactive scene understanding.",
+    "first_test": "Create the documented environment and run the demo on a short local sequence. Compare the reconstructed points with the input frames before using it for measurement.",
+    "language": "Python",
+    "source_issue": "2026-07-04"
+  },
+  "rohitg00/agentmemory": {
+    "name": "agentmemory",
+    "category": "Agent Ops",
+    "description": "A persistent memory service for coding agents and MCP clients. It stores project context and exposes a demo server for checking how memory is added and retrieved.",
+    "first_test": "Run the setup and agentmemory demo --serve in a disposable project. Store one fact, retrieve it in a new session, and verify the record before adding private notes.",
+    "language": "TypeScript",
+    "source_issue": "2026-05-23"
+  },
+  "rohitg00/ai-engineering-from-scratch": {
+    "name": "ai-engineering-from-scratch",
+    "category": "Open Source",
+    "description": "A hands-on course that teaches AI engineering by building and shipping small projects with an agent as a tutor.",
+    "first_test": "Install its skills and run /start-learning for one topic. Make the smallest exercise yourself, run its test, and record what you changed before asking the agent for the next lesson.",
+    "language": "Python",
+    "source_issue": "2026-10-03"
+  },
+  "run-llama/liteparse": {
+    "name": "liteparse",
+    "category": "Open Source",
+    "description": "A local document parser for PDFs and other files that returns text with page and spatial information for retrieval and structured extraction.",
+    "first_test": "Parse one PDF containing a table and compare the returned text and bounding boxes with the page. Add a fixture for the layout before building a search pipeline on it.",
+    "language": "Rust",
+    "source_issue": "2026-06-06"
+  },
+  "ruvnet/ruflo": {
+    "name": "ruflo",
+    "category": "Agent Ops",
+    "description": "A multi-agent orchestration framework for coordinating workflows with memory, learning, retrieval, and Claude-compatible tools. It provides a harness for routing work between agents.",
+    "first_test": "Run one two-step workflow in a disposable repository. Save the agent messages and tool calls, then verify that the second agent receives only the context that you intended.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-24"
+  },
+  "ruvnet/RuView": {
+    "name": "RuView",
+    "category": "Creative Systems",
+    "description": "A WiFi-sensing system that estimates presence, movement, and some vital-sign signals from radio data without using a camera.",
+    "first_test": "Run ruview doctor and ruview verify in a test room. Compare the output with a known movement test and treat any health-related signal as experimental, not a medical measurement.",
+    "language": "Rust",
+    "source_issue": "2026-07-25"
+  },
+  "semantica-agi/semantica": {
+    "name": "semantica",
+    "category": "Open Source",
+    "description": "A Python library for storing entities, relationships, decisions, rules, and source links in a knowledge graph. It can trace decisions, flag conflicts, and export an audit trail.",
+    "first_test": "Install it with pip install semantica. Record one vendor choice with its reason and source, then call trace_decision_chain() and check_decision_rules() before using it in a report.",
+    "language": "Python",
+    "source_issue": "2026-08-22"
+  },
+  "Shubhamsaboo/awesome-llm-apps": {
+    "name": "awesome-llm-apps",
+    "category": "Agent Ops",
+    "description": "A catalog of runnable open-source applications for agents, RAG, multimodal models, and other LLM workflows, with code that can be cloned and adapted.",
+    "first_test": "Choose one small application, create its environment, and run its README example. Trace the model, data, and secret path before copying the pattern into a client project.",
+    "language": "Python",
+    "source_issue": "2026-07-18"
+  },
+  "simplex-chat/simplex-chat": {
+    "name": "simplex-chat",
+    "category": "Creative Systems",
+    "description": "A private messaging system whose network avoids global user identifiers and provides mobile, desktop, and terminal clients.",
+    "first_test": "Install two test clients and send a message over a fresh connection. Check identity setup, backups, notifications, and metadata behavior before inviting a real contact.",
+    "language": "Haskell",
+    "source_issue": "2026-07-04"
+  },
+  "soxoj/maigret": {
+    "name": "maigret",
+    "category": "Open Source",
+    "description": "A Python OSINT CLI that checks a username across more than 3,000 sites and builds a report from the responses.",
+    "first_test": "Run it only for your own username or with written permission. Compare one positive result with the source site because a matching name is not proof of identity.",
+    "language": "Python",
+    "source_issue": "2026-05-08"
+  },
+  "stablyai/orca": {
+    "name": "orca",
+    "category": "Agent Ops",
+    "description": "A desktop and mobile workspace for running several coding agents in parallel, with separate worktrees and support for agents such as Codex, Claude, OpenCode, and Pi.",
+    "first_test": "Run two agents on separate worktrees for the same small issue. Compare their diffs and merge one manually; check that neither agent can modify the other's branch.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-24"
+  },
+  "Starmel/OpenSuperWhisper": {
+    "name": "OpenSuperWhisper",
+    "category": "Open Source",
+    "description": "A macOS dictation application that runs Whisper or Parakeet speech models locally and inserts the transcription into the active application.",
+    "first_test": "Install it with brew install opensuperwhisper and download one local model. Dictate a short note, check punctuation and hotkeys, and confirm the audio stays local.",
+    "language": "Swift",
+    "source_issue": "2026-07-04"
+  },
+  "storytold/artcraft": {
+    "name": "artcraft",
+    "category": "Creative Systems",
+    "description": "A desktop IDE for AI-assisted image and video creation with 2D compositing, 3D scene staging, character posing, camera controls, and selectable generation models.",
+    "first_test": "Open 1 release build, compose a simple scene from 2 image layers, and generate 1 still. Save the project, reopen it, and confirm the composition and model settings remain editable.",
+    "language": "Rust",
+    "source_issue": "2026-10-17"
+  },
+  "supermemoryai/supermemory": {
+    "name": "supermemory",
+    "category": "Open Source",
+    "description": "A memory and context system that stores information from apps and agent sessions and retrieves relevant facts for later work.",
+    "first_test": "Run the local or MCP setup with one non-sensitive note. Retrieve it in a new session, inspect the stored record, and test deletion before importing a larger knowledge base.",
+    "language": "TypeScript",
+    "source_issue": "2026-06-06"
+  },
+  "supertone-inc/supertonic": {
+    "name": "supertonic",
+    "category": "Open Source",
+    "description": "An ONNX text-to-speech engine that runs on-device and supports multilingual speech generation across 31 languages.",
+    "first_test": "Install it with pip install supertonic and synthesize one short sentence in two languages. Check latency, voice quality, output format, and whether the model runs without a network call.",
+    "language": "Swift",
+    "source_issue": "2026-05-23"
+  },
+  "swc-project/swc": {
+    "name": "swc",
+    "category": "Open Source",
+    "description": "A Rust-based compiler toolkit for parsing, transforming, and compiling JavaScript and TypeScript, with libraries and tools for high-speed builds.",
+    "first_test": "Build one example transform and compare its output with the source test. Run the project's test command before replacing a compiler in an existing build pipeline.",
+    "language": "Rust",
+    "source_issue": "2026-06-20"
+  },
+  "tailscale/tailcat": {
+    "name": "tailcat",
+    "category": "Open Source",
+    "description": "A netcat-like CLI and Go library for encrypted peer connections over Tailscale's data plane without its control plane.",
+    "first_test": "Connect 2 test machines with its documented example. Verify the peer address exchange and tunnel behavior before using it for remote work.",
+    "language": "Go",
+    "source_issue": "2026-09-05"
+  },
+  "tashfeenahmed/freellmapi": {
+    "name": "freellmapi",
+    "category": "Infrastructure",
+    "description": "A self-hosted router that exposes OpenAI, Anthropic, Gemini, and optional Ollama-compatible APIs across free-model providers, with routing, failover, encrypted keys, and a local dashboard.",
+    "first_test": "Read the install script before running it, then start a local Docker instance with one test provider key. Send one request and verify the selected model, fallback behavior, key storage, logs, and data directory.",
+    "language": "TypeScript",
+    "source_issue": "2026-08-29"
+  },
+  "TauricResearch/TradingAgents": {
+    "name": "TradingAgents",
+    "category": "Agent Ops",
+    "description": "A multi-agent framework for researching and simulating trading decisions. It separates analyst roles and combines their reports into a final market analysis.",
+    "first_test": "Run it on historical data with paper-trading settings. Compare the report with a simple baseline and record the data date, assumptions, and transaction costs before trusting any signal.",
+    "language": "Python",
+    "source_issue": "2026-05-08"
+  },
+  "Tencent/WeKnora": {
+    "name": "WeKnora",
+    "category": "Agent Ops",
+    "description": "An open-source knowledge platform for turning documents into a searchable RAG system, reasoning agent, and wiki.",
+    "first_test": "Import a few public documents and ask 1 source-specific question. Confirm the answer cites the correct passage.",
+    "language": "Go",
+    "source_issue": "2026-09-26"
+  },
+  "TencentCloud/CubeSandbox": {
+    "name": "CubeSandbox",
+    "category": "Security",
+    "description": "A RustVMM and KVM-based sandbox for AI agents with hardware isolation, concurrent startup, snapshots, rollback, and compatibility with E2B-style SDKs.",
+    "first_test": "Launch one disposable sandbox and run a harmless command. Measure startup and cleanup, test snapshot rollback, and check the host boundary before running untrusted code.",
+    "language": "Rust",
+    "source_issue": "2026-07-11"
+  },
+  "TencentCloud/Octop": {
+    "name": "Octop",
+    "category": "Infrastructure",
+    "description": "A self-hosted, multi-user AI assistant that combines multiple agents with a web dashboard, CLI, messaging channels, connectors, knowledge bases, and scheduled tasks.",
+    "first_test": "Run octop init and octop run in a disposable local profile, create 1 test user and expert, and inspect the data directory and tool approval flow before connecting an account.",
+    "language": "Python",
+    "source_issue": "2026-10-03"
+  },
+  "TencentCloud/TencentDB-Agent-Memory": {
+    "name": "TencentDB-Agent-Memory",
+    "category": "Infrastructure",
+    "description": "A self-hosted memory server for agent teams. It turns conversations, documents, and code into Chat Memory, Skills, Wiki, and CodeGraph assets that can be shared by client tools.",
+    "first_test": "Copy .env.example to .env, run ./start-all.sh, and open localhost:8125. Import one runbook and one codebase, then give a reviewer only the assets it needs.",
+    "language": "TypeScript",
+    "source_issue": "2026-08-15"
+  },
+  "thedotmack/claude-mem": {
+    "name": "claude-mem",
+    "category": "Agent Ops",
+    "description": "A Claude Code plugin that captures session work, compresses it, and injects relevant context into later sessions. It supports persistent project memory instead of relying on one chat window.",
+    "first_test": "Install it with npx claude-mem install in a test project. Complete one small task, start a new session, and verify that the recalled context is correct before using it for client work.",
+    "language": "TypeScript",
+    "source_issue": "2026-10-10"
+  },
+  "THU-MAIC/OpenMAIC": {
+    "name": "OpenMAIC",
+    "category": "Agent Ops",
+    "description": "A multi-agent interactive classroom built with a web interface and AI agents for guided learning sessions.",
+    "first_test": "Use the public demo for one SEO training topic. Check the lesson flow and source handling before considering it for client education.",
+    "language": "TypeScript",
+    "source_issue": "2026-09-05"
+  },
+  "tinyhumansai/openhuman": {
+    "name": "openhuman",
+    "category": "Agent Ops",
+    "description": "A local-first personal AI system that combines memory, agent orchestration, workflows, and deep research in one desktop application.",
+    "first_test": "Install it without personal data and run one research task using public sources. Inspect the memory store and outbound requests before importing notes or connecting accounts.",
+    "language": "Rust",
+    "source_issue": "2026-08-29"
+  },
+  "tirth8205/code-review-graph": {
+    "name": "code-review-graph",
+    "category": "Agent Ops",
+    "description": "A local code-intelligence graph for MCP and CLI clients that maps a repository so agents can focus on relevant files during code review.",
+    "first_test": "Index a small repository and ask for one review path. Compare the returned files with the actual call graph, then check the context reduction before trusting a large-repo review.",
+    "language": "Python",
+    "source_issue": "2026-07-25"
+  },
+  "ToolJet/ToolJet": {
+    "name": "ToolJet",
+    "category": "Agent Ops",
+    "description": "A visual builder for internal apps with tables, forms, charts, JavaScript, Python, and connections to databases, APIs, SaaS tools, and object storage.",
+    "first_test": "Run the Docker quickstart with test data and build a small order dashboard. Check the data source, access rules, empty state, and error state before using real records.",
+    "language": "JavaScript",
+    "source_issue": "2026-08-15"
+  },
+  "Tracer-Cloud/opensre": {
+    "name": "opensre",
+    "category": "Infrastructure",
+    "description": "An OpenSRE framework for agents that investigate incidents on infrastructure you control. It provides onboarding, investigation commands, and a place to record evidence and actions.",
+    "first_test": "Install it with pipx or the project script and run opensre onboard on a test service. Give it one known alert and check that each conclusion links to a log or command result.",
+    "language": "Python",
+    "source_issue": "2026-04-22"
+  },
+  "trycua/cua": {
+    "name": "cua",
+    "category": "Security",
+    "description": "Infrastructure, SDKs, and benchmarks for computer-use agents that control full macOS, Linux, and Windows desktops in sandboxes.",
+    "first_test": "Start one sandbox and run the smallest desktop benchmark. Measure startup, screen access, file access, and cleanup, then keep the agent on a test account until those boundaries are clear.",
+    "language": "HTML",
+    "source_issue": "2026-04-29"
+  },
+  "tt-a1i/archify": {
+    "name": "archify",
+    "category": "Agent Ops",
+    "description": "A Node.js rendering and validation system that compiles typed JSON architecture, workflow, sequence, data-flow, and lifecycle diagrams into self-contained HTML and SVG.",
+    "first_test": "Try the skill without installing it and generate one workflow diagram from a small system description. Open the HTML, compare every node and route with the source, and run the documented validator.",
+    "language": "JavaScript",
+    "source_issue": "2026-09-12"
+  },
+  "unclebob/swarm-forge": {
+    "name": "swarm-forge",
+    "category": "Agent Ops",
+    "description": "A tmux and Git worktree system for coordinating several coding agents with role prompts, branch-specific configurations, and message passing.",
+    "first_test": "Run the smallest documented pack on a disposable repository. Check each worktree, role prompt, and handoff message, then merge one change manually before scaling the swarm.",
+    "language": "Clojure",
+    "source_issue": "2026-08-08"
+  },
+  "usekaneo/kaneo": {
+    "name": "kaneo",
+    "category": "Open Source",
+    "description": "A self-hosted, open-source project-management application with a focused interface for projects, tasks, and team work.",
+    "first_test": "Start the documented instance and create one test project with two tasks. Check roles, notifications, export, and backup before importing a real project.",
+    "language": "TypeScript",
+    "source_issue": "2026-08-08"
+  },
+  "usestrix/strix": {
+    "name": "strix",
+    "category": "Security",
+    "description": "An AI-assisted penetration-testing tool that scans a local application, explains possible vulnerabilities, and helps investigate fixes.",
+    "first_test": "Run strix --target against a deliberately vulnerable local app. Reproduce one finding manually, record the request and fix, and use it only on systems you are authorised to test.",
+    "language": "Python",
+    "source_issue": "2026-07-11"
+  },
+  "vectorize-io/hindsight": {
+    "name": "hindsight",
+    "category": "Agent Ops",
+    "description": "An agent memory system with retain, recall, and reflect operations, available through a self-hosted API, an embedded Python mode, client libraries, and an MCP server.",
+    "first_test": "Start a local instance, retain three facts in a test memory bank, and recall one of them. Inspect the returned evidence and delete the test data before evaluating a production integration.",
+    "language": "Python",
+    "source_issue": "2026-10-03"
+  },
+  "vercel-labs/open-agents": {
+    "name": "open-agents",
+    "category": "Infrastructure",
+    "description": "An open-source reference app for running background coding agents with a web interface, Vercel runtime, sandboxes, and GitHub integration. It is a starting point for building a custom service.",
+    "first_test": "Fork it and run one agent against a test repository. Trace the request, sandbox, branch, and pull request path so you know where credentials and generated files go.",
+    "language": "TypeScript",
+    "source_issue": "2026-04-22"
+  },
+  "vercel/next.js": {
+    "name": "next.js",
+    "category": "Open Source",
+    "description": "A React framework for building full-stack web applications with current React features and Rust-based JavaScript tooling.",
+    "first_test": "Complete 1 page from the official Learn Next.js course, run it locally, and check the production build before considering it for a client site.",
+    "language": "JavaScript",
+    "source_issue": "2026-10-03"
+  },
+  "virattt/dexter": {
+    "name": "dexter",
+    "category": "Agent Ops",
+    "description": "An agent for deep financial research that gathers company information, performs analysis, and produces a cited research result.",
+    "first_test": "Ask one bounded question about a public company and require source links. Check the source dates and calculations line by line before using the report in a decision.",
+    "language": "TypeScript",
+    "source_issue": "2026-05-08"
+  },
+  "virgiliojr94/book-to-skill": {
+    "name": "book-to-skill",
+    "category": "Agent Ops",
+    "description": "A tool that turns a technical book PDF into a Claude Code skill for study, reference, and task support.",
+    "first_test": "Use a public-domain or permitted PDF and generate one small skill. Check every instruction against the page number it came from before installing it in an agent.",
+    "language": "Python",
+    "source_issue": "2026-08-08"
+  },
+  "vitali87/code-graph-rag": {
+    "name": "code-graph-rag",
+    "category": "Code Intelligence",
+    "description": "A CLI that parses a multi-language repository with Tree-sitter and stores its code structure in Memgraph for symbol queries, caller searches, dead-code checks, and edit previews.",
+    "first_test": "Index a disposable clone with cgr daemon up and cgr start --repo-path /path/to/repo --update-graph. Ask one function question and inspect the source and graph path before allowing an edit.",
+    "language": "Python",
+    "source_issue": "2026-08-15"
+  },
+  "volcengine/OpenViking": {
+    "name": "OpenViking",
+    "category": "Infrastructure",
+    "description": "A Python context database for AI agents that combines agent memory, knowledge RAG, and skills in one storage layer.",
+    "first_test": "Run the smallest local example with one public document and one saved memory. Check what is indexed, how retrieval is scored, and how records are deleted before adding private material.",
+    "language": "Python",
+    "source_issue": "2026-08-22"
+  },
+  "warpdotdev/warp": {
+    "name": "warp",
+    "category": "Agent Ops",
+    "description": "A terminal-based development environment with command history, workflows, and support for built-in or external coding agents.",
+    "first_test": "Open a test project and run one read-only agent task. Check the command preview, working directory, environment variables, and generated files before enabling automatic execution.",
+    "language": "Rust",
+    "source_issue": "2026-05-08"
+  },
+  "wonderwhy-er/DesktopCommanderMCP": {
+    "name": "DesktopCommanderMCP",
+    "category": "Infrastructure",
+    "description": "An MCP server that gives an agent terminal control, filesystem search, file reads, diffs, and edits from a connected desktop environment.",
+    "first_test": "Run it in a sandbox folder with list, search, and diff requests only. Confirm the allowed path and command policy before enabling file writes or shell execution.",
+    "language": "TypeScript",
+    "source_issue": "2026-07-18"
+  },
+  "xbtlin/ai-berkshire": {
+    "name": "ai-berkshire",
+    "category": "Agent Ops",
+    "description": "A set of value-investing research skills for Claude and Codex that combines financial statements, valuation methods, and adversarial review into a report.",
+    "first_test": "Run one skill on a public annual report and keep the source pages with the output. Recalculate one key ratio yourself and treat the result as research, not a recommendation.",
+    "language": "Python",
+    "source_issue": "2026-07-04"
+  },
+  "yikart/AiToEarn": {
+    "name": "AiToEarn",
+    "category": "Open Source",
+    "description": "A Chinese and English platform for using AI to create and distribute content across several publishing and marketing services, with plugin and MCP integrations.",
+    "first_test": "Connect only a test account and publish one private draft. Check the generated copy, platform permissions, and deletion path before linking a production social account.",
+    "language": "TypeScript",
+    "source_issue": "2026-05-16"
+  },
+  "Z4nzu/hackingtool": {
+    "name": "hackingtool",
+    "category": "Open Source",
+    "description": "A menu of more than 200 security tools across recon, OSINT, web, wireless, forensics, and post-exploitation categories, with an AI layer that suggests commands.",
+    "first_test": "Use it only on systems that you own or are authorised to test. Pick one local lab target, run one tool manually first, and save the command and permission record with the result.",
+    "language": "Python",
+    "source_issue": "2026-04-29"
+  },
+  "Zackriya-Solutions/meetily": {
+    "name": "meetily",
+    "category": "Infrastructure",
+    "description": "A local meeting assistant that records or imports calls, transcribes speech, and produces searchable notes and summaries without requiring a hosted service.",
+    "first_test": "Run it on a short test recording with consent from everyone involved. Compare the transcript with the audio, check where files are stored, and delete the recording after the test.",
+    "language": "Rust",
+    "source_issue": "2026-07-11"
+  },
+  "zhaoxuya520/reverse-skill": {
+    "name": "reverse-skill",
+    "category": "Security",
+    "description": "A skill router for authorised reverse engineering and penetration testing that selects tools, bootstraps them when needed, and stores reusable research notes.",
+    "first_test": "Run it only against a local lab target. Check the selected tool and command before execution, save the evidence, and remove any tool that has a broader scope than the test needs.",
+    "language": "PowerShell",
+    "source_issue": "2026-08-08"
+  },
+  "ZhuLinsen/daily_stock_analysis": {
+    "name": "daily_stock_analysis",
+    "category": "Open Source",
+    "description": "A multi-market stock-analysis application that combines market data, news, an LLM analysis workflow, dashboards, and optional notifications.",
+    "first_test": "Run python main.py --dry-run with a public symbol and inspect the input date and sources. Compare the output with the raw data; do not place trades from the generated analysis.",
+    "language": "Python",
+    "source_issue": "2026-06-27"
+  },
+  "zilliztech/claude-context": {
+    "name": "claude-context",
+    "category": "Agent Ops",
+    "description": "An MCP plugin that uses semantic search to find relevant code across a large repository and provide that context to Claude Code or another coding agent.",
+    "first_test": "Install the Node 20+ package in a disposable clone and index it. Ask for one symbol's callers, compare the result with rg, and allow write tools only after the search is accurate.",
+    "language": "TypeScript",
+    "source_issue": "2026-04-29"
+  }
+}
