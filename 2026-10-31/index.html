@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Trending Weekly - October 31, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0d0d0d;color:#f4f1eb}body{font-family:'Source Serif 4',Georgia,serif}a{color:inherit;text-decoration-color:currentColor;text-underline-offset:.18em}.magazine{display:flex;width:1400vw;height:100vh;transition:transform .6s cubic-bezier(.76,0,.24,1)}.page{position:relative;width:100vw;height:100vh;flex:0 0 100vw;padding:7vh 7vw 10vh;overflow:hidden}.cover,.back{display:flex;flex-direction:column;justify-content:space-between;background:#0d0d0d;color:#f4f1eb}.cover-kicker,.cover-date,.cover-issue,.back-meta,.category,.repo-meta,.weekly-gain,.callout-title{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.14em}.cover-kicker{font-size:max(12px,1vw);opacity:.55}.cover-title{font-family:'Playfair Display',serif;font-size:max(48px,8.5vw);font-weight:900;line-height:.9;max-width:11ch}.cover-subtitle{font-size:max(20px,2.2vw);line-height:1.2;max-width:28ch;opacity:.82}.cover-date{font-size:max(13px,1.1vw);opacity:.5}.cover-issue{font-size:max(12px,.9vw);opacity:.45;margin-top:2vh}.repo-page{display:grid;grid-template-columns:55fr 45fr;gap:5vw;align-items:center}.repo-page.light{background:#f4f1eb;color:#111}.repo-page.dark{background:#111;color:#f4f1eb}.repo-left,.repo-right{position:relative;z-index:1}.rank{position:absolute;z-index:-1;top:-15vh;left:-4vw;font-family:'Playfair Display',serif;font-size:33vw;font-weight:900;line-height:1;opacity:.07}.category{font-size:max(12px,1vw);font-weight:600;opacity:.58;margin-bottom:3vh}.repo-headline{font-family:'Playfair Display',serif;font-size:max(34px,5.2vw);font-weight:900;line-height:1.02;margin:0 0 3vh;letter-spacing:0}.repo-path{font-family:'IBM Plex Mono',monospace;font-size:max(14px,1.12vw);margin:0 0 3vh;overflow-wrap:anywhere}.repo-description{font-size:max(18px,1.5vw);line-height:1.34;max-width:48ch;margin:0;opacity:.86}.star-count{font-family:'Playfair Display',serif;font-size:max(58px,7vw);font-weight:900;line-height:.9;margin-bottom:2vh}.repo-meta,.weekly-gain{font-size:max(12px,1vw);opacity:.62;margin-bottom:2vh}.weekly-gain{font-weight:600}.callout{margin-top:5vh;border-left:4px solid currentColor;padding:2.4vh 0 2.4vh 2vw;background:rgba(127,127,127,.08)}.callout-title{font-size:max(12px,.92vw);font-weight:600;margin:0 0 1.6vh;opacity:.7}.callout-text{font-size:max(17px,1.35vw);line-height:1.34;margin:0;opacity:.86;max-width:32ch}.back-title{font-family:'Playfair Display',serif;font-size:max(44px,7.2vw);font-weight:900;line-height:.95;max-width:10ch}.back-meta{font-size:max(12px,1vw);opacity:.55;line-height:1.7;max-width:70ch}.dots{position:fixed;left:50%;bottom:2.5vh;transform:translateX(-50%);display:flex;gap:.55vw;z-index:10}.dot{width:.55vw;height:.55vw;min-width:7px;min-height:7px;border-radius:50%;border:1px solid currentColor;background:transparent;color:#777;opacity:.45;cursor:pointer}.dot.active{background:currentColor;opacity:.9}@media(max-width:760px){.page{padding:5vh 7vw 10vh}.repo-page{grid-template-columns:1fr;gap:4vh;align-content:center}.repo-headline{font-size:max(31px,11vw)}.repo-description{font-size:18px}.star-count{font-size:max(48px,16vw)}.callout{margin-top:2vh;padding-left:4vw}.cover-title{font-size:max(48px,17vw)}.cover-subtitle{font-size:20px}.dots{gap:6px}.dot{width:7px;height:7px}}
+</style>
+<style id="magazine-cover-fit">
+/* Size covers against both viewport dimensions, reserving navigation space. */
+.cover {
+  height: 100dvh;
+  min-height: 100dvh;
+  padding: clamp(18px, 5dvh, 56px) 7vw clamp(48px, 9dvh, 96px);
+  gap: clamp(16px, 3dvh, 32px);
+  overflow: hidden;
+}
+.cover > div { flex-shrink: 0; min-width: 0; }
+.cover .cover-title, .cover .cover__title {
+  font-size: clamp(32px, min(7vw, 12dvh), 112px);
+  line-height: 1;
+  max-width: 14ch;
+  margin: clamp(16px, 4dvh, 40px) 0 0;
+  overflow-wrap: normal;
+}
+.cover .cover-subtitle, .cover .cover__subtitle {
+  font-size: clamp(16px, min(1.6vw, 2.8dvh), 26px);
+  line-height: 1.3;
+  max-width: 44ch;
+  margin: 0 0 clamp(12px, 2dvh, 22px);
+}
+.cover .cover-kicker, .cover .cover-date, .cover .cover-issue,
+.cover .cover__meta, .cover .cover__date, .cover .cover__issue {
+  font-size: clamp(11px, min(.9vw, 2dvh), 16px);
+  line-height: 1.5;
+}
+.cover .cover-issue { margin-top: clamp(6px, 1dvh, 12px); }
+.cover .cover__title { margin-bottom: clamp(16px, 3dvh, 32px); }
+.cover .cover__meta, .cover .cover__issue { top: 5dvh; }
+@media (max-width: 760px) {
+  .cover .cover-title, .cover .cover__title {
+    font-size: clamp(28px, min(13vw, 10dvh), 72px);
+    max-width: 100%;
+  }
+  .cover .cover-subtitle, .cover .cover__subtitle { max-width: 100%; }
+}
+@media (max-height: 450px) and (min-width: 761px) {
+  .cover { gap: 12px; padding-top: 16px; padding-bottom: 42px; }
+  .cover .cover-title, .cover .cover__title {
+    font-size: min(6vw, 10dvh);
+    max-width: 22ch;
+    margin-top: 12px;
+  }
+  .cover .cover-subtitle, .cover .cover__subtitle {
+    font-size: 14px;
+    max-width: 64ch;
+    margin-bottom: 8px;
+  }
+}
+</style>
+</head>
+<body>
+<main class="magazine" id="magazine">
+<section class="page cover">
+  <div>
+    <div class="cover-kicker">GitHub Trending Weekly</div>
+    <h1 class="cover-title">GitHub Repo Briefing</h1>
+  </div>
+  <div>
+    <div class="cover-subtitle">Twelve weekly trending repositories, summarized by what they do and how to test them</div>
+    <div class="cover-date">October 31, 2026</div>
+    <div class="cover-issue">Issue 28</div>
+  </div>
+</section>
+<section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">01</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">hallmark</h2>
+    <p class="repo-path"><a href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener">Nutlope/hallmark</a></p>
+    <p class="repo-description">A design skill for Claude Code, Codex, Cursor, and OpenCode that builds pages from a catalog of fifty themes and checks the result in a real browser against tiered quality gates, with separate redesign and audit commands.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">43,553</div>
+    <div class="repo-meta">Stars total / CSS</div>
+    <div class="weekly-gain">11,766 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run /hallmark audit on 1 existing page without changing it. Compare each reported issue with the page at desktop and mobile widths before letting it redesign anything.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">02</div>
+    <div class="category">Security</div>
+    <h2 class="repo-headline">security-audit-skill</h2>
+    <p class="repo-path"><a href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener">cloudflare/security-audit-skill</a></p>
+    <p class="repo-description">A coding-agent skill that organizes repository security audits into reconnaissance, coverage-led hunting, candidate validation, structured findings, independent verification, and source-backed reports.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">54,867</div>
+    <div class="repo-meta">Stars total / JavaScript</div>
+    <div class="weekly-gain">12,838 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install it in an isolated agent profile and audit one disposable sample repository. Check that coverage-ledger.json and findings.json pass the included validators before reading the generated reports.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">03</div>
+    <div class="category">Business Tools</div>
+    <h2 class="repo-headline">claude-seo</h2>
+    <p class="repo-path"><a href="https://github.com/AgriciDaniel/claude-seo" target="_blank" rel="noopener">AgriciDaniel/claude-seo</a></p>
+    <p class="repo-description">An SEO audit plugin for Claude Code built from 26 sub-skills and 19 agents, covering technical SEO, Core Web Vitals, structured data, AI search citation, and local, e-commerce, and international SEO, with a prioritized action plan.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">24,837</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">4,478 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run one audit on a site you own and pick 3 of its highest-priority findings. Check each against Search Console or PageSpeed data before acting on any recommendation.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">04</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">impeccable</h2>
+    <p class="repo-path"><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">pbakaus/impeccable</a></p>
+    <p class="repo-description">Design guidance for AI coding agents, packaged as one skill with 24 commands, live browser iteration, and deterministic checks for frontend design problems.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">97,830</div>
+    <div class="repo-meta">Stars total / Rust</div>
+    <div class="weekly-gain">11,323 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install it in a disposable frontend project, run /impeccable init, and audit 1 page. Compare every reported issue with the rendered page before keeping any suggested change.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">05</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">superpowers</h2>
+    <p class="repo-path"><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">obra/superpowers</a></p>
+    <p class="repo-description">A development methodology for coding agents, delivered as composable skills that trigger automatically for brainstorming, planning, git worktrees, test-driven development, subagent execution, and code review.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">309,812</div>
+    <div class="repo-meta">Stars total / Shell</div>
+    <div class="weekly-gain">5,474 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install it in 1 disposable repository and give the agent a small feature. Check that it asks clarifying questions, writes a plan, and adds a failing test before it writes the implementation.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">06</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">andrej-karpathy-skills</h2>
+    <p class="repo-path"><a href="https://github.com/multica-ai/andrej-karpathy-skills" target="_blank" rel="noopener">multica-ai/andrej-karpathy-skills</a></p>
+    <p class="repo-description">A single CLAUDE.md file that turns four coding rules into agent instructions: think before coding, keep the design simple, make small changes, and work toward a clear goal.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">227,264</div>
+    <div class="repo-meta">Stars total / No primary language</div>
+    <div class="weekly-gain">4,178 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Copy the file into a disposable project and give the agent one small bug. Check whether it asks for the goal first and changes only the files that the fix needs.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">07</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">TradingAgents</h2>
+    <p class="repo-path"><a href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener">TauricResearch/TradingAgents</a></p>
+    <p class="repo-description">A multi-agent framework for researching and simulating trading decisions. It separates analyst roles and combines their reports into a final market analysis.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">118,913</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">5,490 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run it on historical data with paper-trading settings. Compare the report with a simple baseline and record the data date, assumptions, and transaction costs before trusting any signal.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">08</div>
+    <div class="category">Creative Systems</div>
+    <h2 class="repo-headline">skills</h2>
+    <p class="repo-path"><a href="https://github.com/jakubkrehel/skills" target="_blank" rel="noopener">jakubkrehel/skills</a></p>
+    <p class="repo-description">A collection of interface skills for coding agents covering accessibility, layout, typography, color, interface writing, and UI polish, plus user-invoked tools for reviewing branches and stress-testing components.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">9,509</div>
+    <div class="repo-meta">Stars total / Markdown</div>
+    <div class="weekly-gain">1,107 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install only better-accessibility and run it on 1 form you own. Verify each reported problem with the keyboard and a screen reader before keeping any fix.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">09</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">taste-skill</h2>
+    <p class="repo-path"><a href="https://github.com/Leonxlnx/taste-skill" target="_blank" rel="noopener">Leonxlnx/taste-skill</a></p>
+    <p class="repo-description">A design-review skill for agent workflows that covers layout, typography, motion, image use, and checks for generic or repetitive interface output.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">106,745</div>
+    <div class="repo-meta">Stars total / JavaScript</div>
+    <div class="weekly-gain">4,712 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install it and review one existing screen. Ask for three concrete changes, implement one, and compare the result at desktop and mobile widths before keeping the skill.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">10</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">t3code</h2>
+    <p class="repo-path"><a href="https://github.com/pingdotgg/t3code" target="_blank" rel="noopener">pingdotgg/t3code</a></p>
+    <p class="repo-description">A control surface with mobile, web, and desktop clients for starting and managing local coding-agent sessions.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">34,084</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">2,775 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Run it against a disposable repository and complete one read-only task from the web client. Check authentication, local process scope, and session logs before enabling edits.</p>
+    </div>
+  </div>
+</section><section class="page repo-page light">
+  <div class="repo-left">
+    <div class="rank">11</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">claude-mem</h2>
+    <p class="repo-path"><a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">thedotmack/claude-mem</a></p>
+    <p class="repo-description">A Claude Code plugin that captures session work, compresses it, and injects relevant context into later sessions. It supports persistent project memory instead of relying on one chat window.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">107,230</div>
+    <div class="repo-meta">Stars total / TypeScript</div>
+    <div class="weekly-gain">3,518 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Install it with npx claude-mem install in a test project. Complete one small task, start a new session, and verify that the recalled context is correct before using it for client work.</p>
+    </div>
+  </div>
+</section><section class="page repo-page dark">
+  <div class="repo-left">
+    <div class="rank">12</div>
+    <div class="category">Agent Ops</div>
+    <h2 class="repo-headline">skills</h2>
+    <p class="repo-path"><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">anthropics/skills</a></p>
+    <p class="repo-description">Anthropic&#x27;s public repository of example Agent Skills for Claude, including the document skills for Word, PowerPoint, Excel, and PDF files, the Agent Skills specification, and a skill template.</p>
+  </div>
+  <div class="repo-right">
+    <div class="star-count">185,746</div>
+    <div class="repo-meta">Stars total / Python</div>
+    <div class="weekly-gain">1,888 stars this week</div>
+    <div class="callout">
+      <p class="callout-title">A first test</p>
+      <p class="callout-text">Add it as a Claude Code plugin marketplace and install only document-skills. Ask for 1 short PDF form-field extraction from a test file and check the output against the original document.</p>
+    </div>
+  </div>
+</section>
+<section class="page back">
+  <div class="cover-kicker">End of Issue</div>
+  <div class="back-title">Check the links. Test one repo.</div>
+  <div class="back-meta">GitHub Trending Weekly / Issue 28<br>Generated by Claude from SnailDev github-hot-hub weekly archive: https://raw.githubusercontent.com/SnailDev/github-hot-hub/main/archives/2026-10-31.md</div>
+</section>
+</main>
+<div class="dots" id="dots"></div>
+<script>
+const magazine = document.getElementById('magazine');
+const total = magazine.children.length;
+const dots = document.getElementById('dots');
+let current = 0;
+let lastWheel = 0;
+for (let i = 0; i < total; i++) {
+  const dot = document.createElement('button');
+  dot.className = 'dot';
+  dot.type = 'button';
+  dot.setAttribute('aria-label', `Go to page ${i + 1}`);
+  dot.addEventListener('click', () => go(i));
+  dots.appendChild(dot);
+}
+function go(index) {
+  current = Math.max(0, Math.min(total - 1, index));
+  magazine.style.transform = `translateX(-${current * 100}vw)`;
+  [...dots.children].forEach((dot, i) => dot.classList.toggle('active', i === current));
+}
+document.addEventListener('keydown', event => {
+  if (event.key === 'ArrowRight') go(current + 1);
+  if (event.key === 'ArrowLeft') go(current - 1);
+});
+document.addEventListener('wheel', event => {
+  const now = Date.now();
+  if (now - lastWheel < 700) return;
+  if (Math.abs(event.deltaY) < 10 && Math.abs(event.deltaX) < 10) return;
+  lastWheel = now;
+  go(current + (event.deltaY > 0 || event.deltaX > 0 ? 1 : -1));
+}, { passive: true });
+let touchStart = null;
+document.addEventListener('touchstart', event => {
+  touchStart = event.changedTouches[0].clientX;
+}, { passive: true });
+document.addEventListener('touchend', event => {
+  if (touchStart === null) return;
+  const delta = touchStart - event.changedTouches[0].clientX;
+  if (Math.abs(delta) > 50) go(current + (delta > 0 ? 1 : -1));
+  touchStart = null;
+}, { passive: true });
+go(0);
+</script>
+</body>
+</html>
